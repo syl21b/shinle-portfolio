@@ -85,7 +85,7 @@ export default function Navbar() {
     if (lower.includes("light rain") || lower.includes("drizzle")) return isNight ? <WiNightAltSprinkle {...props} /> : <WiSprinkle {...props} />;
     if (lower.includes("rain") || lower.includes("showers")) return isNight ? <WiNightAltRain {...props} /> : <WiRain {...props} />;
     if (lower.includes("sleet")) return <WiSleet {...props} />;
-    if (lower.includes("light snow")) return <WiSnowWind {...props} />;
+    if (lower.includes("light snow")) return isNight ? <WiSnowWind {...props} /> : <WiSnow {...props} />; // Corrected for day/night snow
     if (lower.includes("snow")) return <WiSnow {...props} />;
     if (lower.includes("fog") || lower.includes("mist") || lower.includes("haze")) return <WiFog {...props} />;
     if (lower.includes("tornado")) return <WiTornado {...props} />;
@@ -172,17 +172,15 @@ export default function Navbar() {
     return () => clearInterval(timerId);
   }, []);
 
-  // <<< THIS IS THE useEffect THAT NEEDS TO BE MODIFIED >>>
+  // !!! THIS IS THE CRITICAL CHANGE: REMOVE THE CONFLICTING ELSE IF BLOCK !!!
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.substring(1);
       const el = document.getElementById(id);
       if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
     }
-    // REMOVE THE ELSE IF BLOCK BELOW
-    // else if (location.pathname === '/') {
-    //   window.scrollTo({ top: 0, behavior: 'smooth' });
-    // }
+    // The conflicting 'else if' block has been removed from here.
+    // The auto-scroll to #home is now handled by App.jsx -> HomeContent.jsx.
   }, [location]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -226,10 +224,10 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-links">
-          {/* Home Link as Lucide Home Icon */}
+          {/* Home Link as Lucide Home Icon - now correctly targets #home */}
           <Link
             to="/"
-            onClick={(e) => handleNavLinkClick(e, '/', '#home')} // Changed #root to #home
+            onClick={(e) => handleNavLinkClick(e, '/', '#home')}
             className="nav-link nav-home-icon"
             aria-label="Go to Home page"
           >
@@ -242,7 +240,7 @@ export default function Navbar() {
           <Link to="/learning" className="nav-link" onClick={() => setIsOpen(false)}>Learning</Link>
           <Link to="/" onClick={(e) => handleNavLinkClick(e, '/', '#contact')} className="nav-link">Contact</Link>
 
-         {/* Desktop Resume Button - Changed to Link component */}
+         {/* Desktop Resume Button */}
          <Link
             to="/resume"
             className="resume-button"
@@ -260,10 +258,10 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="navbar-mobile-menu">
-          {/* Mobile Home Link as Lucide Home Icon */}
+          {/* Mobile Home Link as Lucide Home Icon - now correctly targets #home */}
           <Link
             to="/"
-            onClick={(e) => handleNavLinkClick(e, '/', '#home')} // Changed #root to #home
+            onClick={(e) => handleNavLinkClick(e, '/', '#home')}
             className="nav-link-mobile nav-logo-link-mobile"
             aria-label="Go to Home page"
           >
