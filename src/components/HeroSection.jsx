@@ -1,62 +1,55 @@
-// src/components/HeroSection.jsx
-import React, { useRef, useState, useEffect } from "react"; // Add useRef, useState, useEffect
-// Replaced Tableau with LayoutDashboard as a generic icon for data dashboards
+import React, { useRef, useState, useEffect } from "react";
+// Add Link from react-router-dom
 import { Mail, Github, Linkedin, LayoutDashboard, MoveRight } from "lucide-react";
+import { Link } from 'react-router-dom'; // <<< Import Link
+
 // Import your image from the assets folder
-import avatarImage from "./image/profile.jpeg"; // Correct path to your image
-import avatarImage1 from "./image/profile1.jpg"; // Correct path to your image (for fallback)
-import tableauLogo from "./image/tableau.png"; // Correct path to your image (for fallback)
-import linkedinLogo from "./image/linkedin.png"; // Correct path to your image (for fallback)
-import GithubLogo from "./image/github.png"; // Correct path to your image (for fallback)
-import EmailLogo from "./image/email.png"; // Correct path to your image (for fallback)
-import Background from "./image/background2.png"; // Correct path to your image (for fallback)
+import avatarImage from "./image/profile.jpeg";
+import avatarImage1 from "./image/profile1.jpg";
+import tableauLogo from "./image/tableau.png";
+import linkedinLogo from "./image/linkedin.png";
+import GithubLogo from "./image/github.png";
+import EmailLogo from "./image/email.png";
+import Background from "./image/background2.png";
 
 
 
 export default function HeroSection() {
-  const sectionRef = useRef(null); // Create a ref for the section
-  const [isVisible, setIsVisible] = useState(false); // State to track visibility
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
-          // If the section is intersecting (visible in the viewport)
           if (entry.isIntersecting) {
             setIsVisible(true);
-            // Optional: If you want the animation to play only once, uncomment the line below
-            // observer.unobserve(entry.target);
           } else {
-            // If the section scrolls out of view, reset the state to replay animation on scroll back
             setIsVisible(false);
           }
         });
       },
       {
-        threshold: 0.3, // Percentage of the target element which is visible to trigger the callback
-                     // 0.3 means 30% of the section must be visible. Adjust as needed (0.0 to 1.0)
-        // rootMargin: "0px 0px -100px 0px" // Optional: Adjust the viewport 'root' for trigger
+        threshold: 0.3,
       }
     );
 
-    // Observe the section when the component mounts
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
 
-    // Cleanup function: stop observing when the component unmounts
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []); // Empty dependency array means this effect runs once on mount and cleans up on unmount
+  }, []);
 
   return (
     <section
-      className={`about hero-main ${isVisible ? 'animate-in' : ''}`} // Add 'animate-in' class when visible
+      className={`about hero-main ${isVisible ? 'animate-in' : ''}`}
       id="home"
-      ref={sectionRef} // Attach the ref to the section
+      ref={sectionRef}
       style={{
         backgroundImage: `url(${Background})`,
         backgroundSize: 'cover',
@@ -117,10 +110,11 @@ export default function HeroSection() {
         </div>
 
         <div className="hero-buttons pt-8">
-          <a href="contact" className="btn btn-primary">
+          {/* Changed <a> to <Link> and href to to="/#contact" */}
+          <Link to="/#contact" className="btn btn-primary">
             Get In Touch
             <MoveRight className="ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
