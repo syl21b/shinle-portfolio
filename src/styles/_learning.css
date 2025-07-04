@@ -41,8 +41,8 @@
   font-size: clamp(2.5rem, 5vw, 4rem); /* Larger clamp range for main title */
   line-height: 1.2;
   letter-spacing: -0.04em;
-  color: var(--dark);
-  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: var(--light);
+  background: linear-gradient(90deg, var(--primary), var(--light));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
