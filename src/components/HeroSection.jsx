@@ -19,7 +19,7 @@ export default function HeroSection() {
     // 'hero-main' class is from index.css for its overall layout, background effects, and height.
     <section
       className="about hero-main"
-      id="root"
+      id="home"
       style={{
         backgroundImage: `url(${Background})`, // Corrected syntax here
         backgroundSize: 'cover', // Ensures the image covers the entire section
