@@ -1,7 +1,7 @@
 // App.jsx
-import React, { useEffect } from "react"; // Import useEffect
+import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Import useLocation
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 // Import your existing section components
 import Navbar from "./components/Navbar";
@@ -18,14 +18,14 @@ import Showcase from "./components/pages/Showcase.jsx";
 
 // A component to group all the sections of your main landing page
 function HomeContent() {
-  const location = useLocation(); // Get the current location object
+  const location = useLocation();
 
   useEffect(() => {
     // This effect runs once after the component mounts
     // and whenever location.pathname or location.hash changes.
 
-    // Check if we are on the root path ('/') and there is no hash in the URL
-    if (location.pathname === '/home' && !location.hash) {
+    // CORRECTED: Check if we are on the root path ('/') and there is no hash in the URL
+    if (location.pathname === '/' && !location.hash) {
       // Use a timeout to ensure the DOM has rendered and the element exists
       // before attempting to scroll. A small delay is usually sufficient.
       setTimeout(() => {
@@ -55,7 +55,10 @@ export default function App() {
         <Navbar />
 
         <Routes>
+          {/* Route for the main page (e.g., your-domain.com/shinle-portfolio/) */}
           <Route path="/" element={<HomeContent />} />
+
+          {/* Other routes */}
           <Route path="/showcase" element={<Showcase />} />
           <Route path="/learning" element={<Learning />} />
           <Route path="/resume" element={<ResumePage />} />
