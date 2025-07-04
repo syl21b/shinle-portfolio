@@ -80,7 +80,7 @@ export default function HeroSection() {
           Transforming Data into Strategic Insights
         </p>
         <p className="sub-heading">
-          Data Scientist | Data Analyst | Math Tutor
+          Data Analyst | Data Scientist | Math Tutor
         </p>
 
         <div className="social-links pt-6">
