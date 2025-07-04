@@ -231,7 +231,7 @@ export default function Navbar() {
           {/* Home Link as Lucide Home Icon */}
           <Link
             to="/"
-            onClick={(e) => handleNavLinkClick(e, '/', '#home')}
+            onClick={(e) => handleNavLinkClick(e, '/', '#root')}
             className="nav-link nav-home-icon"
             aria-label="Go to Home page"
           >
@@ -265,7 +265,7 @@ export default function Navbar() {
           {/* Mobile Home Link as Lucide Home Icon */}
           <Link
             to="/"
-            onClick={(e) => handleNavLinkClick(e, '/', '#home')}
+            onClick={(e) => handleNavLinkClick(e, '/', '#root')}
             className="nav-link-mobile nav-logo-link-mobile"
             aria-label="Go to Home page"
           >

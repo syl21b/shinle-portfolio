@@ -49,7 +49,7 @@ export default function Footer() {
 
       <div className="footer-menu">
         <ul className="footer-menu-list">
-          <li className="menu-list-items"><a href="home" className="links">Home</a></li>
+          <li className="menu-list-items"><a href="root" className="links">Home</a></li>
           <li className="menu-list-items"><a href="about" className="links">About</a></li>
           <li className="menu-list-items"><a href="skills" className="links">Skills</a></li>
           <li className="menu-list-items"><a href="projects" className="links">Projects</a></li>
