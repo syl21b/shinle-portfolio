@@ -29,7 +29,7 @@ function HomeContent() {
       // Use a timeout to ensure the DOM has rendered and the element exists
       // before attempting to scroll. A small delay is usually sufficient.
       setTimeout(() => {
-        const homeElement = document.getElementById('home');
+        const homeElement = document.getElementById('root');
         if (homeElement) {
           homeElement.scrollIntoView({ behavior: 'smooth' });
         }
