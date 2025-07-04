@@ -1,10 +1,7 @@
 // App.jsx
-import React from "react";
-// Import the global App.css, which also imports your fonts and defines variables.
+import React, { useEffect } from "react"; // Import useEffect
 import "./App.css";
-
-// Import React Router components
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Import useLocation
 
 // Import your existing section components
 import Navbar from "./components/Navbar";
@@ -17,59 +14,56 @@ import Footer from "./components/Footer";
 import Thanks from "./components/Thanks";
 import Learning from "./components/Learning";
 import ResumePage  from "./components/ResumePage.jsx";
-
-
-
-
-// Import the Showcase component for the dedicated route
-import Showcase from "./components/pages/Showcase.jsx"; // Ensure this path is correct
+import Showcase from "./components/pages/Showcase.jsx";
 
 // A component to group all the sections of your main landing page
 function HomeContent() {
+  const location = useLocation(); // Get the current location object
+
+  useEffect(() => {
+    // This effect runs once after the component mounts
+    // and whenever location.pathname or location.hash changes.
+
+    // Check if we are on the root path ('/') and there is no hash in the URL
+    if (location.pathname === '/' && !location.hash) {
+      // Use a timeout to ensure the DOM has rendered and the element exists
+      // before attempting to scroll. A small delay is usually sufficient.
+      setTimeout(() => {
+        const homeElement = document.getElementById('home');
+        if (homeElement) {
+          homeElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); // 100ms delay
+    }
+  }, [location]); // Re-run effect if location changes
+
   return (
     <>
-      <HeroSection />
+      <HeroSection /> {/* Assuming HeroSection contains <section id="home"> */}
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
-      
     </>
   );
 }
 
 export default function App() {
   return (
-    // The 'app-wrapper' class will inherit styles from the <body> in App.css,
-    // providing the global background and text color defined in your CSS.
     <div className="app-wrapper">
-      {/* BrowserRouter wraps your entire application to enable routing */}
       <Router>
-        {/* Navbar Section: This will be fixed at the top and appears on all pages */}
         <Navbar />
 
-        {/* Routes define which component to render based on the URL path */}
         <Routes>
-          {/* Route for the main page (e.g., your-domain.com/) */}
           <Route path="/" element={<HomeContent />} />
-
-          {/* Route for the dedicated Showcase page (e.g., your-domain.com/showcase) */}
           <Route path="/showcase" element={<Showcase />} />
-
           <Route path="/learning" element={<Learning />} />
-
           <Route path="/resume" element={<ResumePage />} />
-
-          {/* Add more routes here if you have other dedicated pages */}
         </Routes>
-        
-       <Thanks />
-        {/* Footer: This will also appear on all pages (main and showcase) */}
-        <Footer />
-             
 
+       <Thanks />
+        <Footer />
       </Router>
     </div>
   );
-  
 }
