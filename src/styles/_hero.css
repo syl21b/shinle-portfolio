@@ -50,3 +50,52 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
+
+/* --- Initial states for elements within HeroSection (e.g., in App.css or HeroSection.css) --- */
+/* By default, elements are slightly hidden/offset */
+.hero-main .hero-avatar,
+.hero-main .greet-heading,
+.hero-main .my-heading,
+.hero-main .hero-content p,
+.hero-main .social-links,
+.hero-main .hero-buttons {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly below its final position */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+/* --- Animated state when 'animate-in' class is added (when section is visible) --- */
+/* When 'animate-in' is present, elements return to their normal position and become visible */
+.hero-main.animate-in .hero-avatar,
+.hero-main.animate-in .greet-heading,
+.hero-main.animate-in .my-heading,
+.hero-main.animate-in .hero-content p,
+.hero-main.animate-in .social-links,
+.hero-main.animate-in .hero-buttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Optional: Staggered animation for a more dynamic effect --- */
+/* Apply a delay to each element so they appear one after another */
+.hero-main.animate-in .hero-avatar {
+  transition-delay: 0.1s;
+}
+.hero-main.animate-in .greet-heading {
+  transition-delay: 0.2s;
+}
+.hero-main.animate-in .my-heading {
+  transition-delay: 0.3s;
+}
+.hero-main.animate-in .hero-content p:nth-of-type(1) { /* First paragraph */
+  transition-delay: 0.4s;
+}
+.hero-main.animate-in .hero-content p:nth-of-type(2) { /* Second paragraph (sub-heading) */
+  transition-delay: 0.5s;
+}
+.hero-main.animate-in .social-links {
+  transition-delay: 0.6s;
+}
+.hero-main.animate-in .hero-buttons {
+  transition-delay: 0.7s;
+}
