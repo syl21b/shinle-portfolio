@@ -1,13 +1,12 @@
+// src/index.js (or src/main.jsx)
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom'; // ✅ Import this
-import App from './App';
+import App from './App'; // Make sure this path is correct
+//import './index.css'; // Your global CSS, if any
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/shinle-portfolio">  {/* ✅ Set basename to match GitHub repo name */}
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
