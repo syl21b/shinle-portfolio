@@ -37,8 +37,8 @@
 /* NEW: Main title for the Learning page */
 .learning-main-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700; /* Bolder for main title */
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Larger clamp range for main title */
+  font-weight: 600; /* Bolder for main title */
+  font-size: clamp(2rem, 4.5vw, 3rem); /* Larger clamp range for main title */
   line-height: 1.2;
   letter-spacing: -0.04em;
   color: var(--light);
