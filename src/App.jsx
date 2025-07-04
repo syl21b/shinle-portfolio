@@ -25,7 +25,7 @@ function HomeContent() {
     // and whenever location.pathname or location.hash changes.
 
     // Check if we are on the root path ('/') and there is no hash in the URL
-    if (location.pathname === '/' && !location.hash) {
+    if (location.pathname === '/home' && !location.hash) {
       // Use a timeout to ensure the DOM has rendered and the element exists
       // before attempting to scroll. A small delay is usually sufficient.
       setTimeout(() => {
