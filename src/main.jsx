@@ -1,18 +1,12 @@
-// src/main.jsx
+// src/index.js (or src/main.jsx)
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom'; // <-- Keep this import!
-import App from './App';
-// If you have a global CSS file for your entire app (like index.css), uncomment it:
-// import './index.css'; 
+import App from './App'; // Make sure this path is correct
+//import './index.css'; // Your global CSS, if any
 
-const root = ReactDOM.createRoot(document.getElementById('root')); // <-- Ensure this is 'root'
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <-- BrowserRouter with basename is ESSENTIAL for subpath deployment --> */}
-    <BrowserRouter basename="/shinle-portfolio">
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
