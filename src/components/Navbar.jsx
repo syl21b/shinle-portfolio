@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Home } from "lucide-react"; // Added Home icon
+import { Menu, X, Home } from "lucide-react";
 import {
   WiDaySunny, WiCloud, WiCloudy, WiRain, WiThunderstorm, WiSnow,
   WiFog, WiStrongWind, WiSleet, WiHail, WiSprinkle, WiShowers, WiNa,
@@ -7,7 +7,7 @@ import {
   WiNightAltSprinkle, WiNightAltRain, WiSnowWind, WiWindy,
   WiDust, WiTornado, WiNightClear
 } from "react-icons/wi";
-import { FaFileDownload } from "react-icons/fa"; // Keeping this import just in case, though it won't be used for Link to /resume
+import { FaFileDownload } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
@@ -139,8 +139,6 @@ export default function Navbar() {
             shortForecast: weatherData.weather[0].description,
           });
 
-          // Using a proxy to bypass CORS for OpenWeatherMap Geocoding API if needed
-          // For direct calls, ensure your API key is correctly configured for reverse geocoding
           const geoRes = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${userLatitude}&lon=${userLongitude}&limit=1&appid=${OPENWEATHER_API_KEY}`);
           const geoData = await geoRes.json();
           const loc = geoData[0];
@@ -159,7 +157,6 @@ export default function Navbar() {
     };
     if (userLatitude && userLongitude) {
       fetchWeather();
-      // Fetch weather every 15 minutes (900,000 milliseconds)
       intervalId = setInterval(fetchWeather, 900000);
     }
     return () => clearInterval(intervalId);
@@ -175,27 +172,28 @@ export default function Navbar() {
     return () => clearInterval(timerId);
   }, []);
 
+  // <<< THIS IS THE useEffect THAT NEEDS TO BE MODIFIED >>>
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.substring(1);
       const el = document.getElementById(id);
       if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
-    } else if (location.pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    // REMOVE THE ELSE IF BLOCK BELOW
+    // else if (location.pathname === '/') {
+    //   window.scrollTo({ top: 0, behavior: 'smooth' });
+    // }
   }, [location]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleNavLinkClick = (e, path, hash) => {
-    e.preventDefault(); // Prevent default anchor behavior
-    setIsOpen(false); // Close the mobile menu
+    e.preventDefault();
+    setIsOpen(false);
 
     if (location.pathname !== path) {
-      // If navigating to a different page, navigate and then scroll
       navigate(path + hash);
     } else {
-      // If on the same page, just scroll to the hash
       const el = document.getElementById(hash.substring(1));
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
@@ -231,7 +229,7 @@ export default function Navbar() {
           {/* Home Link as Lucide Home Icon */}
           <Link
             to="/"
-            onClick={(e) => handleNavLinkClick(e, '/', '#home')}
+            onClick={(e) => handleNavLinkClick(e, '/', '#home')} // Changed #root to #home
             className="nav-link nav-home-icon"
             aria-label="Go to Home page"
           >
@@ -246,9 +244,9 @@ export default function Navbar() {
 
          {/* Desktop Resume Button - Changed to Link component */}
          <Link
-            to="/resume" // Use 'to' prop for Link component
+            to="/resume"
             className="resume-button"
-            onClick={() => setIsOpen(false)} // Close menu on click (good for mobile, harmless for desktop)
+            onClick={() => setIsOpen(false)}
             aria-label="View Resume"
           >
             Resume
@@ -265,7 +263,7 @@ export default function Navbar() {
           {/* Mobile Home Link as Lucide Home Icon */}
           <Link
             to="/"
-            onClick={(e) => handleNavLinkClick(e, '/', '#home')}
+            onClick={(e) => handleNavLinkClick(e, '/', '#home')} // Changed #root to #home
             className="nav-link-mobile nav-logo-link-mobile"
             aria-label="Go to Home page"
           >
@@ -278,11 +276,11 @@ export default function Navbar() {
           <Link to="/learning" className="nav-link-mobile" onClick={toggleMenu}>Learning</Link>
           <Link to="/" onClick={(e) => handleNavLinkClick(e, '/', '#contact')} className="nav-link-mobile">Contact</Link>
 
-          {/* Mobile Resume Button - Changed to Link component */}
+          {/* Mobile Resume Button */}
           <Link
-            to="/resume" // Use 'to' prop for Link component
+            to="/resume"
             className="nav-link-mobile resume-button-mobile"
-            onClick={toggleMenu} // Close mobile menu after clicking
+            onClick={toggleMenu}
             aria-label="View Resume"
           >
             Resume
