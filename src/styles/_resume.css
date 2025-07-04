@@ -1,0 +1,153 @@
+/* Resume Page Styles */
+.resume-container {
+  font-family: 'Segoe UI', sans-serif;
+  color: #2c3e50;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  line-height: 1.6;
+  padding-top: 150px;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resume-header h1 {
+  font-size: 2.2rem;
+  color: #34495e;
+}
+
+.resume-header h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #34495e;
+  margin-top: 0.25rem;
+}
+
+.contact-info {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.contact-info svg {
+  vertical-align: middle;
+  margin-right: 0.25rem;
+  color: #2980b9;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h3 {
+  font-size: 1.3rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+/* --- ADJUSTMENT FOR PROJECT AND EXPERIENCE HEADINGS --- */
+/* Apply flexbox to h4 elements within .project and direct div children of .resume-section (for experience) */
+.project h4,
+.resume-section > div > h4 { /* Target h4 within experience divs */
+  display: flex; /* Enable flexbox */
+  justify-content: space-between; /* Push items to opposite ends */
+  align-items: baseline; /* Align items at the baseline of their text */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  font-size: 1.1rem;
+  font-weight: 550;
+  margin-bottom: 0.4rem;
+  color: #2c3e50;
+}
+
+.project-date {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  /* Removed margin-left: 0.5rem; as flexbox will handle spacing */
+  white-space: nowrap; /* Prevent date from wrapping if space is tight */
+  flex-shrink: 0; /* Prevent date from shrinking */
+}
+
+.resume-section ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.resume-section ul li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
+}
+
+/* --- SKILLS SECTION STYLES (from previous adjustment) --- */
+.skills-list-line-by-line {
+  padding-left: 0;
+  list-style: none;
+  display: block;
+  margin: 0;
+}
+
+.skills-list-line-by-line li {
+  background-color: #f7f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+  margin-bottom: 0.75rem;
+  display: block;
+  width: 100%;
+}
+
+/* --- DOWNLOAD BUTTON STYLES --- */
+.resume-download-section {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.download-resume-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.download-resume-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.download-resume-button:active {
+  background-color: #1e7e34;
+  transform: translateY(0);
+}
+
+/* Apply consistent text color across all section content */
+.resume-section p,
+.resume-section ul li,
+.resume-section span,
+.resume-section strong {
+  color: #2c3e50; /* Unified professional dark text */
+}
+.resume-section {
+  color: #2c3e50;
+}

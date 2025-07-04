@@ -1,0 +1,477 @@
+/* General Styling & Variables */
+:root {
+  /* Define your color variables here if not already in a global CSS file */
+  --background-primary: #f8f9fa; /* Light background for the overall page */
+  --card-background: #ffffff; /* White background for content cards/sections */
+  --text-color: #343a40; /* Dark gray for main body text */
+  --text-color-secondary: #6c757d; /* Lighter gray for secondary text */
+  --heading-color: #212529; /* Very dark gray for headings */
+  --primary-color: #075ab4; /* A vibrant blue for main accents */
+  --primary-color-light: #e0f2f7; /* Lighter shade of primary for borders/accents */
+  --border-color: #dee2e6; /* Light gray for borders */
+  --shadow-light: rgba(0, 0, 0, 0.08); /* Light shadow for depth */
+  --gap-md: 20px;
+  --gap-lg: 30px;
+}
+
+
+/* Base styles for the section */
+.section.project-viewer-section {
+  padding-top: 120px; /* Example: Space for a typical fixed header. Adjust as needed. */
+  padding-bottom: var(--gap-lg);
+  padding-left: 1rem; /* Add some default horizontal padding for smaller screens */
+  padding-right: 1rem; /* Add some default horizontal padding for smaller screens */
+
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Changed to column to stack nav and content */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center horizontally */
+  box-sizing: border-box; /* Ensures padding is included in element's total width/height */
+  gap: var(--gap-md); /* Space between navigation and main content container */
+}
+
+/* New wrapper for navigation */
+.project-navigation-wrapper {
+  width: 100%;
+  max-width: 1405px;
+  margin: 0 auto;
+  padding: 20px var(--gap-md); /* Apply vertical padding here now */
+  display: flex; /* Make it a flex container */
+  justify-content: space-between; /* Space out children */
+  align-items: center; /* Vertically align children */
+  gap: 20px; /* Space between buttons and title */
+  border-bottom: 1px solid var(--border-color); /* Keep the border here */
+}
+
+.project-viewer-main-container {
+  width: 100%;
+  max-width: 1405px; /* Maximum content width */
+  margin: 0 auto; /* Ensures it's centered */
+  padding: 0 var(--gap-md); /* Vertical padding is controlled by section, horizontal for inner content */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg); /* Spacing between major sections (media, overview, case study) */
+  background-color: var(--card-background); /* Background for the main container */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow for the container */
+  /* Removed margin-top and margin-bottom here as gap on parent handles spacing */
+  position: relative; /* CRUCIAL: For positioning the ongoing-overlay */
+  overflow: hidden; /* Ensures overlay stays within bounds */
+}
+
+/* NEW: Style for ongoing project container */
+.project-viewer-main-container.project-ongoing {
+  /* You might want to slightly dim or gray out the background or border
+     to visually suggest it's ongoing even before the overlay appears fully,
+     or if the overlay is semi-transparent. */
+   background-color: #f0f0f0; 
+  border: 1px dashed var(--primary-color-light); 
+}
+
+
+/* Project Navigation (now within .project-navigation-wrapper) */
+.project-navigation-wrapper .project-navigation { /* Target it specifically if needed */
+  display: flex;
+  justify-content: space-between; /* Keeps buttons at ends, title in middle */
+  align-items: center;
+  gap: 20px; /* Adjusted gap for better responsiveness */
+  padding: 20px 0; /* Vertical padding */
+  border-bottom: 1px solid var(--border-color); /* Still keep the border */
+}
+
+/* No change to nav-button and project-title-and-date styles as they are children of .project-navigation */
+
+.nav-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 10px; /* Increased padding for easier click */
+  border-radius: 50%;
+  display: flex; /* For centering icon */
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0; /* Prevent buttons from shrinking too much */
+  width: 48px; /* Fixed width for consistent button size */
+  height: 48px; /* Fixed height for consistent button size */
+}
+
+.nav-button:hover {
+  background-color: var(--primary-color-light);
+  color: var(--primary);
+}
+
+.project-title-and-date {
+  text-align: center;
+  flex-grow: 1; /* Allows title to take available space */
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack title and date vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-width: 0; /* Allows content to shrink */
+  padding: 0 10px; /* Add some horizontal padding to prevent text from touching buttons */
+}
+
+.project-viewer-heading {
+  font-size: 2.2rem;
+  color: var(--heading-color);
+  margin-bottom: 5px;
+  line-height: 1.2;
+  white-space: nowrap; /* Keep heading on one line by default */
+  overflow: hidden; /* Hide overflow if too long */
+  text-overflow: ellipsis; /* Add ellipsis */
+}
+
+.project-date {
+  font-size: 0.95rem;
+  color: var(--text-color-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Full-size Media Display */
+.project-media-full {
+  width: 100%; /* Make it full width of its parent container */
+  max-width: 1405px; /* Retain max-width for large screens */
+  height: 805px; /* Set a fixed height here directly */
+  background-color: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures iframe/image stays within bounds */
+  box-shadow: 0 6px 12px var(--shadow-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-viewer-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block; /* Removes extra space below iframe */
+}
+
+.project-viewer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the entire image is visible */
+  display: block;
+}
+
+.no-media-placeholder {
+  color: var(--text-color-secondary);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* NEW: Ongoing Project Overlay - positioned relative to .project-viewer-main-container */
+.ongoing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+  display: flex;
+  flex-direction: column; /* Allows stacking text and perhaps an icon */
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Ensure it's above all content inside the container */
+  /* pointer-events: none; */ /* Removed pointer-events: none to prevent interaction with covered content */
+  border-radius: 8px; /* Match parent's border-radius */
+  gap: 15px; /* Space between text and icon if you add one */
+}
+
+.ongoing-text {
+  color: var(--card-background); /* White text */
+  background-color: rgba(7, 90, 180, 0.9); /* Primary color background */
+  padding: 15px 30px;
+  border-radius: 50px; /* Pill shape */
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Overview & Action Buttons */
+.project-overview {
+  background-color: var(--card-background);
+  padding: var(--gap-md);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md); /* Space between description and buttons */
+  margin-top: -20px; /* Pull it up slightly to overlap with media shadow */
+}
+
+.project-description-summary {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--short-description-color);
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center the summary text */
+}
+
+.project-action-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 15px; /* Space between buttons */
+  justify-content: center; /* Center buttons horizontally */
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.project-btn-icon {
+  margin-left: 8px;
+  width: 18px; /* Standard icon size */
+  height: 18px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--card-background); /* White text on primary button */
+  border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Section Separator */
+.section-separator {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: var(--gap-lg) auto; /* Center the separator */
+  width: 80%; /* Shorter line */
+}
+
+/* Case Study Details */
+.project-case-study-details {
+  background-color: var(--card-background);
+  padding: var(--gap-md);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Spacing between individual case study sections */
+}
+
+.case-study-section {
+  margin-bottom: 0; /* Resetting default margin, controlled by gap */
+}
+
+.case-study-section h3 {
+  color: var(--heading-color);
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--primary-color-light); /* Subtle separator */
+  padding-bottom: 8px;
+}
+
+.case-study-section p {
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+/* Styles for Lists within Case Study (Contributions, Challenges) */
+.contribution-list,
+.challenge-list {
+  list-style-type: disc; /* Default bullet points */
+  padding-left: 25px; /* Indent the list items */
+  margin-top: 10px; /* Space above the list if it follows a paragraph */
+  margin-bottom: 15px; /* Space after the list */
+}
+
+.contribution-list li,
+.challenge-list li {
+  margin-bottom: 8px; /* Space between list items */
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Bold text inside lists from dangerouslySetInnerHTML (if you use it often) */
+.contribution-list li strong,
+.challenge-list li strong,
+.case-study-section p strong {
+  color: var(--primary); /* Highlight strong text */
+  font-weight: 700;
+}
+
+
+/* Project Technologies Tags */
+.project-tech-used-tags {
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap to next line */
+  gap: 10px; /* Space between tags */
+  margin-top: 10px;
+}
+
+.project-tag-item {
+  background-color: var(--primary-color-light); /* Light background for tags */
+  color: var(--primary); /* Darker text for readability */
+  padding: 8px 15px;
+  border-radius: 20px; /* Rounded corners for pill-shape */
+  font-size: 0.9em;
+  font-weight: 500;
+  white-space: nowrap; /* Prevent tags from breaking */
+  border: 1px solid var(--primary-color); /* Subtle border */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-tag-item:hover {
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    transform: translateY(-2px);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1410px) {
+  .project-media-full {
+    width: 100%; /* Becomes full width of its parent */
+    height: 600px; /* Reverts to a responsive height (adjust as needed) */
+    max-width: 100%; /* Ensures it doesn't try to go beyond parent */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust padding-top for smaller screens if navbar height changes responsively */
+  .section.project-viewer-section {
+    padding-top: 70px; /* Example: Adjust if navbar is shorter on mobile */
+  }
+
+  .project-viewer-heading {
+    font-size: 1.8rem;
+    white-space: normal; /* Allow title to wrap on smaller screens */
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .project-date {
+    font-size: 0.9rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  /* Make navigation title stack on smaller screens */
+  .project-navigation-wrapper .project-navigation { /* Target the specific navigation now */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Reduce gap */
+    padding: 10px 0; /* Adjust padding */
+  }
+  .project-navigation-wrapper .project-title-and-date { /* Target the specific title */
+    flex-basis: 100%; /* Make title take full width when wrapped */
+    order: -1; /* Place title above buttons */
+    margin-bottom: 15px; /* Space below title when wrapped */
+  }
+
+  .nav-button {
+    width: 40px; /* Smaller buttons on mobile */
+    height: 40px;
+    padding: 6px;
+  }
+
+  .project-media-full {
+    height: 450px; /* Adjust height for smaller screens */
+  }
+
+  .project-overview,
+  .project-case-study-details {
+    padding: var(--gap-md); /* Keep consistent padding */
+  }
+
+  .project-action-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center stacked buttons */
+  }
+
+  .project-btn {
+    width: 100%; /* Make buttons full width when stacked */
+    max-width: 250px; /* Limit max width for stacked buttons */
+  }
+
+  .case-study-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .case-study-section p,
+  .contribution-list li,
+  .challenge-list li {
+    font-size: 0.95rem;
+  }
+
+  .ongoing-text {
+    font-size: 1.2rem; /* Adjust text size for smaller screens */
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section.project-viewer-section {
+    padding-top: 60px; /* Further adjust if navbar is even shorter on very small mobile screens */
+  }
+
+  .project-viewer-heading {
+    font-size: 1.5rem;
+  }
+
+  .project-date {
+    font-size: 0.85rem;
+  }
+
+  .project-media-full {
+    height: 300px; /* Further reduce height for very small screens */
+  }
+
+  .project-overview,
+  .project-case-study-details {
+    padding: 15px;
+  }
+
+  .project-tag-item {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+
+  .ongoing-text {
+    font-size: 1rem; /* Further adjust text size for very small screens */
+    padding: 8px 15px;
+  }
+}

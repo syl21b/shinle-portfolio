@@ -1,0 +1,74 @@
+/* src/styles/_services.css */
+
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8rem 2rem;
+  text-align: center;
+  background: var(--light);
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+.my-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.my-col {
+  text-align: center;
+  width: auto;
+}
+
+.my-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  padding: 3rem;
+  box-shadow: var(--glow-primary);
+  height: 100%;
+  border-radius: 16px;
+  color: var(--light);
+}
+
+.my-card h3 {
+  color: var(--light);
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.my-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+.icon {
+  height: 110px; /* Larger icon circle */
+  width: 110px;
+  border-radius: 50%;
+  background-color: var(--dark); /* Dark background for icon circle */
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 10px rgba(52, 73, 94, 0.2), var(--glow-primary); /* Primary glow inset, even softer */
+  transition: all 0.3s ease;
+}
+
+.my-card:hover .icon {
+  transform: scale(1.15); /* More pronounced scale */
+  box-shadow: inset 0 0 20px var(--primary), 0 0 10px var(--primary); /* Primary glow */
+}
+
+.icon svg {
+  font-size: 50px; /* Larger icon size */
+  color: var(--light); /* Light color for icon */
+}

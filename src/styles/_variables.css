@@ -1,0 +1,54 @@
+/* src/styles/_variables.css */
+
+/* Luxurious color palette and refined glow effects */
+:root {
+  --primary: #2876c4; /* Softer Deep Charcoal Blue */
+  --primary-dark: #2e3842; /* Slightly darker for subtle depth */
+  --secondary: #6C7A89; /* Muted Blue-Gray, closer to primary for minimalism */
+  --accent: #B0B0B0; /* Neutral medium gray for subtle highlights */
+  --dark: #34495E; /* Consistent Deep Charcoal for text on light backgrounds */
+  --light: #FDFDFD; /* Even softer Off-White - Main background */
+  --gray: #747777; /* Lighter, more muted Ash Gray - for secondary text */
+  --success: #2ECC71; /* Softer Green */
+  --warning: #B0B0B0; /* Neutral medium gray for secondary accents (same as accent for ultimate minimalism) */
+  --error: #E74C3C; /* Consistent Red */
+
+  /* Refined Glow effects and Shadows (Adjusted for even more minimal and organized look) */
+  --glow-primary: 0 0 5px rgba(52, 73, 94, 0.1); /* Even softer, more subtle primary glow */
+  --glow-accent: 0 0 8px rgba(176, 176, 176, 0.15); /* Very subtle gray glow */
+  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.03); /* Extremely light, subtle shadow */
+  --card-hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Still deep but more diffused on hover */
+  --card-border: 1px solid rgba(0, 0, 0, 0.015); /* Almost invisible border */
+  --card-hover-border: 1px solid rgba(176, 176, 176, 0.6); /* Softer hover border with new accent */
+  --section-shadow: 0 5px 20px -8px rgba(0, 0, 0, 0.03); /* Very light section shadow */
+
+  /* New color for distinct short description */
+  --short-description-color: #5197c9; /* A slightly brighter, distinct blue */
+
+  /*-------weather's color------------*/
+  /* Basic Text & Background Colors (adjust as per your site's theme) */
+  --color-navbar-bg: #2d3748; /* Dark blue-grey for navbar */
+  --color-navbar-item-bg: rgba(255, 255, 255, 0.08); /* Subtle background for weather block */
+  --color-primary-weather: #87ceeb; /* A nice sky blue for temperature (if not overridden) */
+  --color-accent-weather: #4dabf7; /* Default icon color (will be overridden by temp colors) */
+  --color-text-light: #f0f4f8; /* Light text for main info */
+  --color-text-muted: #cbd5e0; /* Slightly darker text for secondary info */
+  --color-error-weather: #ef4444; /* Red for errors (renamed to avoid conflict) */
+  --shadow-navbar: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  /* Temperature colors */
+  --color-temp-cold: #64b5f6;
+  --color-temp-cool: #4fc3f7;
+  --color-temp-mild: #4db6ac;
+  --color-temp-warm: #ffb74d;
+  --color-temp-hot: #ff7043;
+
+  /* Weather-specific colors */
+  --color-weather-thunderstorm: #9c27b0;
+  --color-weather-rain: #2196f3;
+  --color-weather-snow: #00bcd4;
+  --color-weather-fog: #9e9e9e;
+  --color-weather-cloudy: #607d8b;
+  --color-weather-sunny: #ff9800;
+  --color-weather-windy: #795548;
+}

@@ -1,0 +1,77 @@
+/* src/styles/_features.css */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.feature-card {
+  background: var(--light);
+  backdrop-filter: blur(10px);
+  border: var(--card-border);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(52, 73, 94, 0.02) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--gray);
+}
+
+.feature-card .icon-wrapper {
+  background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 8px rgba(52, 73, 94, 0.15), var(--glow-primary);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-wrapper {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 0 15px rgba(52, 73, 94, 0.25), var(--glow-primary);
+}
+
+.feature-card .icon-wrapper svg {
+  font-size: 40px;
+  color: var(--light);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+

@@ -1,0 +1,237 @@
+/* src/styles/_portfolio.css */
+
+.portfolio {
+  position: relative;
+  padding: 8rem 2rem;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--light);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* Base style for individual project cards */
+.port-card {
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  background-color: var(--light);
+  border-radius: 12px;
+  overflow: hidden; /* Ensures content stays within rounded corners */
+  box-shadow: 0 10px 25px var(--shadow-medium);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Needed for the ongoing-overlay */
+}
+
+.port-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow-strong);
+}
+
+/* Left Frame: Media Container (for image or iframe) */
+.port-card-media {
+  width: 100%;
+  /* Mobile height: Adjust to a more reasonable value, e.g., 280px-400px */
+  height: 350px; /* More reasonable default height for mobile/stacked layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.01);
+  border-bottom: 1px solid var(--border-light); /* Separator for stacked layout */
+}
+
+/* Image styling */
+.port-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Iframe styling (for dashboards, PDFs, etc.) */
+.port-card-media iframe,
+.dashboard-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  overflow: auto; /* Allow internal scrolling for iframe content */
+  background-color: var(--light); /* Ensure background is light for embedded content */
+}
+
+/* Right Frame: Text Content Container */
+.port-card-text-content {
+  flex: 1; /* Allows it to grow in flex container */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: left;
+  /* Add min-height to ensure it doesn't collapse too much on mobile if content is short */
+  min-height: 200px; /* Ensures some base height for text content */
+}
+
+/* This div will naturally group the title, description, and toggle button */
+.port-card-text-content > div:first-child {
+  flex-grow: 1; /* This pushes the buttons container to the bottom */
+}
+
+.port-card h3 { /* Project Title within the card */
+  color: var(--dark);
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Adjustments for date, short description, tags, and buttons */
+.port-card .text-sm.font-semibold.text-\[var\(--accent\)\] { /* Targets the date span */
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.port-card .project-short-description {
+  font-size: 1.0rem;
+  font-weight: 500;
+  color: var(--short-description-color);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.port-card .long-description {
+  max-height: 8em; /* Collapsed height (approx 4-5 lines of text) */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  color: var(--gray) !important;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  padding-right: 1px; /* Small padding to prevent scrollbar flicker if content is exactly max-height */
+}
+
+.long-description.expanded {
+  max-height: 1000px; /* A sufficiently large value to reveal all content, adjust if content is much larger */
+  /* Using a large pixel value is often better than 'none' for smooth transitions */
+  color: var(--gray) !important;
+}
+
+.description-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  color: var(--primary);
+  align-self: flex-start; /* Ensure button aligns to the start within its flex container */
+}
+
+.project-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.port-card .project-tag {
+  background-color: rgba(52, 73, 94, 0.03);
+  color: var(--dark);
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(52, 73, 94, 0.1);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.01);
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+}
+
+.port-card .project-buttons-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.port-card .btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Styles for the Ongoing Project Overlay */
+.ongoing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 118, 196, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.ongoing-text {
+  color: var(--light);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments for Port Card */
+@media (min-width: 993px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Keep 1 column layout, cards become rows */
+  }
+
+  .port-card {
+    flex-direction: row; /* Desktop: side-by-side frames */
+    /* Remove fixed min-height here, let content define it for better responsiveness */
+  }
+
+  .port-card-media {
+    flex: 1; /* Takes 1 part of available space */
+    /* On desktop, remove fixed height and let it match the height of the card */
+    height: auto;
+    /* You can set a min-height if you want a minimum visual presence even with short text */
+    min-height: 100%; /* Ensure media has a reasonable minimum height */
+    border-bottom: none; /* Remove bottom border */
+    border-right: 1px solid var(--border-light); /* Add right border for separation */
+  }
+
+  .port-card-text-content {
+    flex: 1; /* Takes 1 part */
+    padding: 2rem;
+    /* Set a min-height for the text content on desktop as well */
+    min-height: 400px; /* Match media min-height for visual balance */
+  }
+}
+
+@media (max-width: 768px) {
+  .port-card-media {
+    height: 250px; /* Further reduce media height on smaller screens for mobile view */
+  }
+  .port-card .btn {
+    width: 100%; /* Make buttons full width on small screens */
+  }
+}

@@ -1,0 +1,158 @@
+/* src/styles/_learning.css */
+
+/* Page Wrapper */
+.learning-page-wrapper {
+  min-height: 100vh;
+  background-color: var(--light-gray, #f3f4f6); /* Using a fallback if --light-gray isn't defined */
+  padding: 2rem 1rem; /* py-8 px-4 */
+  padding-top: 4rem; /* Added padding to clear the fixed navbar */
+  font-family: 'Inter', sans-serif; /* Ensure Inter font is loaded */
+}
+
+/* Main Content Container */
+.learning-content-container {
+  max-width: 1024px; /* max-w-screen-lg */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+  padding: 2.5rem; /* Increased padding for more breathing room */
+  background-color: var(--light); /* bg-white */
+  border-radius: 0.75rem; /* Slightly more rounded */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); /* Stronger, more diffused shadow */
+  border: 1px solid var(--border-color, #e0e0e0); /* Added subtle border */
+}
+
+/* Responsive padding for content container */
+@media (min-width: 640px) { /* sm breakpoint */
+  .learning-content-container {
+    padding: 3rem; /* Increased for larger screens */
+  }
+}
+
+/* Header */
+.learning-header {
+  text-align: center;
+  margin-bottom: 3.5rem; /* Increased margin-bottom */
+}
+
+/* NEW: Main title for the Learning page */
+.learning-main-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700; /* Bolder for main title */
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Larger clamp range for main title */
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  color: var(--dark);
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: var(--glow-primary);
+  margin-bottom: 1rem; /* Spacing below the main title */
+}
+
+/* NEW: Paragraph style for Learning page content */
+.learning-paragraph {
+  font-size: 1.1rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 1rem; /* Default margin for paragraphs */
+}
+
+/* New class for smaller, refined section titles */
+.learning-section-title {
+  font-family: 'Space Grotesk', sans-serif; /* Maintain heading font */
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3vw, 2.5rem); /* Smaller clamp range for section titles */
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 2rem; /* Consistent spacing below title */
+}
+
+/* Section Blocks */
+.learning-section-block {
+  margin-bottom: 5rem; /* Increased margin-bottom for more separation between sections */
+}
+
+/* NEW: Container for individual content blocks (videos, article links) */
+.learning-content-block {
+  background-color: var(--light); /* White background */
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  border: 1px solid var(--border-color, #e0e0e0); /* Subtle border */
+  padding: 2rem; /* Internal padding */
+  margin-bottom: 2.5rem; /* Space between content blocks within a section */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.learning-content-block:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+/* Specific styling for the About DataWithBaraa box */
+.learning-bio-box {
+  background-color: var(--light-bg-alt, #f9fafb); /* Lighter background */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-top: 1.5rem; /* Space above the bio box */
+  border: 1px solid var(--border-color, #e5e7eb);
+}
+
+.learning-bio-box h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem; /* Smaller heading for bio */
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+
+/* Iframe Wrapper (for aspect ratio and centering) */
+.learning-iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 0.75rem; /* Slightly more rounded */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+  max-width: 800px; /* max-width from inline style */
+  border: 1px solid var(--border-color, #e0e0e0); /* Added subtle border */
+}
+
+/* Iframe itself */
+.learning-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Footer */
+.learning-footer {
+  text-align: center;
+  color: var(--gray-text, #6b7280);
+  margin-top: 4rem; /* Increased margin-top */
+  font-size: 0.9rem; /* Slightly smaller font for footer */
+}
+
+/* Ensure your existing h1, h2, p, and button styles apply correctly */
+/* Your _base.css, _buttons.css, _utilities.css already define these */
+/* For example, h1, h2, p, .btn, .btn-primary */
+
+/* If --light-gray or --border-color or --light-bg-alt are not in _variables.css,
+   you might want to add them or use direct hex values. */
+/* Example for _variables.css:
+:root {
+  --light-gray: #f3f4f6;
+  --border-color: #e5e7eb;
+  --light-bg-alt: #f9fafb;
+  --gray-text: #6b7280;
+}
+*/

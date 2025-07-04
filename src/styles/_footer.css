@@ -1,0 +1,122 @@
+/* src/styles/_footer.css */
+
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--light);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(227, 61, 61, 0.05);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  gap: 2rem;
+}
+
+/* Refined social media icons for Hero and Footer sections */
+.footer-list-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.footer-list-items:hover {
+  background-color: var(--primary);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.footer-list-items svg {
+  font-size: 40px;
+  color: var(--light);
+  transition: color 0.3s ease;
+}
+
+.footer-list-items:hover svg {
+  color: var(--light);
+}
+
+.footer-links { /* This class is now largely redundant for social icons directly in footer-list-items */
+  font-size: 30px;
+  color: var(--light);
+  text-decoration: none;
+}
+
+.footer-menu {
+  padding: 0;
+}
+
+.footer-menu .footer-menu-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  padding: 0;
+}
+
+.footer-menu-list .links {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.footer-menu-list .links:hover {
+  color: var(--light);
+  border-bottom-color: var(--light);
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* **FIXED .logo and .logo-img styling for consistent button integration** */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.logo:hover {
+  box-shadow: var(--glow-primary);
+  transform: translateY(-5px);
+}
+
+.logo-img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Ensure footer-list-items (for social icons) remain larger */
+.footer-list-items.logo {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}

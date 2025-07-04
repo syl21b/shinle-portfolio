@@ -1,0 +1,252 @@
+/* src/styles/_navbar.css */
+
+.navbar-main {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(44, 62, 80, 0.9);
+  padding: 0.5rem 0rem;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--light);
+}
+
+.navbar-logo .accent-text {
+  color: var(--accent);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--light);
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 0.rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.navbar-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--light);
+}
+
+.navbar-mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(44, 62, 80, 0.95);
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem 1rem;
+  box-shadow: var(--card-shadow);
+  border-radius: 0 0 8px 8px;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.nav-link-mobile {
+  color: var(--light);
+  font-weight: 500;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.nav-link-mobile:last-child {
+  border-bottom: none;
+}
+
+.nav-link-mobile:hover {
+  color: var(--accent);
+}
+
+.nav-link.home-link {
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.nav-link.home-link:hover {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px var(--primary),
+    0 0 40px var(--primary);
+}
+
+/* ===================================== */
+/* Navbar Weather & Time Structure       */
+/* ===================================== */
+/* Container for the entire weather block within the navbar */
+.navbar-weather {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem; /* Space from logo/left edge */
+  padding: 0.4rem 0.8rem; /* Inner padding */
+  border-radius: 8px; /* Subtle rounded corners */
+}
+
+/* Main grid layout for weather icon, details, and time */
+.weather-info-grid {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Icon on left, content on right */
+  grid-template-rows: auto auto; /* First row for details, second for time */
+  gap: 0.1rem 0.75rem; /* Row gap (tight), Column gap (normal) */
+  align-items: center; /* Vertically center items in their grid cells */
+  color: var(--color-text-light); /* General text color */
+}
+
+/* Weather Icon - positioned to span both rows */
+.weather-icon-dynamic {
+  grid-row: 1 / span 2; /* Spans both rows */
+  grid-column: 1; /* First column */
+  width: 36px;
+  height: 36px;
+  /* IMPORTANT: REMOVED THE color PROPERTY HERE. It's handled by inline style from React. */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+  transition: color 0.5s ease, filter 0.3s ease;
+}
+
+/* Weather Details - Container for Location, Temperature, Description */
+/* RENAMED CLASS HERE TO MATCH JSX: weather-details-main */
+.weather-details-main {
+  grid-row: 1; /* First row */
+  grid-column: 2; /* Second column */
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  gap: 0.05rem; /* Very tight spacing between its children */
+  align-items: flex-start; /* Align text to the left */
+  line-height: 1.1; /* Tighter line height for entire block */
+}
+
+.current-location-name {
+  font-size: 0.75rem; /* Smaller for subtle location */
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px; /* Constrain width to prevent excessive overflow */
+  display: block; /* Ensure it takes its own line */
+}
+
+.weather-temperature {
+  font-weight: 700;
+  font-size: 1.3rem; /* Prominent temperature */
+  line-height: 1; /* Tight line height */
+  color: var(--color-text-light); /* This is for the text, icon color is separate */
+  margin: 0; /* Remove default margins */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.weather-description {
+  font-size: 0.75rem; /* Same size as location for consistency */
+  color: var(--color-text-muted);
+  line-height: 1.2;
+  text-transform: capitalize; /* Ensures consistent capitalization */
+  margin: 0; /* Remove default margins */
+  white-space: nowrap; /* Keep description on one line if possible */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis if it overflows */
+  max-width: 140px; /* Match max-width of location name */
+}
+
+/* Time Section */
+.weather-time {
+  grid-row: 2; /* Second row */
+  grid-column: 2; /* Second column */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  /* NO DOT HERE ANYMORE, SO gap MIGHT BE ADJUSTED IF NEEDED */
+  /* gap: 0.3rem; */
+  margin-top: 0.1rem; /* Small margin to separate from description */
+}
+
+/* REMOVED: THE ENTIRE .weather-time::before BLOCK IS GONE */
+/* If you want a dot, you'd add it back with content: '•'; here */
+
+.current-time {
+  font-size: 0.8rem; /* Consistent size for time */
+  color:var(--color-text-light);
+  line-height: 1;
+}
+
+/* Loading and Error States (adjusting slightly for current font sizes) */
+.weather-loading,
+.weather-error {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+}
+
+.weather-loading {
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.2rem; /* Give it a fixed height to prevent jumping */
+}
+
+.weather-error {
+  color: var(--color-error-weather); /* Corrected variable name from --color-error */
+  background: rgba(255, 107, 107, 0.1);
+  height: 2.2rem; /* Give it a fixed height to prevent jumping */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 1024px) {
+  .navbar-weather {
+    margin-left: 0; /* Remove margin on smaller screens if it pushes too much */
+    margin-top: 1rem; /* Add some top margin */
+  }
+  .weather-info-grid {
+    grid-template-columns: auto 1fr;
+    gap: 0.2rem 0.5rem;
+  }
+}
+.resume-button {
+  padding: 4px 12px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.resume-button:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}

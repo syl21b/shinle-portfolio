@@ -1,0 +1,16 @@
+/* src/styles/main.css */
+
+@import './_variables.css';
+@import './_base.css';
+@import './_layout.css';
+@import './_learning.css';
+@import './_navbar.css';
+@import './_hero.css';
+@import './_features.css';
+@import './_portfolio.css';
+@import './_services.css';
+@import './_contact.css';
+@import './_footer.css';
+@import './_buttons.css'; 
+@import './_utilities.css';
+@import './_resume.css';

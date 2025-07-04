@@ -1,0 +1,880 @@
+/* App.css - Refactored for an impressive, futuristic, and luxurious look */
+
+/* Import Google Fonts - Inter for body, Space Grotesk for headings */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* Luxurious color palette and refined glow effects */
+:root {
+  --primary: #2C3E50; /* Deep Charcoal Blue - Richer primary */
+  --primary-dark: #1A252F; /* Even darker for subtle contrast */
+  --secondary: #6A0572; /* Rich Deep Purple */
+  --accent: #FFD700; /* Gold - for highlights and glows */
+  --dark: #2C3E50; /* Deep Charcoal - for text on light backgrounds */
+  --light: #F8F8F8; /* Soft Off-White - Main background */
+  --gray: #7F8C8D; /* Muted Ash Gray - for secondary text */
+  --success: #27AE60; /* Adjusted Green */
+  --warning: #F39C12; /* Adjusted Orange */
+  --error: #E74C3C; /* Adjusted Red */
+  
+  /* Refined Glow effects and Shadows (Adjusted based on minimal/luxury request) */
+  --glow-primary: 0 0 10px rgba(44, 62, 80, 0.2); /* Softer primary glow */
+  --glow-accent: 0 0 18px rgba(255, 215, 0, 0.3); /* Slightly softer gold glow */
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* More diffused, lighter shadow */
+  --card-hover-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* Deeper, elegant hover shadow */
+  --card-border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle border */
+  --card-hover-border: 1px solid var(--accent); /* Gold border on hover */
+  --section-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.1); /* Lighter section shadow */
+}
+
+/* Universal box-sizing reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; /* For smoother text rendering */
+  -moz-osx-font-smoothing: grayscale; /* For smoother text rendering */
+}
+
+/* Body and Global Typography */
+html {
+  scroll-behavior: smooth;
+  height: 100%; /* Ensure html takes full height */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--light); /* Main background: Soft Off-White */
+  color: var(--dark); /* Default text color: Deep Charcoal */
+  min-height: 100vh;
+  line-height: 1.7; /* Slightly more spacious line height */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the main app wrapper fills the screen and structures content */
+#root, .app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--light); /* Main background for app wrapper */
+  color: var(--dark); /* Default text color for app wrapper */
+}
+
+
+/* Headings - Space Grotesk with sophisticated styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700; /* Bolder headings */
+  line-height: 1.3;
+  letter-spacing: -0.03em; /* Slightly tighter letter spacing */
+  color: var(--dark); /* Default heading color: Deep Charcoal */
+}
+
+h1 {
+  font-size: clamp(3rem, 6vw, 5rem); /* Larger, more impactful H1 */
+  background: linear-gradient(90deg, var(--accent), var(--primary)); /* Gold to primary gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: var(--glow-accent); /* Gold glow for H1 */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem); /* Larger H2 */
+  position: relative;
+  margin-bottom: 2.5rem;
+  color: var(--dark);
+  width: 100%;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1rem; /* Slightly larger base paragraph font for readability */
+  color: var(--gray); /* Muted gray for paragraph text */
+  line-height: 1.8; /* More spacious line height */
+}
+
+/* Layout and Section Styling */
+.container {
+  width: 100%;
+  max-width: 1280px; /* Wider container for more expansive layouts */
+  margin: 0 auto;
+  padding: 0 2rem; /* Increased padding */
+}
+
+.section { /* Generic section padding */
+  padding: 8rem 0; /* More generous padding for distinct sections */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.section-dark {
+  /* Subtle light gradient background on white */
+  background: linear-gradient(180deg, rgba(240, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%); 
+  box-shadow: inset 0 5px 15px rgba(0,0,0,0.03); /* Lighter inner shadow */
+}
+
+.section-accent {
+  background: linear-gradient(45deg, var(--secondary), var(--primary)); /* Reverse gradient for variety */
+  color: var(--light);
+}
+
+/* Impressive Elements & Components */
+
+/* Hero Section */
+.hero-main {
+  min-height: 90vh; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: var(--light); /* Ensure light background for hero */
+  /* Added subtle radial glow from index.css, adjusted for light theme */
+  background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 70%), var(--light);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px; /* Wider content area */
+  animation: fadeInScale 1.2s ease-out forwards; /* Slightly slower animation */
+}
+
+.hero-main p {
+  font-size: clamp(1.2rem, 2vw, 1.4rem); /* Larger hero paragraph */
+  margin-bottom: 3rem;
+  color: var(--dark); /* Dark text on light background */
+  text-shadow: none; /* No text shadow on light background */
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Increased gap */
+  flex-wrap: wrap;
+}
+
+/* Feature Cards (for About/Skills) */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Larger min-width for cards */
+  gap: 2.5rem; /* Increased gap */
+  margin-top: 4rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.95); /* Light background for cards */
+  backdrop-filter: blur(15px); /* Stronger blur */
+  border: var(--card-border); /* Subtle border from root variables */
+  border-radius: 16px; /* More rounded for softness */
+  padding: 3rem; /* Increased padding */
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother, more elegant transition */
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before { /* Subtle background pattern/glow */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 60%); /* Gold hint */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px); /* More pronounced lift */
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--accent); /* Gold border on hover */
+}
+
+.feature-card .icon-wrapper {
+  background: linear-gradient(45deg, var(--secondary), var(--primary)); /* Richer gradient for icons */
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Larger icon wrapper */
+  height: 80px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1), var(--glow-accent); /* Soft shadow with accent glow */
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-wrapper {
+  transform: rotate(5deg) scale(1.1); /* More pronounced animation */
+  box-shadow: 0 0 25px rgba(0,0,0,0.2), var(--glow-accent);
+}
+
+.feature-card .icon-wrapper svg {
+  font-size: 40px; /* Larger icon size */
+  color: var(--light); /* Light color for icons */
+}
+
+.feature-card h3 {
+  color: var(--primary); /* Primary color for card headings */
+  font-size: 1.8rem; /* Larger H3 */
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+/* Call to Action Section (Contact Section) */
+.cta-section {
+  text-align: center;
+  padding: 5rem 2rem; /* Increased padding */
+  background: linear-gradient(135deg, var(--primary), var(--secondary)); /* Rich gradient background */
+  border-radius: 20px; /* More rounded */
+  margin: 4rem auto; /* More margin */
+  max-width: 1000px; /* Wider CTA */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2), var(--glow-primary); /* Deeper shadow with primary glow */
+  border: 1px solid var(--accent); /* Accent border */
+  position: relative;
+  overflow: hidden;
+  color: var(--light); /* Light text on dark gradient */
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section h2 {
+  color: var(--light); /* Light heading on dark gradient */
+  margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for paragraph */
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.cta-section .btn {
+  font-size: 1.1rem; /* Larger button text */
+  padding: 1rem 2.5rem; /* Larger padding */
+}
+
+/* Portfolio section styles (re-using general card and grid structure) */
+.portfolio {
+  position: relative;
+  padding: 8rem 2rem; /* Consistent generous padding */
+  text-align: center;
+}
+
+.portfolio-grid { /* New class for grid layout */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); /* Adjusted min-width for larger cards */
+  gap: 3rem; /* Larger gap */
+  margin-top: 4rem;
+}
+
+.port-card {
+  background: rgba(255, 255, 255, 0.95); /* Light background for portfolio cards */
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: var(--card-border); /* Subtle border from root variables */
+  box-shadow: var(--card-shadow);
+  display: flex; /* Ensure flex for consistent internal layout */
+  flex-direction: column; /* Stack content vertically */
+  height: 100%; /* Important for grid alignment */
+}
+
+.port-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--accent);
+}
+
+.port-card .image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.port-card .image img {
+  height: 250px; /* Increased height for images */
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.port-card:hover .image img {
+  transform: scale(1.08); /* More pronounced zoom */
+}
+.dashboard-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 450px; /* Adjusted min-height for iframe */
+  border: none;
+  background-color: var(--dark); /* Dark background for iframe to stand out on light page */
+}
+
+/* FIX: Redesigned project-tag for small, highlighted boxes (Luxury style) */
+.project-tag {
+  display: inline-block;
+  background-color: rgba(255, 215, 0, 0.1); /* Very subtle gold background */
+  color: var(--dark); /* Dark text on light gold background */
+  padding: 0.5rem 1rem; /* Generous padding */
+  border-radius: 10px; /* More rounded */
+  font-size: 0.9rem; /* Slightly larger font */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em; /* More letter spacing */
+  border: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: all 0.25s ease-in-out;
+  cursor: default;
+}
+
+.project-tag:hover {
+  transform: translateY(-3px); /* More pronounced lift */
+  background-color: rgba(255, 215, 0, 0.2); /* Slightly stronger gold on hover */
+  border-color: var(--accent); /* Solid gold border on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), var(--glow-accent); /* Enhanced shadow with glow */
+}
+
+.port-card-content {
+  padding: 2rem; /* More padding */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.port-card-content h3 {
+  color: var(--primary); /* Primary color for project card titles */
+  margin-bottom: 0.8rem;
+}
+
+.port-card-content p {
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+/* Services section styles */
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8rem 2rem; /* Consistent generous padding */
+  text-align: center;
+  background: var(--light); /* Explicitly light background */
+}
+
+.my-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem; /* Increased gap */
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.my-col {
+  text-align: center;
+  width: auto;
+}
+
+.my-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(135deg, var(--primary), var(--secondary)); /* Rich gradient background */
+  padding: 3rem; /* Increased padding */
+  box-shadow: var(--glow-primary);
+  height: 100%;
+  border-radius: 16px; /* Rounded corners */
+  color: var(--light); /* Light text on dark gradient card */
+}
+
+.my-card h3 {
+  color: var(--light);
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.my-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+.icon {
+  height: 110px; /* Larger icon circle */
+  width: 110px;
+  border-radius: 50%;
+  background-color: var(--dark); /* Dark background for icon circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.3); /* Accent glow inset */
+  transition: all 0.3s ease;
+}
+
+.my-card:hover .icon {
+  transform: scale(1.15); /* More pronounced scale */
+  box-shadow: inset 0 0 30px var(--accent), 0 0 20px var(--accent); /* Stronger glow */
+}
+
+.icon svg {
+  font-size: 45px; /* Larger icon size */
+  color: var(--accent); /* Gold color for icon */
+}
+
+/* Contact section styles */
+.contact {
+  padding: 8rem 2rem; /* Consistent generous padding */
+  color: var(--dark); /* Dark text on light background */
+  background: var(--light); /* Explicitly light background */
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  justify-content: space-between;
+  gap: 4rem; /* Increased gap */
+}
+
+.contact-form-container {
+  flex: 1;
+  min-width: 350px; /* Wider minimum width */
+  background: rgba(255, 255, 255, 0.95); /* Light background for form */
+  border-radius: 16px;
+  padding: 3rem; /* Increased padding */
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.8rem; /* More spacing */
+  font-weight: 700;
+  color: var(--primary); /* Primary color for labels */
+}
+
+.contact-form .form-controls {
+  width: 100%;
+  padding: 1rem 1.2rem; /* Larger inputs */
+  margin-bottom: 2rem; /* More spacing */
+  border-radius: 10px; /* More rounded */
+  border: 1px solid var(--gray);
+  background-color: rgba(0, 0, 0, 0.03); /* Very subtle dark background */
+  color: var(--dark); /* Dark text */
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .form-controls:focus {
+  outline: none;
+  border-color: var(--accent); /* Gold border on focus */
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2); /* Gold glow on focus */
+}
+
+.contact-form textarea.form-controls {
+  min-height: 150px; /* Taller textarea */
+  resize: vertical;
+}
+
+.contact-form .form-btn {
+  width: auto;
+  align-self: flex-start;
+  margin-top: 1.5rem;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 350px; /* Wider minimum width */
+  background: rgba(255, 255, 255, 0.95); /* Light background for details */
+  border-radius: 16px;
+  padding: 3rem; /* Increased padding */
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+}
+
+.contact-details h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.contact-details p {
+  margin-bottom: 1.2rem; /* More spacing */
+  color: var(--dark); /* Dark text */
+  display: flex;
+  align-items: flex-start; /* Align icon to top of text */
+  gap: 1rem; /* Increased gap */
+}
+
+.contact-details p svg {
+  color: var(--accent); /* Gold color for icons */
+  font-size: 1.5rem; /* Larger icons */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--primary-dark); /* Darker primary for footer */
+  color: var(--light);
+  padding: 4rem 2rem; /* More padding */
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem; /* More spacing */
+  gap: 2rem; /* Increased gap */
+}
+
+.footer-list-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px; /* Larger social icons */
+  width: 60px;
+  border-radius: 50%;
+  background-color: var(--primary); /* Primary color for social circles */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.footer-list-items:hover {
+  background-color: var(--accent); /* Gold on hover */
+  box-shadow: var(--glow-accent);
+  transform: translateY(-5px); /* More pronounced lift */
+}
+
+.footer-links {
+  font-size: 30px; /* Larger social icon size */
+  color: var(--light);
+  text-decoration: none;
+}
+
+.footer-menu {
+  padding: 0;
+}
+
+.footer-menu .footer-menu-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* Increased gap */
+  margin-bottom: 2.5rem;
+  padding: 0;
+}
+
+.footer-menu-list .links {
+  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.footer-menu-list .links:hover {
+  color: var(--accent); /* Gold on hover */
+  border-bottom-color: var(--accent);
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.6); /* Even more transparent white */
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* ------------------------------------------- */
+/* Utility Classes (Refined) */
+/* ------------------------------------------- */
+
+.greet-heading {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 1.5px;
+  color: var(--primary); /* Primary color for greet heading */
+  font-family: 'Inter', sans-serif;
+}
+
+.my-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 2rem;
+  color: var(--dark);
+}
+
+.sub-heading {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.heading-span {
+  color: var(--accent); /* Accent for spans within headings */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.small-para {
+  font-size: 1rem;
+  color: var(--dark); /* Dark color for small paragraphs on light background */
+}
+
+.white-text {
+  color: var(--light) !important;
+}
+
+.blue-text {
+  color: var(--primary) !important;
+}
+
+/* Specific style for skill items (for Recharts compatibility) */
+.skill-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  min-height: 250px; /* Increased min-height */
+}
+
+.skill-item h3 {
+  margin-bottom: 0.8rem;
+}
+
+.skill-item p.small-para {
+  margin-bottom: 0.8rem;
+}
+
+.skill-item p.text-xs {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: var(--primary); /* Primary color for skill text */
+}
+
+/* Custom tooltip for Recharts */
+.custom-tooltip {
+  background-color: rgba(44, 62, 80, 0.95); /* Dark background */
+  border: 1px solid var(--accent); /* Gold border */
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: var(--light);
+}
+
+.custom-tooltip .label {
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.custom-tooltip .intro {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Specific styling for the radar chart container */
+.radar-chart-container {
+  margin-top: 3rem;
+}
+
+
+/* Animations */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); } /* More float */
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; } /* Slightly less opaque pulse */
+}
+
+.floating {
+  animation: float 7s ease-in-out infinite; /* Slower float */
+}
+
+.pulsing {
+  animation: pulse 2.5s ease-in-out infinite; /* Slower pulse */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 6rem 0;
+  }
+  .hero-buttons {
+    gap: 1.5rem;
+  }
+  .feature-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .cta-section {
+    margin: 3rem 1.5rem;
+    padding: 4rem 1.5rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+  .services, .contact {
+    padding: 6rem 1.5rem;
+  }
+  .my-row {
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+  .contact-content {
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .contact-form-container, .contact-details {
+    padding: 2.5rem;
+  }
+  .footer {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+  h2 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+  .section {
+    padding: 5rem 0;
+  }
+  .hero-main {
+    padding-top: 5rem;
+    min-height: 80vh;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .feature-card {
+    padding: 2rem;
+  }
+  .cta-section {
+    padding: 3.5rem 1.5rem;
+  }
+  .cta-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .portfolio-grid, .my-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .dashboard-iframe {
+    min-height: 350px;
+  }
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact-form-container, .contact-details {
+    width: 100%;
+    min-width: unset;
+  }
+  .footer-menu .footer-menu-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .logo .logo-heading {
+    font-size: 1.6rem;
+  }
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+  .feature-card {
+    padding: 1.5rem;
+  }
+  .feature-card h3 {
+    font-size: 1.6rem;
+  }
+  .cta-section {
+    padding: 3rem 1rem;
+  }
+  .my-card {
+    padding: 2rem;
+  }
+  .contact-form-container, .contact-details {
+    padding: 2rem;
+  }
+  .footer {
+    padding: 2.5rem 1rem;
+  }
+  .footer-list-items {
+    height: 50px;
+    width: 50px;
+  }
+  .footer-links {
+    font-size: 24px;
+  }
+  .footer-menu-list .links {
+    font-size: 0.9rem;
+  }
+}
