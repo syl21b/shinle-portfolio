@@ -142,11 +142,11 @@ export const projects = [
     results: "Achieved an <strong>R² score of 0.859</strong> with the <strong>Gradient Boosting</strong> model, demonstrating <strong>high accuracy</strong> in predicting used car prices. The identified key price drivers offer valuable insights for strategic pricing and buying decisions, potentially <strong>minimizing financial risk</strong> for users.",
     futureEnhancements: "Develop a <strong>web application</strong> for real-time car price predictions, integrate with <strong>external market data APIs</strong>, incorporate more nuanced features (e.g., car condition, accident history), and retrain models with <strong>more recent data</strong> for continuous accuracy.",
     linkText: "Open Report",
-    linkHref: "https://github.com/syl21b/Car-Price-Prediction/blob/351296bcfdef19fc7f5d38c8808b6cbd8573ca68/Final%20Report_%20Car%20Price%20Prediction.pdf",
+    linkHref: "https://github.com/syl21b/Car-Price-Prediction/blob/main/Final%20Report_%20Car%20Price%20Prediction.pdf",
     buttonTitle: "Open Car Price Prediction Report (PDF) in new tab",
     iframeSrc: `https://docs.google.com/viewer?url=${encodeURIComponent("https://raw.githubusercontent.com/syl21b/Car-Price-Prediction/main/Final%20Report_%20Car%20Price%20Prediction.pdf")}&embedded=true`, // Corrected PDF URL in iframeSrc
     demoLinkText: "View Code",
-    demoLinkHref: "https://github.com/syl21b/Car-Price-Prediction.git",
+    demoLinkHref: "https://github.com/syl21b/Car-Price-Prediction/blob/main/Car%20Price%20Prediction.ipynb",
     demoButtonTitle: "View Car Price Prediction Code on GitHub",
     imagePreview: "/images/car-price-preview.png", // Added a preview image for PDF
   },
