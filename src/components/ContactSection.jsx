@@ -32,7 +32,7 @@ export default function ContactSection() {
             </a>
             {/* Outline button for Download Resume. Uses 'btn' for base styles and 'btn-outline' for the bordered look. */}
             <a
-              href="ShinLe_Resume.pdf" 
+              href="/ShinLe_Resume.pdf" 
               className="download-resume-button btn btn-outline"
               download="ShinLe_Resume.pdf"
               aria-label="Download Resume as PDF"
