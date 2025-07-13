@@ -101,6 +101,19 @@ export default function Showcase() {
                 <ExternalLink className="project-btn-icon" />
               </a>
             )}
+
+            {currentProject.datasetLink && (
+              <a
+                href={currentProject.datasetLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-btn btn-outline"
+                title={`View the dataset for ${currentProject.title}`}
+              >
+                View Dataset
+                <ExternalLink className="project-btn-icon" />
+              </a>
+            )}
           </div>
         </div>
 
@@ -135,6 +148,8 @@ export default function Showcase() {
               ))}
             </div>
           </div>
+
+          {/* Dataset Link was moved from here */}
 
           <div className="case-study-section">
             <h3>Challenges & Learnings:</h3>

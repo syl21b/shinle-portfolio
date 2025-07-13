@@ -35,6 +35,7 @@ export const projects = [
     demoLinkHref: "https://github.com/syl21b/World-Stock-Market.git",
     demoButtonTitle: "View World Stock Market Code on GitHub",
     imagePreview: "/images/stock-market-preview.png", // Ensure you have a preview image for Tableau
+    datasetLink: "https://www.kaggle.com/datasets/nelgiriyewithana/world-stock-prices-daily-updating" // Dataset likely within the GitHub repo or acquired via scripts there
   },
   {
     id: 2,
@@ -70,6 +71,7 @@ export const projects = [
     demoLinkHref: "https://github.com/syl21b/Superstore.git",
     demoButtonTitle: "View Superstore Analysis Code on GitHub",
     imagePreview: "/images/superstore-preview.png", // Ensure you have a preview image for Tableau
+    datasetLink: "https://www.kaggle.com/datasets/blurredmachine/superstore-time-series-dataset/data" // Common Kaggle dataset for Superstore
   },
   {
     
@@ -113,6 +115,7 @@ export const projects = [
       //demoButtonTitle: "Explore the code on GitHub",
       // IMPORTANT: Replace with a more specific image preview for the churn dashboard
       imagePreview: "/images/churn-dashboard-preview.png", // Assuming you'll add this image to your public folder
+      datasetLink: "https://www.kaggle.com/datasets/jokimrodrigues/financial-risk-analysis-dataset" // Common Kaggle dataset for Bank Churn
     },
   {
     id: 4,
@@ -149,6 +152,7 @@ export const projects = [
     demoLinkHref: "https://github.com/syl21b/Car-Price-Prediction/blob/main/Car%20Price%20Prediction.ipynb",
     demoButtonTitle: "View Car Price Prediction Code on GitHub",
     imagePreview: "/images/car-price-preview.png", // Added a preview image for PDF
+    datasetLink: "https://github.com/syl21b/Car-Price-Prediction" // Dataset likely within the GitHub repo or acquired via scripts there
   },
   {
     id: 5,
@@ -185,6 +189,7 @@ export const projects = [
     demoLinkHref: "https://github.com/syl21b/Churn_Prediction/blob/ece7528f3ee130b422453e4c4ed5f7784ddc1c87/Project-Churn%20Prediction.ipynb",
     demoButtonTitle: "View Customer Churn Prediction Code on GitHub",
     imagePreview: "/images/churn-prediction-preview.png", // Added a preview image for PDF
+    datasetLink: "https://www.kaggle.com/datasets/safrin03/predictive-analytics-for-customer-churn-dataset?select=train.csv" // Common Kaggle dataset for Telco Churn
   },
   {
     id: 6,
@@ -246,6 +251,7 @@ export const projects = [
         <li>Utilizes advanced modeling to recommend plans that offer the best financial value *given their anticipated healthcare utilization*, rather than just the lowest premium.</li>
       </ul>
       <p>This feature would revolutionize consumer decision-making by providing predictive financial clarity, moving beyond current year pricing to forecast the true financial implications of health plan choices based on individual health profiles and anticipated events. This shifts the focus from "what is the premium?" to "what will this plan *actually cost me* for my unique health needs?"</p>
-    `
+    `,
+    datasetLink: "https://www.kaggle.com/datasets/bumjoohuh/individual-market-medical-plan" // Official HealthCare.gov data source
   }
 ];
