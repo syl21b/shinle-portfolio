@@ -71,7 +71,7 @@ export default function ResumePage() {
               rel="noopener noreferrer"
               className="project-link"
             >
-              Car Price Prediction | FSU
+              Car Price Prediction
             </a>
             <span className="project-date">(08/2023 – 12/2023)</span>
           </h4>
