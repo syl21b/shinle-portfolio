@@ -1,0 +1,172 @@
+/* Base styles for the entire page */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Changed to white for a light theme */
+    color: #333333; /* Changed to a dark gray for better contrast on white background */
+    line-height: 1.5;
+}
+
+/* Container for the section */
+.section-projects {
+    padding-top: 4rem; /* Corresponds to py-16 */
+    padding-bottom: 4rem; /* Corresponds to py-16 */
+    background-color: #ffffff; /* Changed to white for a light theme */
+}
+
+/* Centering and padding for content */
+.container {
+    max-width: 1280px; /* Corresponds to mx-auto px-4 in Tailwind for large screens */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Heading styles */
+.heading {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem); 
+    font-weight: 800; /* Corresponds to font-extrabold */
+    text-align: center;
+    margin-bottom: 3rem; /* Corresponds to mb-12 */
+    color: #333333; /* Ensure heading is dark for light background */
+}
+
+.heading-span {
+    color: #3b82f6; /* Corresponds to text-blue-500 */
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    gap: 2rem; /* Corresponds to gap-8 */
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Corresponds to grid-cols-1 (default for small screens) */
+}
+
+/* Medium screens (md: breakpoint) */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Corresponds to md:grid-cols-2 */
+    }
+}
+
+/* Large screens (lg: breakpoint) */
+@media (min-width: 1024px) {
+    .projects-grid {
+        /* FIX: Changed to 3 columns for large screens as originally intended */
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* Corresponds to lg:grid-cols-3 */
+    }
+}
+
+/* Individual Project Card */
+.project-card {
+    position: relative;
+    background-color: #f0f0f0; /* Changed to a light gray for subtle card background on white page */
+    border-radius: 0.75rem; /* Corresponds to rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Corresponds to shadow-lg */
+    overflow: hidden;
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s ease-in-out; /* Corresponds to transition-transform duration-300 */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Corresponds to hover:scale-105 */
+}
+
+/* Media container (for image or iframe) */
+.project-media {
+    width: 100%;
+    height: 16rem; /* Corresponds to h-64 */
+    background-color: #e0e0e0; /* Changed to a slightly darker light gray for media background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure content doesn't spill */
+}
+
+/* Responsive height for medium and large screens */
+@media (min-width: 768px) {
+    .project-media {
+        height: 18rem; /* Corresponds to md:h-72 */
+    }
+}
+@media (min-width: 1024px) {
+    .project-media {
+        height: 20rem; /* Corresponds to lg:h-80 */
+    }
+}
+
+.project-image,
+.project-iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* For images */
+    border: none; /* Remove default iframe border */
+    border-top-left-radius: 0.75rem; /* Corresponds to rounded-t-xl */
+    border-top-right-radius: 0.75rem; /* Corresponds to rounded-t-xl */
+}
+
+/* Text content area */
+.project-content {
+    padding: 1.5rem; /* Corresponds to p-6 */
+}
+
+.project-title {
+    font-size: 1.25rem; /* Corresponds to text-xl */
+    font-weight: 600; /* Corresponds to font-semibold */
+    margin-bottom: 0.5rem; /* Corresponds to mb-2 */
+    color: #1d4ed8; /* Good dark blue for light background */
+    transition: filter 0.3s ease-in-out; /* Transition for blur effect */
+}
+
+/* Style for blurring ongoing project titles */
+.project-title-ongoing {
+    filter: blur(3px); /* Apply blur effect */
+}
+
+/* Hover Overlay */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity for light theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Allows clicks to pass through when hidden */
+    transition: opacity 0.3s ease-in-out; /* Corresponds to transition-opacity duration-300 */
+    border-radius: 0.75rem; /* Corresponds to rounded-xl */
+}
+
+/* Show overlay when .show class is present (from React component) */
+.project-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* View Detail Button */
+.view-detail-button {
+    padding: 0.75rem 1.5rem; /* Corresponds to px-6 py-3 */
+    background-color: #2563eb; /* Corresponds to bg-blue-600 */
+    color: #fff; /* Corresponds to text-white */
+    font-weight: 700; /* Corresponds to font-bold */
+    border-radius: 0.5rem; /* Corresponds to rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Corresponds to shadow-lg */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Corresponds to transition-colors duration-300 */
+    outline: none; /* Remove default focus outline */
+}
+
+.view-detail-button:hover {
+    background-color: #1d4ed8; /* Corresponds to hover:bg-blue-700 */
+}
+
+.view-detail-button:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Corresponds to focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 */
+}

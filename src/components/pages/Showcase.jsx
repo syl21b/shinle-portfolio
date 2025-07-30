@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { projects } from "./projectsData";
 import "./Showcase.css";
 
-
-
 export default function Showcase() {
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const { projectId } = useParams(); // Get the projectId from URL params
+  const initialIndex = projects.findIndex((p) => p.id === Number(projectId));
+
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(
+    initialIndex !== -1 ? initialIndex : 0
+  );
+
+  useEffect(() => {
+    if (initialIndex !== -1 && initialIndex !== currentProjectIndex) {
+      setCurrentProjectIndex(initialIndex);
+    }
+  }, [initialIndex, currentProjectIndex]);
+
   const currentProject = projects[currentProjectIndex];
 
   const goToNextProject = () => {
@@ -18,7 +29,7 @@ export default function Showcase() {
   };
 
   const convertMarkdownBold = (text) =>
-  text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    text ? text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") : "";
 
   if (!currentProject) {
     return (
@@ -32,25 +43,20 @@ export default function Showcase() {
 
   return (
     <section id="project-viewer" className="section project-viewer-section">
-      {/* Project Navigation - MOVED HERE, OUTSIDE the main content container */}
-      <div className="project-navigation-wrapper"> {/* New wrapper for navigation */}
+      <div className="project-navigation-wrapper">
         <button onClick={goToPrevProject} className="nav-button" aria-label="Previous Project">
           <ChevronLeft size={24} />
         </button>
-        <div className="project-title-and-date">
-          <h2 className="project-viewer-heading">
-            {currentProject.title}
-          </h2>
-          <span className="project-date">{currentProject.date}</span>
+        <div className={`project-title-and-date ${currentProject.isOngoing ? "blur-title" : ""}`}>
+          <h2 className="project-viewer-heading">{currentProject.title}</h2>
+          {currentProject.date && <span className="project-date">{currentProject.date}</span>}
         </div>
         <button onClick={goToNextProject} className="nav-button" aria-label="Next Project">
           <ChevronRight size={24} />
         </button>
       </div>
 
-      {/* Main Content Container - this is what the overlay will cover */}
       <div className={`project-viewer-main-container ${currentProject.isOngoing ? 'project-ongoing' : ''}`}>
-        {/* Full-size Media Display (Image / Iframe) */}
         <div className="project-media-full">
           {currentProject.iframeSrc ? (
             <iframe
@@ -71,7 +77,7 @@ export default function Showcase() {
           )}
         </div>
 
-        {/* Project Overview & Action Buttons */}
+
         <div className="project-overview">
           <p className="project-description-summary">{currentProject.description}</p>
 
@@ -81,7 +87,7 @@ export default function Showcase() {
                 href={currentProject.linkHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`project-btn btn-primary`}
+                className="project-btn btn-primary"
                 title={currentProject.buttonTitle}
               >
                 {currentProject.linkText}
@@ -94,7 +100,7 @@ export default function Showcase() {
                 href={currentProject.demoLinkHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`project-btn btn-outline`}
+                className="project-btn btn-outline"
                 title={currentProject.demoButtonTitle}
               >
                 {currentProject.demoLinkText}
@@ -119,20 +125,19 @@ export default function Showcase() {
 
         <hr className="section-separator" />
 
-        {/* Case Study Details */}
         <div className="project-case-study-details">
           <div className="case-study-section">
             <h3>Problem:</h3>
-            <p dangerouslySetInnerHTML={{__html: convertMarkdownBold(currentProject.problem)}}></p>
+            <p dangerouslySetInnerHTML={{ __html: convertMarkdownBold(currentProject.problem) }}></p>
           </div>
 
           <div className="case-study-section">
             <h3>Solution:</h3>
-            <p dangerouslySetInnerHTML={{__html: convertMarkdownBold(currentProject.solution)}}></p>
+            <p dangerouslySetInnerHTML={{ __html: convertMarkdownBold(currentProject.solution) }}></p>
             {currentProject.contributions && currentProject.contributions.length > 0 && (
               <ul className="contribution-list">
                 {currentProject.contributions.map((contribution, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{__html: convertMarkdownBold(contribution)}}></li>
+                  <li key={index} dangerouslySetInnerHTML={{ __html: convertMarkdownBold(contribution) }}></li>
                 ))}
               </ul>
             )}
@@ -149,14 +154,12 @@ export default function Showcase() {
             </div>
           </div>
 
-          {/* Dataset Link was moved from here */}
-
           <div className="case-study-section">
             <h3>Challenges & Learnings:</h3>
             {currentProject.challenges && currentProject.challenges.length > 0 && (
               <ul className="challenge-list">
                 {currentProject.challenges.map((challenge, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{__html: convertMarkdownBold(challenge)}}></li>
+                  <li key={index} dangerouslySetInnerHTML={{ __html: convertMarkdownBold(challenge) }}></li>
                 ))}
               </ul>
             )}
@@ -165,17 +168,18 @@ export default function Showcase() {
           {currentProject.results && (
             <div className="case-study-section">
               <h3>Results/Impact:</h3>
-              <p dangerouslySetInnerHTML={{__html: convertMarkdownBold(currentProject.results)}}></p>
+              <p dangerouslySetInnerHTML={{ __html: convertMarkdownBold(currentProject.results) }}></p>
             </div>
           )}
 
           {currentProject.futureEnhancements && (
             <div className="case-study-section">
               <h3>Future Enhancements:</h3>
-              <p dangerouslySetInnerHTML={{__html: convertMarkdownBold(currentProject.futureEnhancements)}}></p>
+              <p dangerouslySetInnerHTML={{ __html: convertMarkdownBold(currentProject.futureEnhancements) }}></p>
             </div>
           )}
         </div>
+
         {currentProject.isOngoing && (
           <div className="ongoing-overlay">
             <span className="ongoing-text">Ongoing / Coming Soon</span>
