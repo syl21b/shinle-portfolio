@@ -131,6 +131,35 @@ export default function Showcase() {
               </ul>
             )}
           </div>
+
+          {/* New: Challenges */}
+          {currentProject.challenges && currentProject.challenges.length > 0 && (
+            <div className="case-study-section">
+              <h3>Challenges:</h3>
+              <ul className="challenge-list">
+                {currentProject.challenges.map((challenge, i) => (
+                  <li key={i} dangerouslySetInnerHTML={{ __html: convertMarkdownBold(challenge) }}></li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* New: Results */}
+          {currentProject.results && (
+            <div className="case-study-section">
+              <h3>Results:</h3>
+              <p dangerouslySetInnerHTML={{ __html: convertMarkdownBold(currentProject.results) }}></p>
+            </div>
+          )}
+
+          {/* New: Future Enhancements */}
+          {currentProject.futureEnhancements && (
+            <div className="case-study-section">
+              <h3>Future Enhancements:</h3>
+              <p dangerouslySetInnerHTML={{ __html: convertMarkdownBold(currentProject.futureEnhancements) }}></p>
+            </div>
+          )}
+
           <div className="case-study-section">
             <h3>Technologies Used:</h3>
             <div className="project-tech-used-tags project-grid-tags">
