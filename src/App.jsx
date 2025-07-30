@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
 // Import components
 import Navbar from "./components/Navbar";
@@ -48,7 +48,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<HomeContent />} />
-        <Route path="/showcase/:projectId" element={<Showcase />} />
+        <Route path="/showcase/:projectId?" element={<Showcase />} />
         <Route path="/learning" element={<Learning />} />
         <Route path="/resume" element={<ResumePage />} />
       </Routes>
