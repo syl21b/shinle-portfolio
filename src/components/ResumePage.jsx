@@ -12,7 +12,7 @@ export default function ResumePage() {
           <span><Mail size={16} /> shinle666@gmail.com</span>
           <span><Phone size={16} /> 772-285-6483</span>
           <span><Linkedin size={16} /> <a href="https://linkedin.com/in/shin-le-b9727a238" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
-          <span><Globe size={16} /> <a href="YOUR_PORTFOLIO_URL" target="_blank" rel="noopener noreferrer">Portfolio</a></span>
+          <span><Globe size={16} /> <a href="https://syl21b.github.io/shinle-portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a></span>
         </div>
       </header>
 
