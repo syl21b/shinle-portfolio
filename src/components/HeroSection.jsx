@@ -4,7 +4,7 @@ import { Mail, Github, Linkedin, LayoutDashboard, MoveRight } from "lucide-react
 import { Link } from 'react-router-dom'; // <<< Import Link
 
 // Import your image from the assets folder
-import avatarImage from "./image/profile.jpeg";
+import avatarImage from "./image/profile3.jpg";
 import avatarImage1 from "./image/profile1.jpg";
 import tableauLogo from "./image/tableau.png";
 import linkedinLogo from "./image/linkedin.png";
