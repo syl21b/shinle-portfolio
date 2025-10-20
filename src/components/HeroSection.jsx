@@ -17,6 +17,7 @@ import Background from "./image/background2.png";
 export default function HeroSection() {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const zoomLevel = 1.4; // adjust here or via a state variable
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,10 +59,12 @@ export default function HeroSection() {
       }}
     >
       <div className="hero-content">
-        <img
-          src={avatarImage}
-          alt="Shin Le's Avatar"
-          className="hero-avatar"
+      <img
+        src={avatarImage}
+        alt="Shin Le's Avatar"
+        className="hero-avatar"
+        style={{ transform: `scale(${zoomLevel})` }}
+
           onError={(e) => { e.target.onerror = null; e.target.src = avatarImage1; }}
         />
 
