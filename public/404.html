@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="refresh" content="0; URL=/" />
-  </head>
-  <body></body>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Simple redirect for HashRouter
+    const path = window.location.pathname;
+    if (path.includes('/shinle-portfolio/')) {
+      // Extract the path after the base
+      const basePath = '/shinle-portfolio/';
+      const rest = path.substring(path.indexOf(basePath) + basePath.length);
+      if (rest && !rest.includes('.')) { // Only for non-file paths
+        window.location.href = basePath + '#/' + rest + window.location.search + window.location.hash;
+      } else {
+        window.location.href = basePath;
+      }
+    } else {
+      window.location.href = '/shinle-portfolio/';
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting to portfolio...</p>
+</body>
 </html>
