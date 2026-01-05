@@ -4,23 +4,19 @@
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    // Simple redirect for HashRouter
-    const path = window.location.pathname;
-    if (path.includes('/shinle-portfolio/')) {
-      // Extract the path after the base
-      const basePath = '/shinle-portfolio/';
-      const rest = path.substring(path.indexOf(basePath) + basePath.length);
-      if (rest && !rest.includes('.')) { // Only for non-file paths
-        window.location.href = basePath + '#/' + rest + window.location.search + window.location.hash;
-      } else {
-        window.location.href = basePath;
-      }
-    } else {
-      window.location.href = '/shinle-portfolio/';
+    // Single Page App redirect for GitHub Pages
+    const segmentCount = 1; // Adjust if your base path is different
+    const l = window.location;
+    const base = '/shinle-portfolio/';
+    
+    // If we're not at the index.html, redirect to it
+    if (!l.pathname.includes('index.html')) {
+      const path = l.pathname.substring(base.length);
+      window.location.replace(base + 'index.html' + l.search + l.hash);
     }
   </script>
 </head>
 <body>
-  <p>Redirecting to portfolio...</p>
+  <p>Redirecting...</p>
 </body>
 </html>

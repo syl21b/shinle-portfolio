@@ -10,13 +10,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Remove the problematic rollupOptions entirely
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    // Generate sourcemaps for debugging
+    sourcemap: true,
   },
-  // Optional server config for development
+  // This helps with the redirects
   server: {
-    historyApiFallback: true,
-  }
+    open: true,
+  },
 });

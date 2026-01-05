@@ -5,18 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Add this script -->
-    <script>
-      // Handle hash-based routing for GitHub Pages
-      (function() {
-        if (window.location.hash && window.location.hash.startsWith('#!')) {
-          const path = window.location.hash.substring(2);
-          window.history.replaceState(null, null, path);
-        }
-      })();
-    </script>
+    <!-- Remove the hash handling script - HashRouter will handle it -->
     
-    <title>Your Portfolio</title>
+    <title>Shin Le - Portfolio</title>
   </head>
   <body>
     <div id="root"></div>
