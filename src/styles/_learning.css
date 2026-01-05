@@ -1,130 +1,215 @@
-/* src/styles/_learning.css */
+/* src/styles/_learning.css - Complete mobile-optimized version */
 
 /* Page Wrapper */
 .learning-page-wrapper {
   min-height: 100vh;
-  background-color: var(--light-gray, #f3f4f6); /* Using a fallback if --light-gray isn't defined */
-  padding: 2rem 1rem; /* py-8 px-4 */
-  padding-top: 4rem; /* Added padding to clear the fixed navbar */
-  font-family: 'Inter', sans-serif; /* Ensure Inter font is loaded */
+  background-color: #f3f4f6;
+  padding: 1rem 0.5rem;
+  padding-top: 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Main Content Container */
 .learning-content-container {
-  max-width: 1024px; /* max-w-screen-lg */
+  max-width: 1024px;
   margin-left: auto;
-  margin-right: auto; /* mx-auto */
-  padding: 2.5rem; /* Increased padding for more breathing room */
-  background-color: var(--light); /* bg-white */
-  border-radius: 0.75rem; /* Slightly more rounded */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); /* Stronger, more diffused shadow */
-  border: 1px solid var(--border-color, #e0e0e0); /* Added subtle border */
+  margin-right: auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
 }
 
-/* Responsive padding for content container */
-@media (min-width: 640px) { /* sm breakpoint */
+/* Responsive padding */
+@media (min-width: 640px) {
+  .learning-page-wrapper {
+    padding: 2rem 1rem;
+  }
+  
   .learning-content-container {
-    padding: 3rem; /* Increased for larger screens */
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .learning-content-container {
+    padding: 3rem;
   }
 }
 
 /* Header */
 .learning-header {
   text-align: center;
-  margin-bottom: 3.5rem; /* Increased margin-bottom */
+  margin-bottom: 2.5rem;
 }
 
-/* NEW: Main title for the Learning page */
+/* Main title */
 .learning-main-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600; /* Bolder for main title */
-  font-size: clamp(2rem, 4.5vw, 3rem); /* Larger clamp range for main title */
-  line-height: 1.2;
-  letter-spacing: -0.04em;
-  color: var(--light);
-  background: linear-gradient(90deg, var(--primary), var(--light));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: var(--glow-primary);
-  margin-bottom: 1rem; /* Spacing below the main title */
-}
-
-/* NEW: Paragraph style for Learning page content */
-.learning-paragraph {
-  font-size: 1.1rem;
-  color: var(--gray);
-  line-height: 1.8;
-  margin-bottom: 1rem; /* Default margin for paragraphs */
-}
-
-/* New class for smaller, refined section titles */
-.learning-section-title {
-  font-family: 'Space Grotesk', sans-serif; /* Maintain heading font */
   font-weight: 600;
-  font-size: clamp(1.8rem, 3vw, 2.5rem); /* Smaller clamp range for section titles */
-  line-height: 1.3;
+  font-size: 1.8rem;
+  line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--dark);
+  color: #075ab4;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .learning-main-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Paragraph style */
+.learning-paragraph {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .learning-paragraph {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+}
+
+/* Section titles */
+.learning-section-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #1f2937;
   text-align: center;
-  margin-bottom: 2rem; /* Consistent spacing below title */
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .learning-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Subtitle in bio boxes */
+.learning-subtitle {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f2937;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .learning-subtitle {
+    font-size: 1.125rem;
+  }
 }
 
 /* Section Blocks */
 .learning-section-block {
-  margin-bottom: 5rem; /* Increased margin-bottom for more separation between sections */
+  margin-bottom: 3rem;
 }
 
-/* NEW: Container for individual content blocks (videos, article links) */
+@media (min-width: 640px) {
+  .learning-section-block {
+    margin-bottom: 5rem;
+  }
+}
+
+/* Content blocks */
 .learning-content-block {
-  background-color: var(--light); /* White background */
-  border-radius: 0.75rem; /* Rounded corners */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Soft shadow */
-  border: 1px solid var(--border-color, #e0e0e0); /* Subtle border */
-  padding: 2rem; /* Internal padding */
-  margin-bottom: 2.5rem; /* Space between content blocks within a section */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.learning-content-block:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+@media (min-width: 640px) {
+  .learning-content-block {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .learning-content-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  }
 }
 
-/* Specific styling for the About DataWithBaraa box */
+/* Bio boxes */
 .learning-bio-box {
-  background-color: var(--light-bg-alt, #f9fafb); /* Lighter background */
+  background-color: #f9fafb;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  margin-top: 1.5rem; /* Space above the bio box */
-  border: 1px solid var(--border-color, #e5e7eb);
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  border: 1px solid #e5e7eb;
 }
 
 .learning-bio-box h3 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.4rem; /* Smaller heading for bio */
+  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--dark);
+  color: #1f2937;
   margin-bottom: 0.75rem;
 }
 
+@media (min-width: 640px) {
+  .learning-bio-box {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .learning-bio-box h3 {
+    font-size: 1.4rem;
+  }
+}
 
-/* Iframe Wrapper (for aspect ratio and centering) */
+/* Lists */
+.learning-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.learning-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+/* Links */
+.learning-link {
+  color: #2563eb;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.learning-link:hover {
+  color: #1d4ed8;
+}
+
+/* Iframe Wrapper */
 .learning-iframe-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%;
   overflow: hidden;
-  border-radius: 0.75rem; /* Slightly more rounded */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   margin-left: auto;
-  margin-right: auto; /* mx-auto */
-  max-width: 800px; /* max-width from inline style */
-  border: 1px solid var(--border-color, #e0e0e0); /* Added subtle border */
+  margin-right: auto;
+  max-width: 800px;
+  border: 1px solid #e0e0e0;
 }
 
-/* Iframe itself */
+/* Iframe */
 .learning-iframe {
   position: absolute;
   top: 0;
@@ -134,25 +219,214 @@
   border: 0;
 }
 
+/* Button Container */
+.learning-button-container {
+  text-align: center;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .learning-button-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* Buttons */
+.learning-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 639px) {
+  .learning-btn {
+    width: 100%;
+    padding: 0.875rem 1rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .learning-btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.9375rem;
+  }
+}
+
+.btn-primary {
+  background-color: #075ab4;
+  color: white;
+  border-color: #075ab4;
+}
+
+.btn-primary:hover {
+  background-color: #064b96;
+  border-color: #064b96;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #075ab4;
+  border-color: #075ab4;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(7, 90, 180, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Section Separator */
+.learning-section-separator {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .learning-section-separator {
+    margin: 3rem 0;
+  }
+}
+
 /* Footer */
 .learning-footer {
   text-align: center;
-  color: var(--gray-text, #6b7280);
-  margin-top: 4rem; /* Increased margin-top */
-  font-size: 0.9rem; /* Slightly smaller font for footer */
+  color: #6b7280;
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
 }
 
-/* Ensure your existing h1, h2, p, and button styles apply correctly */
-/* Your _base.css, _buttons.css, _utilities.css already define these */
-/* For example, h1, h2, p, .btn, .btn-primary */
-
-/* If --light-gray or --border-color or --light-bg-alt are not in _variables.css,
-   you might want to add them or use direct hex values. */
-/* Example for _variables.css:
-:root {
-  --light-gray: #f3f4f6;
-  --border-color: #e5e7eb;
-  --light-bg-alt: #f9fafb;
-  --gray-text: #6b7280;
+@media (min-width: 640px) {
+  .learning-footer {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+  }
 }
-*/
+
+/* Extra small devices */
+@media (max-width: 359px) {
+  .learning-page-wrapper {
+    padding-top: 3.5rem;
+  }
+  
+  .learning-content-container {
+    padding: 1rem;
+  }
+  
+  .learning-content-block {
+    padding: 1rem;
+  }
+  
+  .learning-main-title {
+    font-size: 1.5rem;
+  }
+  
+  .learning-section-title {
+    font-size: 1.2rem;
+  }
+  
+  .learning-bio-box {
+    padding: 1rem;
+  }
+  
+  .learning-bio-box h3 {
+    font-size: 1.1rem;
+  }
+  
+  .learning-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .learning-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .learning-page-wrapper {
+    background-color: #111827;
+  }
+  
+  .learning-content-container,
+  .learning-content-block,
+  .learning-bio-box {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #f9fafb;
+  }
+  
+  .learning-main-title {
+    color: #60a5fa;
+  }
+  
+  .learning-section-title,
+  .learning-bio-box h3,
+  .learning-subtitle {
+    color: #f9fafb;
+  }
+  
+  .learning-paragraph,
+  .learning-list li {
+    color: #d1d5db;
+  }
+  
+  .learning-bio-box {
+    background-color: #374151;
+    border-color: #4b5563;
+  }
+  
+  .learning-link {
+    color: #60a5fa;
+  }
+  
+  .learning-link:hover {
+    color: #93c5fd;
+  }
+  
+  .learning-footer {
+    color: #9ca3af;
+    border-top-color: #374151;
+  }
+  
+  .learning-section-separator {
+    background-color: #374151;
+  }
+  
+  .btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+  }
+  
+  .btn-secondary {
+    color: #60a5fa;
+    border-color: #60a5fa;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgba(96, 165, 250, 0.1);
+  }
+}

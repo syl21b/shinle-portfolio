@@ -31,10 +31,10 @@
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  padding: 3rem;
+  padding: var(--spacing-3xl);
   box-shadow: var(--glow-primary);
   height: 100%;
-  border-radius: 16px;
+  border-radius: var(--radius-2xl);
   color: var(--light);
 }
 
@@ -51,24 +51,23 @@
 }
 
 .icon {
-  height: 110px; /* Larger icon circle */
+  height: 110px;
   width: 110px;
-  border-radius: 50%;
-  background-color: var(--dark); /* Dark background for icon circle */
+  border-radius: var(--radius-full);
+  background-color: var(--dark);
   display: flex;
-
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 10px rgba(52, 73, 94, 0.2), var(--glow-primary); /* Primary glow inset, even softer */
-  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(52, 73, 94, 0.2), var(--glow-primary);
+  transition: all var(--transition-base);
 }
 
 .my-card:hover .icon {
-  transform: scale(1.15); /* More pronounced scale */
-  box-shadow: inset 0 0 20px var(--primary), 0 0 10px var(--primary); /* Primary glow */
+  transform: scale(1.15);
+  box-shadow: inset 0 0 20px var(--primary), 0 0 10px var(--primary);
 }
 
 .icon svg {
-  font-size: 50px; /* Larger icon size */
-  color: var(--light); /* Light color for icon */
+  font-size: 50px;
+  color: var(--light);
 }

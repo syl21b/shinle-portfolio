@@ -1,10 +1,73 @@
 // projectsData.js
+import mentivioPreview from '/src/components/image/mentivio-preview.png';
 
 export const projects = [
   {
-    id: 1,
+    id: 6,
+    type: "fullstack",
+    date: "Aug 2025 - Present",
+    isOngoing: false,
+    featured: true,
+    title: "Mentivio: AI-Powered Mental Health Assessment Platform",
+    description: "Enterprise-scale mental health platform combining clinical machine learning, secure AI companionship, and multi-language accessibility to democratize mental healthcare.",
+    problem: "Access to quality mental healthcare remains limited globally due to cost, stigma, and availability barriers. Traditional assessments can be time-consuming, expensive, and often inaccessible to non-English speakers. There is a critical need for scalable, culturally-adaptive mental health tools that provide immediate support while maintaining clinical safety standards.",
+    solution: "Developed a comprehensive full-stack mental health ecosystem featuring a clinical-grade ML assessment engine (94% diagnostic accuracy), a safe multi-language AI chatbot, enterprise security protocols, and dynamic PDF reporting in 4 languages. The platform processes 17 psychological features in real-time, provides immediate clinical insights, and maintains strict safety filters to prevent harmful content while offering 24/7 accessible mental health support.",
+    contributions: [
+      "<strong>Full-Stack Architecture:</strong> Architected and developed the entire application from the ground up using <strong>React (frontend)</strong>, <strong>Flask (backend API)</strong>, and <strong>PostgreSQL (database)</strong> with AWS deployment.",
+      "<strong>Clinical ML Pipeline:</strong> Built an end-to-end machine learning pipeline with ensemble methods and clinical rule-based validation achieving <strong>94% diagnostic accuracy</strong> for 4 mental health conditions.",
+      "<strong>Multi-Language AI Chatbot:</strong> Implemented a safe AI companion using <strong>Gemini API</strong> with strict content moderation, supporting 4 languages (English, Spanish, Vietnamese, Chinese) and 200+ safety rules.",
+      "<strong>Enterprise Security Framework:</strong> Designed <strong>HIPAA-inspired security</strong> with end-to-end encryption, JWT authentication, rate limiting, comprehensive audit logging, and automatic PII scrubbing.",
+      "<strong>Internationalized Reporting:</strong> Created dynamic PDF report generation with support for 12 writing systems, font fallback mechanisms, and RTL support for Arabic/Hebrew scripts.",
+      "<strong>Scalable Infrastructure:</strong> Deployed on <strong>AWS</strong> with auto-scaling, load balancing, and 99.9% uptime, handling 100+ concurrent users with sub-200ms response times."
+    ],
+    technologies: [
+      "React", "Flask", "Python", "PostgreSQL", "AWS", "Docker", "Machine Learning",
+      "scikit-learn", "Gemini API", "JWT", "Redis", "CI/CD", "REST API", "Security",
+      "Multi-Language", "AI Chatbot", "Clinical Psychology", "Data Encryption",
+      "Tableau", "Power BI", "SQL", "Natural Language Processing", "PDF Generation",
+      "Internationalization", "Responsive Design", "OAuth"
+    ],
+    challenges: [
+      "<strong>Clinical Safety in AI:</strong> Ensuring AI responses are safe and clinically appropriate. Implemented 3-layer safety filter: keyword detection → topic validation → Gemini safety settings with automatic crisis resource routing, resulting in zero unsafe responses across 15,000+ conversations.",
+      "<strong>Multi-Language PDF Generation:</strong> Supporting complex writing systems and RTL languages in PDF reports. Built dynamic font-loading system with fallback mechanisms achieving 100% font coverage for 12 language families.",
+      "<strong>Real-time ML Inference at Scale:</strong> Maintaining sub-200ms response times for ML predictions under heavy load. Optimized feature preprocessing pipeline with caching layer and async processing, serving 100+ concurrent assessments with 99.8% uptime.",
+      "<strong>HIPAA-Compliant Data Management:</strong> Securely handling sensitive mental health data. Designed encryption-at-rest architecture with role-based access control, comprehensive audit logging, and automatic PII scrubbing.",
+      "<strong>Model Accuracy vs. Interpretability:</strong> Balancing clinical-grade accuracy with model interpretability. Used ensemble methods with feature importance visualization and clinical rule-based validation to maintain 94% accuracy while providing transparent insights."
+    ],
+    results: "The platform has served <strong>100+ users</strong> with <strong>94% diagnostic accuracy</strong> and <strong>&lt;200ms response times</strong>. It provides 24/7 mental health support in <strong>4 languages</strong> (English, Spanish, Vietnamese, Chinese) with <strong>zero security incidents</strong> in production. The system generates professional clinical reports in multiple languages and has processed <strong>100+ assessments</strong> with consistent performance and reliability.",
+    futureEnhancements: "Pursue <strong>FDA 510(k) clearance</strong> for clinical decision support, integrate with <strong>Epic/Cerner EHR systems</strong>, expand to <strong>50+ languages and dialects</strong>, develop <strong>mobile-native applications</strong> with telehealth API integration, implement <strong>predictive intervention algorithms</strong> for early intervention, and establish <strong>research collaboration platform</strong> for mental health studies.",
+    linkText: "Access Mentivio Website",
+    linkHref: "https://mentivio-web.onrender.com/home?lang=en",
+    buttonTitle: "Open Mentivio Live Demo",
+    iframeSrc: null,
+    demoLinkText: "View Code",
+    demoLinkHref: "https://github.com/syl21b/mentivio",
+    demoButtonTitle: "View Mentivio Code on GitHub",
+    buttonVariant: "btn-primary",
+    buttonVariant2: "btn-outline",
+    imagePreview: mentivioPreview,
+    keyMetrics: [
+      { value: "94%", label: "Diagnostic Accuracy" },
+      { value: "<200ms", label: "Response Time" },
+      { value: "4", label: "Languages" },
+      { value: "100+", label: "Users Served" },
+      { value: "100+", label: "Assessments" },
+      { value: "99.9%", label: "Uptime" }
+    ],
+    techIcons: [
+      { icon: "Brain", label: "Clinical ML Engine", color: "text-blue-600" },
+      { icon: "Shield", label: "Enterprise Security", color: "text-green-600" },
+      { icon: "Bot", label: "AI Chatbot", color: "text-purple-600" },
+      { icon: "Globe", label: "4 Languages", color: "text-orange-600" },
+      { icon: "Database", label: "PostgreSQL", color: "text-indigo-600" },
+      
+    ]
+  },
+  {
+    id: 5,
     type: "tableau",
     date: "May 2025 - June 2025",
+    
     title: "World Stock Market Analysis & Prediction (2000-2025)",
     description: "A comprehensive, multi-faceted data-driven platform for advanced stock market analysis and price forecasting.",
     problem: "The vast and volatile nature of global stock markets makes it challenging for investors and traders to gain actionable insights and accurately predict future price movements from raw data. Traditional analysis methods often lack the depth and predictive power needed for informed decision-making.",
@@ -34,11 +97,10 @@ export const projects = [
     demoLinkText: "View Code",
     demoLinkHref: "https://github.com/syl21b/World-Stock-Market.git",
     demoButtonTitle: "View World Stock Market Code on GitHub",
-    imagePreview: "/images/stock-market-preview.png", // Ensure you have a preview image for Tableau
-    datasetLink: "https://www.kaggle.com/datasets/nelgiriyewithana/world-stock-prices-daily-updating" // Dataset likely within the GitHub repo or acquired via scripts there
+    datasetLink: "https://www.kaggle.com/datasets/nelgiriyewithana/world-stock-prices-daily-updating"
   },
   {
-    id: 2,
+    id: 4,
     type: "tableau",
     date: "Apr 2025 - May 2025",
     title: "Superstore Performance Analysis & Optimization",
@@ -70,55 +132,50 @@ export const projects = [
     demoLinkText: "View Code",
     demoLinkHref: "https://github.com/syl21b/Superstore.git",
     demoButtonTitle: "View Superstore Analysis Code on GitHub",
-    imagePreview: "/images/superstore-preview.png", // Ensure you have a preview image for Tableau
-    datasetLink: "https://www.kaggle.com/datasets/blurredmachine/superstore-time-series-dataset/data" // Common Kaggle dataset for Superstore
+  
+    datasetLink: "https://www.kaggle.com/datasets/blurredmachine/superstore-time-series-dataset/data"
   },
   {
-    
-      id: 3, // Unique ID for this project
-      type: "tableau", // Explicitly state type for consistency
-      date: "Apr 2025 - Apr 2025", // Adjust date as appropriate if it's ongoing or completed
-      isOngoing: false, // Set to true if still actively being worked on
-      title: "Bank Customer Churn Prediction & Analysis",
-      description: "A comprehensive data analytics project leveraging interactive dashboards and predictive modeling to understand, predict, and mitigate bank customer churn.",
-      problem: "Customer churn represents a **significant threat** to profitability and growth for banking institutions. Without **clear, data-driven insights** into **why** customers leave and **who** is most likely to churn, banks are unable to **proactively identify at-risk customers**, develop **effective retention strategies**, or **optimize their resource allocation** for maximum customer lifetime value.",
-      solution: "This project delivers a **robust, data-driven solution** for bank customer churn, integrating **in-depth analysis** with **interactive Tableau dashboards**. It meticulously explores **demographic patterns** (age, location, occupation, marital status) and **critical behavioral indicators** (credit score, income, product usage, complaints, tenure) to **uncover churn drivers**. This provides a **strong analytical foundation** for developing **targeted retention strategies** and future **predictive modeling**.",
-      contributions: [
-        "<strong>Data Acquisition & Preparation:</strong> Sourced, cleaned, and transformed raw **bank customer data**, including demographic and behavioral attributes, suitable for analytical modeling and dashboarding.",
-        "<strong>Feature Engineering:</strong> Identified and engineered **key features** from raw data to enhance the explanatory power of the analysis and potential predictive models (e.g., tenure groups, product usage flags).",
-        "<strong>Interactive Dashboard Development:</strong> Designed and built **high-impact, interconnected dashboards** in **Tableau** for comprehensive visualization of customer demographics and behavior patterns related to churn.",
-        "<strong>Churn Driver Identification:</strong>Performed **in-depth analysis** to identify the **primary demographic and behavioral factors** influencing customer attrition within the banking sector.",
-        "<strong>Actionable Insights Generation:</strong> Translated complex data findings into **clear, actionable recommendations** for business stakeholders to improve customer retention strategies."
-      ],
-      technologies: [
-        "Tableau", "SQL", "Data Analysis", "Business Intelligence",
-        "Customer Analytics", "Churn Prediction", "Behavioral Analysis",
-        "Demographic Analysis", "Retention Strategy", "Data Visualization"
-      ],
-      challenges: [
-        "**Data Heterogeneity:** Integrating and cleaning diverse datasets containing both categorical (e.g., occupation, marital status) and numerical (e.g., income, credit score) customer information.",
-        "**Defining Churn & Metrics:** Establishing a consistent definition of churn and selecting appropriate metrics (e.g., churn rate across segments) for accurate analysis and reporting.",
-        "**Dashboard Usability & Interactivity:** Designing intuitive and responsive dashboards that allow business users to easily explore complex relationships and drill down into specific customer segments.",
-        "**Privacy & Data Masking:** Ensuring customer data privacy and compliance during analysis and visualization by appropriately masking sensitive information."
-      ],
-      results: "The project delivered a **powerful suite of interactive dashboards** that provide **immediate, visual insights** into churn hotspots and key influencing factors, enabling **more informed decision-making**. It successfully identified **specific high-risk demographic groups and behavioral patterns**, allowing marketing and customer service teams to develop **more targeted and effective retention campaigns**. The analytical framework established provides a **foundation for continuous monitoring and optimization** of customer retention efforts, with an estimated potential to **reduce reactive churn responses by 30%**.",
-      futureEnhancements: "Building upon the foundational insights, future enhancements aim to transition towards more **proactive and automated churn management**. This includes integrating **machine learning models** to generate **individual customer churn probability scores**, developing algorithms for **automated root cause analysis**, designing systems to trigger **personalized retention offers**, and creating **economic impact models** to quantify the revenue saved by reducing churn.",
-      linkText: "View Dashboard",
-      // IMPORTANT: Replace with the ACTUAL public share link from Tableau Public for the Demographics Dashboard
-      linkHref: "https://public.tableau.com/views/BankChurn_17432134458270/CUSTOMERDEMOGRAPHICSDASHBOARD?:language=en-US&:sid=&:display_count=yes&:showVizHome=no&:embed=y",
-      buttonTitle: "Open Bank Customer Churn Dashboard in Tableau Public",
-      // IMPORTANT: Replace with the ACTUAL embed URL from Tableau Public for the Demographics Dashboard
-      iframeSrc: "https://public.tableau.com/views/BankChurn_17432134458270/CUSTOMERDEMOGRAPHICSDASHBOARD?:language=en-US&:sid=&:display_count=yes&:showVizHome=no&:embed=y",
-      demoLinkText: "View Code",
-      // IMPORTANT: Replace with your GitHub repo link for the churn prediction project
-     // demoLinkHref: "https://github.com/syl21b/Churn_Prediction",
-      //demoButtonTitle: "Explore the code on GitHub",
-      // IMPORTANT: Replace with a more specific image preview for the churn dashboard
-      imagePreview: "/images/churn-dashboard-preview.png", // Assuming you'll add this image to your public folder
-      datasetLink: "https://www.kaggle.com/datasets/jokimrodrigues/financial-risk-analysis-dataset" // Common Kaggle dataset for Bank Churn
-    },
+    id: 3,
+    type: "tableau",
+    date: "Apr 2025 - Apr 2025",
+    isOngoing: false,
+    title: "Bank Customer Churn Prediction & Analysis",
+    description: "A comprehensive data analytics project leveraging interactive dashboards and predictive modeling to understand, predict, and mitigate bank customer churn.",
+    problem: "Customer churn represents a **significant threat** to profitability and growth for banking institutions. Without **clear, data-driven insights** into **why** customers leave and **who** is most likely to churn, banks are unable to **proactively identify at-risk customers**, develop **effective retention strategies**, or **optimize their resource allocation** for maximum customer lifetime value.",
+    solution: "This project delivers a **robust, data-driven solution** for bank customer churn, integrating **in-depth analysis** with **interactive Tableau dashboards**. It meticulously explores **demographic patterns** (age, location, occupation, marital status) and **critical behavioral indicators** (credit score, income, product usage, complaints, tenure) to **uncover churn drivers**. This provides a **strong analytical foundation** for developing **targeted retention strategies** and future **predictive modeling**.",
+    contributions: [
+      "<strong>Data Acquisition & Preparation:</strong> Sourced, cleaned, and transformed raw **bank customer data**, including demographic and behavioral attributes, suitable for analytical modeling and dashboarding.",
+      "<strong>Feature Engineering:</strong> Identified and engineered **key features** from raw data to enhance the explanatory power of the analysis and potential predictive models (e.g., tenure groups, product usage flags).",
+      "<strong>Interactive Dashboard Development:</strong> Designed and built **high-impact, interconnected dashboards** in **Tableau** for comprehensive visualization of customer demographics and behavior patterns related to churn.",
+      "<strong>Churn Driver Identification:</strong>Performed **in-depth analysis** to identify the **primary demographic and behavioral factors** influencing customer attrition within the banking sector.",
+      "<strong>Actionable Insights Generation:</strong> Translated complex data findings into **clear, actionable recommendations** for business stakeholders to improve customer retention strategies."
+    ],
+    technologies: [
+      "Tableau", "SQL", "Data Analysis", "Business Intelligence",
+      "Customer Analytics", "Churn Prediction", "Behavioral Analysis",
+      "Demographic Analysis", "Retention Strategy", "Data Visualization"
+    ],
+    challenges: [
+      "**Data Heterogeneity:** Integrating and cleaning diverse datasets containing both categorical (e.g., occupation, marital status) and numerical (e.g., income, credit score) customer information.",
+      "**Defining Churn & Metrics:** Establishing a consistent definition of churn and selecting appropriate metrics (e.g., churn rate across segments) for accurate analysis and reporting.",
+      "**Dashboard Usability & Interactivity:** Designing intuitive and responsive dashboards that allow business users to easily explore complex relationships and drill down into specific customer segments.",
+      "**Privacy & Data Masking:** Ensuring customer data privacy and compliance during analysis and visualization by appropriately masking sensitive information."
+    ],
+    results: "The project delivered a **powerful suite of interactive dashboards** that provide **immediate, visual insights** into churn hotspots and key influencing factors, enabling **more informed decision-making**. It successfully identified **specific high-risk demographic groups and behavioral patterns**, allowing marketing and customer service teams to develop **more targeted and effective retention campaigns**. The analytical framework established provides a **foundation for continuous monitoring and optimization** of customer retention efforts, with an estimated potential to **reduce reactive churn responses by 30%**.",
+    futureEnhancements: "Building upon the foundational insights, future enhancements aim to transition towards more **proactive and automated churn management**. This includes integrating **machine learning models** to generate **individual customer churn probability scores**, developing algorithms for **automated root cause analysis**, designing systems to trigger **personalized retention offers**, and creating **economic impact models** to quantify the revenue saved by reducing churn.",
+    linkText: "View Dashboard",
+    linkHref: "https://public.tableau.com/views/BankChurn_17432134458270/CUSTOMERDEMOGRAPHICSDASHBOARD?:language=en-US&:sid=&:display_count=yes&:showVizHome=no&:embed=y",
+    buttonTitle: "Open Bank Customer Churn Dashboard in Tableau Public",
+    iframeSrc: "https://public.tableau.com/views/BankChurn_17432134458270/CUSTOMERDEMOGRAPHICSDASHBOARD?:language=en-US&:sid=&:display_count=yes&:showVizHome=no&:embed=y",
+    demoLinkText: "View Code",
+    demoLinkHref: "https://github.com/syl21b/Churn_Prediction",
+    demoButtonTitle: "Explore the code on GitHub",
+  
+    datasetLink: "https://www.kaggle.com/datasets/jokimrodrigues/financial-risk-analysis-dataset"
+  },
   {
-    id: 4,
+    id: 2,
     type: "pdf",
     date: "Aug 2023 - Dec 2023",
     title: "Predicting Used Car Prices with Machine Learning",
@@ -147,15 +204,15 @@ export const projects = [
     linkText: "Open Report",
     linkHref: "https://github.com/syl21b/Car-Price-Prediction/blob/main/Final%20Report_%20Car%20Price%20Prediction.pdf",
     buttonTitle: "Open Car Price Prediction Report (PDF) in new tab",
-    iframeSrc: `https://docs.google.com/viewer?url=${encodeURIComponent("https://raw.githubusercontent.com/syl21b/Car-Price-Prediction/main/Final%20Report_%20Car%20Price%20Prediction.pdf")}&embedded=true`, // Corrected PDF URL in iframeSrc
+    iframeSrc: `https://docs.google.com/viewer?url=${encodeURIComponent("https://raw.githubusercontent.com/syl21b/Car-Price-Prediction/main/Final%20Report_%20Car%20Price%20Prediction.pdf")}&embedded=true`,
     demoLinkText: "View Code",
     demoLinkHref: "https://github.com/syl21b/Car-Price-Prediction/blob/main/Car%20Price%20Prediction.ipynb",
     demoButtonTitle: "View Car Price Prediction Code on GitHub",
-    imagePreview: "/images/car-price-preview.png", // Added a preview image for PDF
-    datasetLink: "https://github.com/syl21b/Car-Price-Prediction" // Dataset likely within the GitHub repo or acquired via scripts there
+   
+    datasetLink: "https://github.com/syl21b/Car-Price-Prediction"
   },
   {
-    id: 5,
+    id: 1,
     type: "pdf",
     date: "Oct 2023 - Dec 2023",
     title: "Customer Churn Prediction with Machine Learning",
@@ -184,20 +241,20 @@ export const projects = [
     linkText: "Open Report",
     linkHref: "https://github.com/syl21b/Churn_Prediction/blob/ece7528f3ee130b422453e4c4ed5f7784ddc1c87/Report.pdf",
     buttonTitle: "Open Customer Churn Prediction Report (PDF)",
-    iframeSrc: `https://docs.google.com/viewer?url=${encodeURIComponent("https://raw.githubusercontent.com/syl21b/Churn_Prediction/main/Report.pdf")}&embedded=true`, // Corrected PDF URL in iframeSrc
+    iframeSrc: `https://docs.google.com/viewer?url=${encodeURIComponent("https://raw.githubusercontent.com/syl21b/Churn_Prediction/main/Report.pdf")}&embedded=true`,
     demoLinkText: "View Code",
     demoLinkHref: "https://github.com/syl21b/Churn_Prediction/blob/ece7528f3ee130b422453e4c4ed5f7784ddc1c87/Project-Churn%20Prediction.ipynb",
     demoButtonTitle: "View Customer Churn Prediction Code on GitHub",
-    imagePreview: "/images/churn-prediction-preview.png", // Added a preview image for PDF
-    datasetLink: "https://www.kaggle.com/datasets/safrin03/predictive-analytics-for-customer-churn-dataset?select=train.csv" // Common Kaggle dataset for Telco Churn
+    
+    datasetLink: "https://www.kaggle.com/datasets/safrin03/predictive-analytics-for-customer-churn-dataset?select=train.csv"
   },
   {
-    id: 6,
-    title: "Individual Market Medical Plan Data Analysis (2025)",
+    id: 0,
+    title: "Ongoing...",
     date: "Ongoing",
     isOngoing: true,
-    category: "Healthcare Analytics & Policy", // More specific category
-    imagePreview: "/assets/images/placeholder-medical-plan.png",
+    category: "Healthcare Analytics & Policy",
+
     iframeSrc: "",
     linkHref: "",
     linkText: "View Dashboard",
@@ -252,6 +309,6 @@ export const projects = [
       </ul>
       <p>This feature would revolutionize consumer decision-making by providing predictive financial clarity, moving beyond current year pricing to forecast the true financial implications of health plan choices based on individual health profiles and anticipated events. This shifts the focus from "what is the premium?" to "what will this plan *actually cost me* for my unique health needs?"</p>
     `,
-    datasetLink: "https://www.kaggle.com/datasets/bumjoohuh/individual-market-medical-plan" // Official HealthCare.gov data source
+    datasetLink: "https://www.kaggle.com/datasets/bumjoohuh/individual-market-medical-plan"
   }
 ];

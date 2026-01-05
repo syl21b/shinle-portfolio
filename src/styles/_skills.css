@@ -1,0 +1,220 @@
+/* src/styles/_skills.css */
+/* Skills Section Styles using Design Tokens */
+
+.skills-section {
+  background: linear-gradient(180deg, rgba(250, 250, 250, 0.8) 0%, rgba(255, 255, 255, 0.98) 100%);
+  position: relative;
+  overflow: visible !important;
+  min-height: 100vh;
+  cursor: default;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.radar-chart-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--spacing-xl);
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+  overflow: visible !important;
+  z-index: 2;
+  cursor: default;
+}
+
+.radar-chart-container:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.radar-chart-container.tooltip-open {
+  z-index: 100;
+}
+
+/* Radar chart text labels */
+.radar-label {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.radar-label:hover {
+  transform: scale(1.05);
+}
+
+/* Custom tooltip styles */
+.custom-tooltip {
+  background: #111827;
+  border-radius: var(--radius-lg);
+  color: var(--light);
+  box-shadow: var(--shadow-strong);
+  font-family: var(--font-primary);
+  z-index: 1000;
+  position: relative;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skills summary section */
+.skills-summary {
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: all var(--transition-base);
+}
+
+.skills-summary:hover {
+  box-shadow: var(--card-hover-shadow);
+  border: var(--card-hover-border);
+}
+
+/* ==================== REMOVE FOCUS OUTLINES ==================== */
+/* Remove blue focus outline from containers */
+.container.card:focus,
+.container.card:focus-visible,
+.container.card:focus-within,
+.radar-chart-container:focus,
+.radar-chart-container:focus-visible,
+.radar-chart-container:focus-within,
+.skills-section:focus,
+.skills-section:focus-visible,
+.skills-section:focus-within {
+  outline: none !important;
+  box-shadow: var(--shadow-md) !important;
+  border-color: var(--border-light) !important;
+}
+
+/* Remove focus from radar chart labels */
+.radar-label:focus,
+.radar-label:focus-visible {
+  outline: none !important;
+}
+
+/* Remove focus from all divs in skills section */
+.skills-section div:focus,
+.skills-section div:focus-visible {
+  outline: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .radar-chart-container {
+    padding: var(--spacing-md);
+  }
+  
+  .skills-summary {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .radar-chart-container {
+    padding: var(--spacing-sm);
+  }
+  
+  .skills-instructions {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .skills-summary {
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Recharts specific overrides */
+.recharts-polar-grid-line {
+  stroke: rgba(0, 0, 0, 0.1);
+}
+
+.recharts-polar-angle-axis-tick-value {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.recharts-legend-item {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+/* Animation for skill bars */
+.recharts-bar-rectangle {
+  transition: transform 0.3s ease;
+}
+
+.recharts-bar-rectangle:hover {
+  transform: scaleX(1.02);
+}
+
+/* Grid lines styling */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(0, 0, 0, 0.05);
+}
+
+/* Axis labels */
+.recharts-text.recharts-cartesian-axis-tick-value {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  fill: var(--gray);
+}
+
+/* Chart container responsiveness */
+@media (max-width: 1024px) {
+  .skills-chart-container {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-chart-container {
+    padding: var(--spacing-sm);
+  }
+  
+  /* Mobile specific focus removal */
+  .container.card:active,
+  .radar-chart-container:active,
+  .skills-section:active {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .skills-section {
+    break-inside: avoid;
+  }
+  
+  .radar-chart-container {
+    box-shadow: none;
+    border: 1px solid var(--border-light);
+  }
+  
+  .custom-tooltip {
+    display: none;
+  }
+}

@@ -1,6 +1,5 @@
 /* src/styles/main.css */
-
-@import './_variables.css';
+@import './_design-tokens.css';
 @import './_base.css';
 @import './_layout.css';
 @import './_learning.css';
@@ -14,3 +13,6 @@
 @import './_buttons.css'; 
 @import './_utilities.css';
 @import './_resume.css';
+@import './_skills.css';
+@import './_featuredProjects.css';
+@import './Showcase.css';

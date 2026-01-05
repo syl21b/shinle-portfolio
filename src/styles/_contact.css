@@ -3,10 +3,10 @@
 /* Call to Action Section (Contact Section) */
 .cta-section {
   text-align: center;
-  padding: 5rem 2rem;
+  padding: var(--spacing-5xl) var(--spacing-xl);
   background: linear-gradient(135deg, var(--light), var(--primary));
-  border-radius: 20px;
-  margin: 4rem auto;
+  border-radius: var(--radius-3xl);
+  margin: var(--spacing-4xl) auto;
   max-width: 1000px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1), var(--glow-primary);
   border: 1px solid rgba(52, 73, 94, 0.2);
@@ -22,24 +22,23 @@
 
 .cta-section h2 {
   color: var(--primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .cta-section p {
   color: var(--light);
   max-width: 700px;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto var(--spacing-3xl) auto;
 }
 
 .cta-section .btn {
-  font-size: 1.1rem;
-  padding: 1rem 2.5rem;
+  font-size: var(--font-size-md);
+  padding: var(--spacing-md) var(--spacing-2xl);
 }
-
 
 /* Contact section styles */
 .contact {
-  padding: 5rem 2rem;
+  padding: var(--spacing-5xl) var(--spacing-xl);
   color: var(--dark);
   background: var(--light);
   scroll-snap-align: start;
@@ -48,17 +47,17 @@
 .contact-content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 4rem;
+  margin-top: var(--spacing-4xl);
   justify-content: space-between;
-  gap: 4rem;
+  gap: var(--spacing-4xl);
 }
 
 .contact-form-container {
   flex: 1;
   min-width: 350px;
   background: var(--light);
-  border-radius: 16px;
-  padding: 3rem;
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-3xl);
   box-shadow: var(--card-shadow);
   border: var(--card-border);
 }
@@ -69,21 +68,21 @@
 }
 
 .contact-form label {
-  margin-bottom: 0.8rem;
-  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
   color: var(--primary);
 }
 
 .contact-form .form-controls {
   width: 100%;
-  padding: 1rem 1.2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
+  padding: var(--spacing-md) 1.2rem;
+  margin-bottom: var(--spacing-xl);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--gray);
   background-color: rgba(0, 0, 0, 0.01);
   color: var(--dark);
-  font-size: 1.1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: var(--font-size-md);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .contact-form .form-controls:focus {
@@ -100,22 +99,22 @@
 .contact-form .form-btn {
   width: auto;
   align-self: flex-start;
-  margin-top: 1.5rem;
+  margin-top: var(--spacing-lg);
 }
 
 .contact-details {
   flex: 1;
   min-width: 350px;
   background: var(--light);
-  border-radius: 16px;
-  padding: 3rem;
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-3xl);
   box-shadow: var(--card-shadow);
   border: var(--card-border);
 }
 
 .contact-details h3 {
   color: var(--primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .contact-details p {
@@ -123,11 +122,11 @@
   color: var(--dark);
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: var(--spacing-md);
 }
 
 .contact-details p svg {
   color: var(--primary);
-  font-size: 1.5rem;
+  font-size: var(--font-size-lg);
   flex-shrink: 0;
 }
