@@ -37,16 +37,21 @@ export default function ResumePageDataAnalyst() {
       const contentWidth = pageWidth - (margin * 2);
       let yPos = margin;
 
+      // Balanced spacing constants
+      const SECTION_SPACING = 5; // Space between sections
+      const ITEM_SPACING = 4;    // Space between items within a section
+      const LINE_SPACING = 4.5;  // Line height for text
+
       pdf.setFont('helvetica', 'normal');
       pdf.setFont('helvetica', 'bold');
-      pdf.setFontSize(28);
+      pdf.setFontSize(20);
       pdf.text('SHIN LE', pageWidth / 2, yPos, { align: 'center' });
-      yPos += 8;
+      yPos += 7;
 
       pdf.setFont('helvetica', 'italic');
       pdf.setFontSize(11);
       pdf.text('Data Analyst', pageWidth / 2, yPos, { align: 'center' });
-      yPos += 6;
+      yPos += 5;
 
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -88,10 +93,10 @@ export default function ResumePageDataAnalyst() {
       
       pdf.setTextColor(0, 0, 0);
       
-      yPos += 5;
+      yPos += 4;
       pdf.setLineWidth(0.5);
       pdf.line(margin, yPos, pageWidth - margin, yPos);
-      yPos += 7;
+      yPos += 6;
 
       const addSection = (title) => {
         pdf.setFont('helvetica', 'bold');
@@ -100,17 +105,19 @@ export default function ResumePageDataAnalyst() {
         yPos += 1;
         pdf.setLineWidth(0.3);
         pdf.line(margin, yPos, pageWidth - margin, yPos);
-        yPos += 5;
+        yPos += SECTION_SPACING;
       };
 
+      // PROFESSIONAL SUMMARY
       addSection('PROFESSIONAL SUMMARY');
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       const summary = 'Results-driven Data Analyst with a strong mathematics background and a knack for uncovering actionable insights from complex datasets. I combine technical expertise in SQL, Python, and Tableau with business acumen to drive data-informed decisions. Proven ability to translate raw data into compelling narratives that stakeholders can use to optimize operations and boost profitability.';
       const summaryLines = pdf.splitTextToSize(summary, contentWidth);
       pdf.text(summaryLines, margin, yPos);
-      yPos += summaryLines.length * 4.5 + 4;
+      yPos += summaryLines.length * LINE_SPACING + SECTION_SPACING -3;
 
+      // TECHNICAL SKILLS
       addSection('TECHNICAL SKILLS');
       pdf.setFontSize(9);
       
@@ -131,10 +138,11 @@ export default function ResumePageDataAnalyst() {
         pdf.setFont('helvetica', 'normal');
         const skillsLines = pdf.splitTextToSize(skills, contentWidth - categoryWidth);
         pdf.text(skillsLines, margin + categoryWidth, yPos);
-        yPos += skillsLines.length * 4.5;
+        yPos += skillsLines.length * LINE_SPACING;
       });
-      yPos += 3;
+      yPos += SECTION_SPACING;
 
+      // DATA ANALYSIS PROJECTS
       addSection('DATA ANALYSIS PROJECTS');
       
       pdf.setFont('helvetica', 'bold');
@@ -144,7 +152,7 @@ export default function ResumePageDataAnalyst() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('September 2025 – Present', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -157,9 +165,9 @@ export default function ResumePageDataAnalyst() {
       project1.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
@@ -168,7 +176,7 @@ export default function ResumePageDataAnalyst() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('May 2025 – June 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -181,9 +189,9 @@ export default function ResumePageDataAnalyst() {
       project2.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
@@ -192,7 +200,7 @@ export default function ResumePageDataAnalyst() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('April 2025 – May 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -205,10 +213,11 @@ export default function ResumePageDataAnalyst() {
       project3.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 3;
+      yPos += SECTION_SPACING;
 
+      // PROFESSIONAL EXPERIENCE
       addSection('PROFESSIONAL EXPERIENCE');
       
       pdf.setFont('helvetica', 'bold');
@@ -216,11 +225,11 @@ export default function ResumePageDataAnalyst() {
       pdf.text('Mathematics Tutor & Academic Coach', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('August 2024 – April 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'italic');
       pdf.setFontSize(9);
       pdf.text('Mathnasium Learning Center', margin, yPos);
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -233,33 +242,37 @@ export default function ResumePageDataAnalyst() {
       exp1.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
+      // EDUCATION
       addSection('EDUCATION');
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.text('Bachelor of Science in Applied Mathematics', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('Florida State University', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       pdf.text('Relevant Coursework: Statistical Methods, Data Analysis, Computational Mathematics, Probability Theory', margin, yPos);
-      yPos += 5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.text('Associate of Arts in Mathematics', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('Indian River State College', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       pdf.text('Graduated with Honors, Dean\'s List', margin, yPos);
-      yPos += 5;
-
+      
+      // ADD EXTRA SPACE HERE - This is the key fix!
+      yPos += SECTION_SPACING + 3; // Add extra 2mm for more space
+      
+      // CERTIFICATIONS
       addSection('CERTIFICATIONS');
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -267,7 +280,7 @@ export default function ResumePageDataAnalyst() {
       pdf.textWithLink('IBM Data Analyst Professional Certificate', margin, yPos, { url: 'https://coursera.org/share/6f4a5c892079cf1212f1669b9539e20b' });
       pdf.setTextColor(0, 0, 0);
       pdf.text('July 2023', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
 
       pdf.setTextColor(30, 90, 142);
       pdf.textWithLink('IBM Data Science Professional Certificate', margin, yPos, { url: 'https://coursera.org/share/c483954137c683f173873918b09024f2' });

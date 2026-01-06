@@ -37,16 +37,21 @@ export default function ResumePageMLEngineer() {
       const contentWidth = pageWidth - (margin * 2);
       let yPos = margin;
 
+      // Balanced spacing constants
+      const SECTION_SPACING = 5; // Space between sections
+      const ITEM_SPACING = 4;    // Space between items within a section
+      const LINE_SPACING = 4.5;  // Line height for text
+
       pdf.setFont('helvetica', 'normal');
       pdf.setFont('helvetica', 'bold');
-      pdf.setFontSize(28);
+      pdf.setFontSize(20);
       pdf.text('SHIN LE', pageWidth / 2, yPos, { align: 'center' });
-      yPos += 8;
+      yPos += 7;
 
       pdf.setFont('helvetica', 'italic');
       pdf.setFontSize(11);
       pdf.text('Full-Stack Machine Learning Engineer', pageWidth / 2, yPos, { align: 'center' });
-      yPos += 6;
+      yPos += 5;
 
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -88,10 +93,10 @@ export default function ResumePageMLEngineer() {
       
       pdf.setTextColor(0, 0, 0);
       
-      yPos += 5;
+      yPos += 4;
       pdf.setLineWidth(0.5);
       pdf.line(margin, yPos, pageWidth - margin, yPos);
-      yPos += 7;
+      yPos += 6;
 
       const addSection = (title) => {
         pdf.setFont('helvetica', 'bold');
@@ -100,17 +105,19 @@ export default function ResumePageMLEngineer() {
         yPos += 1;
         pdf.setLineWidth(0.3);
         pdf.line(margin, yPos, pageWidth - margin, yPos);
-        yPos += 5;
+        yPos += SECTION_SPACING;
       };
 
+      // PROFESSIONAL SUMMARY
       addSection('PROFESSIONAL SUMMARY');
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       const summary = 'Full-Stack Machine Learning Engineer specializing in building end-to-end AI applications from research to production deployment. Combines strong expertise in machine learning algorithms with full-stack development skills to create scalable, production-ready AI solutions. Proven ability to architect ML systems, implement advanced models, and deploy them in cloud environments with robust APIs and user interfaces.';
       const summaryLines = pdf.splitTextToSize(summary, contentWidth);
       pdf.text(summaryLines, margin, yPos);
-      yPos += summaryLines.length * 4.5 + 4;
+      yPos += summaryLines.length * LINE_SPACING + SECTION_SPACING - 3;
 
+      // TECHNICAL SKILLS
       addSection('TECHNICAL SKILLS');
       pdf.setFontSize(9);
       
@@ -131,10 +138,11 @@ export default function ResumePageMLEngineer() {
         pdf.setFont('helvetica', 'normal');
         const skillsLines = pdf.splitTextToSize(skills, contentWidth - categoryWidth);
         pdf.text(skillsLines, margin + categoryWidth, yPos);
-        yPos += skillsLines.length * 4.5;
+        yPos += skillsLines.length * LINE_SPACING;
       });
-      yPos += 3;
+      yPos += SECTION_SPACING;
 
+      // ML ENGINEERING PROJECTS
       addSection('ML ENGINEERING PROJECTS');
       
       pdf.setFont('helvetica', 'bold');
@@ -144,7 +152,7 @@ export default function ResumePageMLEngineer() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('September 2025 – Present', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -157,9 +165,9 @@ export default function ResumePageMLEngineer() {
       project1.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
@@ -168,7 +176,7 @@ export default function ResumePageMLEngineer() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('May 2025 – June 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -181,9 +189,9 @@ export default function ResumePageMLEngineer() {
       project2.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
@@ -192,7 +200,7 @@ export default function ResumePageMLEngineer() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('March 2025 – April 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -205,10 +213,11 @@ export default function ResumePageMLEngineer() {
       project3.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 3;
+      yPos += SECTION_SPACING;
 
+      // PROFESSIONAL EXPERIENCE
       addSection('PROFESSIONAL EXPERIENCE');
       
       pdf.setFont('helvetica', 'bold');
@@ -216,11 +225,11 @@ export default function ResumePageMLEngineer() {
       pdf.text('ML Engineering Consultant', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('January 2024 – Present', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'italic');
       pdf.setFontSize(9);
       pdf.text('Freelance / Contract', margin, yPos);
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -233,20 +242,20 @@ export default function ResumePageMLEngineer() {
       exp1.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.text('Mathematics Tutor & Academic Coach', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('August 2024 – April 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'italic');
       pdf.setFontSize(9);
       pdf.text('Mathnasium Learning Center', margin, yPos);
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -259,33 +268,37 @@ export default function ResumePageMLEngineer() {
       exp2.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 3;
+      yPos += SECTION_SPACING;
 
+      // EDUCATION
       addSection('EDUCATION');
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.text('Bachelor of Science in Applied Mathematics', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('Florida State University', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       pdf.text('Relevant Coursework: Machine Learning, Algorithms, Data Structures, Statistical Computing, Linear Algebra', margin, yPos);
-      yPos += 5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.text('Associate of Arts in Mathematics', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('Indian River State College', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       pdf.text('Graduated with Honors, Dean\'s List', margin, yPos);
-      yPos += 5;
-
+      
+      // ADD EXTRA SPACE HERE
+      yPos += SECTION_SPACING + 3;
+      
+      // CERTIFICATIONS
       addSection('CERTIFICATIONS');
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -293,13 +306,13 @@ export default function ResumePageMLEngineer() {
       pdf.textWithLink('AWS Certified Machine Learning - Specialty', margin, yPos, { url: 'https://syl21b.github.io/shinle-portfolio' });
       pdf.setTextColor(0, 0, 0);
       pdf.text('October 2023', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
 
       pdf.setTextColor(30, 90, 142);
       pdf.textWithLink('TensorFlow Developer Certificate', margin, yPos, { url: 'https://syl21b.github.io/shinle-portfolio' });
       pdf.setTextColor(0, 0, 0);
       pdf.text('September 2023', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
 
       pdf.setTextColor(30, 90, 142);
       pdf.textWithLink('IBM Data Science Professional Certificate', margin, yPos, { url: 'https://coursera.org/share/c483954137c683f173873918b09024f2' });

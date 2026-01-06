@@ -37,16 +37,21 @@ export default function ResumePageDataScientist() {
       const contentWidth = pageWidth - (margin * 2);
       let yPos = margin;
 
+      // Balanced spacing constants
+      const SECTION_SPACING = 5; // Space between sections
+      const ITEM_SPACING = 4;    // Space between items within a section
+      const LINE_SPACING = 4.5;  // Line height for text
+
       pdf.setFont('helvetica', 'normal');
       pdf.setFont('helvetica', 'bold');
-      pdf.setFontSize(28);
+      pdf.setFontSize(20);
       pdf.text('SHIN LE', pageWidth / 2, yPos, { align: 'center' });
-      yPos += 8;
+      yPos += 7;
 
       pdf.setFont('helvetica', 'italic');
       pdf.setFontSize(11);
       pdf.text('Data Scientist', pageWidth / 2, yPos, { align: 'center' });
-      yPos += 6;
+      yPos += 5;
 
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -88,10 +93,10 @@ export default function ResumePageDataScientist() {
       
       pdf.setTextColor(0, 0, 0);
       
-      yPos += 5;
+      yPos += 4;
       pdf.setLineWidth(0.5);
       pdf.line(margin, yPos, pageWidth - margin, yPos);
-      yPos += 7;
+      yPos += 6;
 
       const addSection = (title) => {
         pdf.setFont('helvetica', 'bold');
@@ -100,17 +105,19 @@ export default function ResumePageDataScientist() {
         yPos += 1;
         pdf.setLineWidth(0.3);
         pdf.line(margin, yPos, pageWidth - margin, yPos);
-        yPos += 5;
+        yPos += SECTION_SPACING;
       };
 
+      // PROFESSIONAL SUMMARY
       addSection('PROFESSIONAL SUMMARY');
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       const summary = 'Data Scientist with strong mathematical foundations and expertise in advanced statistical modeling, machine learning, and predictive analytics. Specializes in extracting meaningful insights from complex datasets and developing data-driven solutions to business challenges. Proven ability to apply rigorous scientific methodology to real-world problems, from hypothesis formulation to model deployment and impact measurement.';
       const summaryLines = pdf.splitTextToSize(summary, contentWidth);
       pdf.text(summaryLines, margin, yPos);
-      yPos += summaryLines.length * 4.5 + 4;
+      yPos += summaryLines.length * LINE_SPACING + SECTION_SPACING - 3;
 
+      // TECHNICAL SKILLS
       addSection('TECHNICAL SKILLS');
       pdf.setFontSize(9);
       
@@ -131,10 +138,11 @@ export default function ResumePageDataScientist() {
         pdf.setFont('helvetica', 'normal');
         const skillsLines = pdf.splitTextToSize(skills, contentWidth - categoryWidth);
         pdf.text(skillsLines, margin + categoryWidth, yPos);
-        yPos += skillsLines.length * 4.5;
+        yPos += skillsLines.length * LINE_SPACING;
       });
-      yPos += 3;
+      yPos += SECTION_SPACING;
 
+      // DATA SCIENCE PROJECTS
       addSection('DATA SCIENCE PROJECTS');
       
       pdf.setFont('helvetica', 'bold');
@@ -144,7 +152,7 @@ export default function ResumePageDataScientist() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('September 2025 – Present', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -157,9 +165,9 @@ export default function ResumePageDataScientist() {
       project1.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
@@ -168,7 +176,7 @@ export default function ResumePageDataScientist() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('May 2025 – June 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -181,9 +189,9 @@ export default function ResumePageDataScientist() {
       project2.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
@@ -192,7 +200,7 @@ export default function ResumePageDataScientist() {
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('March 2025 – April 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -205,10 +213,11 @@ export default function ResumePageDataScientist() {
       project3.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 3;
+      yPos += SECTION_SPACING;
 
+      // PROFESSIONAL EXPERIENCE
       addSection('PROFESSIONAL EXPERIENCE');
       
       pdf.setFont('helvetica', 'bold');
@@ -216,75 +225,78 @@ export default function ResumePageDataScientist() {
       pdf.text('Data Science Consultant', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('January 2025 – Present', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'italic');
       pdf.setFontSize(9);
       pdf.text('Freelance / Contract', margin, yPos);
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
-const exp1 = [
-'• Increased client revenue by 10-12% through predictive modeling and targeted interventions',
-  '• Designed and implemented experimental frameworks including A/B testing to drive data-informed strategic decisions',
-  '• Delivered comprehensive analysis reports translating complex findings into actionable business recommendations'
-];
-
+      const exp1 = [
+        '• Increased client revenue by 10-12% through predictive modeling and targeted interventions',
+        '• Designed and implemented experimental frameworks including A/B testing to drive data-informed strategic decisions',
+        '• Delivered comprehensive analysis reports translating complex findings into actionable business recommendations'
+      ];
       exp1.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 2.5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.text('Mathematics Tutor & Academic Coach', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('August 2024 – April 2025', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'italic');
       pdf.setFontSize(9);
       pdf.text('Mathnasium Learning Center', margin, yPos);
-      yPos += 5;
+      yPos += ITEM_SPACING;
       
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
-const exp2 = [
-'• Forecasted student progress with 90% accuracy using statistical analysis and predictive models',
-  '• Designed and executed randomized controlled trials to evaluate and refine teaching methodologies',
-  '• Built data visualization dashboards to track educational metrics and measure intervention effectiveness'
-];
+      const exp2 = [
+        '• Forecasted student progress with 90% accuracy using statistical analysis and predictive models',
+        '• Designed and executed randomized controlled trials to evaluate and refine teaching methodologies',
+        '• Built data visualization dashboards to track educational metrics and measure intervention effectiveness'
+      ];
       exp2.forEach(item => {
         const lines = pdf.splitTextToSize(item, contentWidth - 3);
         pdf.text(lines, margin + 2, yPos);
-        yPos += lines.length * 4.5;
+        yPos += lines.length * LINE_SPACING;
       });
-      yPos += 3;
+      yPos += SECTION_SPACING;
 
+      // EDUCATION
       addSection('EDUCATION');
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.text('Bachelor of Science in Applied Mathematics', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('Florida State University', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       pdf.text('Coursework: Statistical Methods, Probability Theory, Regression Analysis, Mathematical Statistics, Computational Data Analysis', margin, yPos);
-      yPos += 5;
+      yPos += SECTION_SPACING;
 
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.text('Associate of Arts in Mathematics', margin, yPos);
       pdf.setFont('helvetica', 'normal');
       pdf.text('Indian River State College', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
       pdf.text('Graduated with Honors, Dean\'s List', margin, yPos);
-      yPos += 5;
-
+      
+      // ADD EXTRA SPACE HERE
+      yPos += SECTION_SPACING + 3;
+      
+      // CERTIFICATIONS
       addSection('CERTIFICATIONS');
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(9);
@@ -292,10 +304,10 @@ const exp2 = [
       pdf.textWithLink('IBM Data Science Professional Certificate', margin, yPos, { url: 'https://coursera.org/share/c483954137c683f173873918b09024f2' });
       pdf.setTextColor(0, 0, 0);
       pdf.text('July 2023', pageWidth - margin, yPos, { align: 'right' });
-      yPos += 5;
+      yPos += ITEM_SPACING;
 
       pdf.setTextColor(30, 90, 142);
-      pdf.textWithLink('IBM Data Science Professional Certificate', margin, yPos, { url: 'https://coursera.org/share/c483954137c683f173873918b09024f2' });
+      pdf.textWithLink('IBM Data Analyst Professional Certificate', margin, yPos, { url: 'https://coursera.org/share/6f4a5c892079cf1212f1669b9539e20b' });
       pdf.setTextColor(0, 0, 0);
       pdf.text('May 2023', pageWidth - margin, yPos, { align: 'right' });
 
@@ -469,38 +481,37 @@ const exp2 = [
           </div>
         </section>
 
-<section className="resume-section">
-  <div className="section-header">
-    <h3 className="section-title">PROFESSIONAL EXPERIENCE</h3>
-  </div>
-  
-  <div className="experience-item">
-    <div className="experience-header">
-      <h4 className="experience-title">Data Science Consultant</h4>
-      <span className="experience-date">January 2025 – Present</span>
-    </div>
-    <p className="company-name">Freelance / Contract</p>
-    <ul className="experience-bullets">
-      <li>Increased client revenue by <strong>10-12%</strong> through predictive modeling and targeted interventions</li>
-      <li>Designed and implemented experimental frameworks including A/B testing to drive data-informed strategic decisions</li>
-      <li>Delivered comprehensive analysis reports translating complex findings into actionable business recommendations</li>
-    </ul>
-  </div>
+        <section className="resume-section">
+          <div className="section-header">
+            <h3 className="section-title">PROFESSIONAL EXPERIENCE</h3>
+          </div>
+          
+          <div className="experience-item">
+            <div className="experience-header">
+              <h4 className="experience-title">Data Science Consultant</h4>
+              <span className="experience-date">January 2025 – Present</span>
+            </div>
+            <p className="company-name">Freelance / Contract</p>
+            <ul className="experience-bullets">
+              <li>Increased client revenue by <strong>10-12%</strong> through predictive modeling and targeted interventions</li>
+              <li>Designed and implemented experimental frameworks including A/B testing to drive data-informed strategic decisions</li>
+              <li>Delivered comprehensive analysis reports translating complex findings into actionable business recommendations</li>
+            </ul>
+          </div>
 
-  <div className="experience-item">
-    <div className="experience-header">
-      <h4 className="experience-title">Mathematics Tutor & Academic Coach</h4>
-      <span className="experience-date">August 2024 – April 2025</span>
-    </div>
-    <p className="company-name">Mathnasium Learning Center</p>
-    <ul className="experience-bullets">
-      <li>Forecasted student progress with <strong>90% accuracy</strong> using statistical analysis and predictive models</li>
-      <li>Designed and executed randomized controlled trials to evaluate and refine teaching methodologies</li>
-      <li>Built data visualization dashboards to track educational metrics and measure intervention effectiveness</li>
-    </ul>
-  </div>
-</section>
-
+          <div className="experience-item">
+            <div className="experience-header">
+              <h4 className="experience-title">Mathematics Tutor & Academic Coach</h4>
+              <span className="experience-date">August 2024 – April 2025</span>
+            </div>
+            <p className="company-name">Mathnasium Learning Center</p>
+            <ul className="experience-bullets">
+              <li>Forecasted student progress with <strong>90% accuracy</strong> using statistical analysis and predictive models</li>
+              <li>Designed and executed randomized controlled trials to evaluate and refine teaching methodologies</li>
+              <li>Built data visualization dashboards to track educational metrics and measure intervention effectiveness</li>
+            </ul>
+          </div>
+        </section>
 
         <section className="resume-section">
           <div className="section-header">
