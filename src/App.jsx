@@ -19,12 +19,13 @@ import ResumePage4 from "./components/pages/ResumePageMLEngineer.jsx";
 import Showcase from "./components/pages/Showcase.jsx";
 import FeaturedProjects from "./components/pages/FeaturedProjects.jsx";
 
-
 function HomeContent() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/" && !location.hash) {
+    // Remove the hash handling since we're using React Router
+    // Instead, handle scroll based on the current route
+    if (location.pathname === "/" || location.pathname === "/shinle-portfolio/") {
       setTimeout(() => {
         const homeElement = document.getElementById("home");
         if (homeElement) {
@@ -47,16 +48,23 @@ function HomeContent() {
 
 export default function App() {
   return (
-    
     <div className="app-wrapper">
       <Navbar />
 
       <Routes>
+        {/* Home route */}
         <Route path="/" element={<HomeContent />} />
-       <Route path="/showcase" element={<ShowcasePage />} />
-      <Route path="/showcase/:id" element={<ProjectDetail />} />
+        
+        {/* Showcase routes - both with and without projectId */}
+        <Route path="/showcase" element={<Showcase />} />
+        <Route path="/showcase/:projectId" element={<Showcase />} />
+        
+        {/* Other routes */}
         <Route path="/learning" element={<Learning />} />
         <Route path="/resume" element={<ResumePage1 />} />
+        
+        {/* Catch-all redirect to home */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
       <Thanks />
