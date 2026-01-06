@@ -47,12 +47,14 @@ function HomeContent() {
 
 export default function App() {
   return (
+    
     <div className="app-wrapper">
       <Navbar />
 
       <Routes>
         <Route path="/" element={<HomeContent />} />
-        <Route path="/showcase/:projectId?" element={<Showcase />} />
+       <Route path="/showcase" element={<ShowcasePage />} />
+      <Route path="/showcase/:id" element={<ProjectDetail />} />
         <Route path="/learning" element={<Learning />} />
         <Route path="/resume" element={<ResumePage1 />} />
       </Routes>

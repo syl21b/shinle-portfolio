@@ -1,23 +1,25 @@
-// Showcase.js
 import React from 'react';
-// Assuming Showcase is the component that holds your project viewer logic
-import Showcase from "./Showcase.js";
+import { Link } from 'react-router-dom';
+import { projects } from './projectsData';
 
-function ShowcasePage() {
+function Showcase() {
   return (
-    
-    <div className="showcase-page">
-      {/* You can add a header or any other content specific to the showcase page */}
-      <h1 style={{ textAlign: 'center', padding: '60px 0', color: '#333' }}>
-        My Project Showcase
-      </h1>
-      
-      {/* Render your Showcase component here */}
-      <Showcase /> 
-      
-      {/* Or any other content you want on this dedicated page */}
+    <div className="projects-grid">
+      {projects.map((project) => (
+        <div key={project.id} className="project-card">
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
+          {/* Add link to project detail */}
+          <Link 
+            to={`/showcase/${project.id}`}
+            className="btn btn-primary mt-4"
+          >
+            View Details
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }
 
-export default ShowcasePage;
+export default Showcase;
