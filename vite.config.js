@@ -13,11 +13,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-    // Generate sourcemaps for debugging
     sourcemap: true,
+    // Remove the rollupOptions for 404.html
   },
-  // This helps with the redirects
   server: {
     open: true,
   },
+  // Add publicDir configuration
+  publicDir: 'public',
 });

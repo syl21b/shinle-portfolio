@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate, useNavigate } from "react-router-dom";
 
 // Import components
 import Navbar from "./components/pages/Navbar";
@@ -23,8 +23,6 @@ function HomeContent() {
   const location = useLocation();
 
   useEffect(() => {
-    // Remove the hash handling since we're using React Router
-    // Instead, handle scroll based on the current route
     if (location.pathname === "/" || location.pathname === "/shinle-portfolio/") {
       setTimeout(() => {
         const homeElement = document.getElementById("home");
@@ -46,16 +44,43 @@ function HomeContent() {
   );
 }
 
+// Add this component to handle SPA redirects
+function SPARedirectHandler() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if we're in a GitHub Pages SPA redirect
+    if (location.search) {
+      const search = location.search;
+      // Check if the search starts with ?/ (SPA redirect pattern)
+      if (search.startsWith('?/')) {
+        // Extract the path from the query parameter
+        const path = search.substring(2); // Remove "?/"
+        const decodedPath = path.replace(/~and~/g, '&');
+        
+        // Navigate to the correct path
+        if (decodedPath) {
+          navigate(decodedPath, { replace: true });
+        }
+      }
+    }
+  }, [location, navigate]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <div className="app-wrapper">
       <Navbar />
-
+      <SPARedirectHandler /> {/* Add the redirect handler */}
+      
       <Routes>
         {/* Home route */}
         <Route path="/" element={<HomeContent />} />
         
-        {/* Showcase routes - both with and without projectId */}
+        {/* Showcase routes */}
         <Route path="/showcase" element={<Showcase />} />
         <Route path="/showcase/:projectId" element={<Showcase />} />
         
