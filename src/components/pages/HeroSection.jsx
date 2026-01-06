@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import avatarImage from "/src/components/image/profile3.jpg";
 import avatarImage1 from "/src/components/image/profile1.jpg";
-import ResumePage from "/src/components/pages/ResumePage.jsx";
 
 
 export default function HeroSection() {

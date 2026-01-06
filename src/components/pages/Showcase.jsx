@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ExternalLink, Brain, Shield, Bot, Globe, ChartLine, Database, Cloud } from "lucide-react";
 import { projects } from "./projectsData";
-import "/src/styles/Showcase.css";
+
 
 export default function Showcase() {
   const { projectId } = useParams();

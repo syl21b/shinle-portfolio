@@ -164,7 +164,7 @@ export default function ResumePageMLEngineer() {
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.setTextColor(30, 90, 142);
-      pdf.textWithLink('Real-Time Stock Prediction API Service', margin, yPos, { url: 'https://github.com/syl21b' });
+      pdf.textWithLink('Real-Time Stock Prediction API Service', margin, yPos, { url: 'https://syl21b.github.io/shinle-portfolio/showcase/5' });
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('May 2025 – June 2025', pageWidth - margin, yPos, { align: 'right' });
@@ -188,7 +188,7 @@ export default function ResumePageMLEngineer() {
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.setTextColor(30, 90, 142);
-      pdf.textWithLink('Automated ML Pipeline Framework', margin, yPos, { url: 'https://github.com/syl21b' });
+      pdf.textWithLink('Automated ML Pipeline Framework', margin, yPos, { url: 'https://syl21b.github.io/shinle-portfolio/showcase/1' });
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('March 2025 – April 2025', pageWidth - margin, yPos, { align: 'right' });
@@ -438,7 +438,7 @@ export default function ResumePageMLEngineer() {
           <div className="project-item">
             <div className="project-header">
               <h4 className="project-title">
-                <a href="https://github.com/syl21b" 
+                <a href="https://syl21b.github.io/shinle-portfolio/showcase/5" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    className="project-link">
@@ -458,7 +458,7 @@ export default function ResumePageMLEngineer() {
           <div className="project-item">
             <div className="project-header">
               <h4 className="project-title">
-                <a href="https://github.com/syl21b"
+                <a href="https://syl21b.github.io/shinle-portfolio/showcase/1"
                    target="_blank" 
                    rel="noopener noreferrer" 
                    className="project-link">

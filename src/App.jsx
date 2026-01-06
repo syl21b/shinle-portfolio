@@ -11,7 +11,6 @@ import ContactSection from "./components/pages/ContactSection";
 import Footer from "./components/pages/Footer";
 import Thanks from "./components/pages/Thanks";
 import Learning from "./components/pages/Learning";
-import ResumePage from "./components/pages/ResumePage.jsx";
 import ResumePage1 from "./components/pages/ResumePageDataAnalyst.jsx";
 import ResumePage2 from "./components/pages/ResumePageBISpecialist.jsx";
 import ResumePage3 from "./components/pages/ResumePageDataScientist.jsx";

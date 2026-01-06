@@ -164,7 +164,7 @@ export default function ResumePageDataAnalyst() {
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.setTextColor(30, 90, 142);
-      pdf.textWithLink('World Stock Market Analysis & Prediction', margin, yPos, { url: 'https://public.tableau.com/views/StockMarket_17475986132330/Menu' });
+      pdf.textWithLink('World Stock Market Analysis & Prediction', margin, yPos, { url: 'https://syl21b.github.io/shinle-portfolio/showcase/5' });
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('May 2025 – June 2025', pageWidth - margin, yPos, { align: 'right' });
@@ -188,7 +188,7 @@ export default function ResumePageDataAnalyst() {
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(10);
       pdf.setTextColor(30, 90, 142);
-      pdf.textWithLink('Superstore Performance Analysis & Business Intelligence', margin, yPos, { url: 'https://public.tableau.com/views/Superstore_17455418407990/ExecutiveSummaryDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link' });
+      pdf.textWithLink('Superstore Performance Analysis & Business Intelligence', margin, yPos, { url: 'https://syl21b.github.io/shinle-portfolio/showcase/4' });
       pdf.setTextColor(0, 0, 0);
       pdf.setFont('helvetica', 'normal');
       pdf.text('April 2025 – May 2025', pageWidth - margin, yPos, { align: 'right' });
@@ -406,7 +406,7 @@ export default function ResumePageDataAnalyst() {
           <div className="project-item">
             <div className="project-header">
               <h4 className="project-title">
-                <a href="https://public.tableau.com/views/StockMarket_17475986132330/Menu" 
+                <a href="https://syl21b.github.io/shinle-portfolio/showcase/5" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    className="project-link">
@@ -426,7 +426,7 @@ export default function ResumePageDataAnalyst() {
           <div className="project-item">
             <div className="project-header">
               <h4 className="project-title">
-                <a href="https://public.tableau.com/views/Superstore_17455418407990/ExecutiveSummaryDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                <a href="https://syl21b.github.io/shinle-portfolio/showcase/4"
                    target="_blank" 
                    rel="noopener noreferrer" 
                    className="project-link">
