@@ -156,10 +156,7 @@
 }
 
 /* Skills Section - Supports both versions */
-.skills-container,
-.skills-list {
-  /* Removed font-family override - will inherit from .resume-container */
-}
+
 
 .skill-line {
   font-size: 0.95rem;

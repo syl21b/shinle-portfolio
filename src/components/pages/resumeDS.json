@@ -93,15 +93,15 @@
     "experience": {
       "title": "PROFESSIONAL EXPERIENCE",
       "items": [
-        {
-          "title": "Data Science Educator & Analytics Developer",
+      {
+          "title": "Mathematics Tutor & Academic Coach",
           "company": "Mathnasium Learning Center",
           "date": "August 2024 – April 2025",
           "bullets": [
-            "Developed predictive analytics system forecasting student performance with 85% accuracy using regression modeling",
-            "Implemented statistical analysis framework measuring teaching effectiveness, improving learning outcomes by 25%",
-            "Built A/B testing platform for curriculum evaluation, optimizing teaching approaches and increasing average grades by 1.5 points",
-            "Created data visualization tools translating complex academic metrics into actionable insights for stakeholders"
+            "Increased student learning outcomes by 25% faster through data-driven progress tracking system implementation",
+            "Improved average math grades by 1.5 points by analyzing performance patterns and customizing teaching approaches",
+            "Enhanced parent satisfaction by 40% through visualization reports translating academic data into actionable insights",
+            "Optimized curriculum delivery efficiency by 20% using statistical analysis to measure teaching effectiveness"
           ]
         }
       ]
