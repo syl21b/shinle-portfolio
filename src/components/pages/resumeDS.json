@@ -113,12 +113,12 @@
         {
           "degree": "Bachelor of Science in Applied Mathematics",
           "institution": "Florida State University",
-          "details": "GPA: 3.8/4.0 | Coursework: Statistical Methods, Data Analysis, Probability Theory, Linear Algebra, Calculus III, Mathematical Modeling"
+          "details": "GPA: 3.89/4.0 | Coursework: Statistical Methods, Data Analysis, Probability Theory, Linear Algebra, Calculus III, Mathematical Modeling"
         },
         {
           "degree": "Associate of Arts in Mathematics",
           "institution": "Indian River State College",
-          "details": "Graduated with Honors (Summa Cum Laude), Dean's List All Semesters, GPA: 4.0/4.0"
+          "details": "GPA: 3.96/4.0Graduated with Honors (Summa Cum Laude), Dean's List All Semesters"
         }
       ]
     },
@@ -126,6 +126,12 @@
     "certifications": {
       "title": "CERTIFICATIONS",
       "items": [
+
+        {
+          "name": "AWS Certified Machine Learning Specialty",
+          "url": "",
+          "date": "Expected Feb 2026"
+        },
         {
           "name": "IBM Data Science Professional Certificate",
           "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",
@@ -135,16 +141,6 @@
           "name": "IBM Data Analyst Professional Certificate",
           "url": "https://coursera.org/share/6f4a5c892079cf1212f1669b9539e20b",
           "date": "July 2023"
-        },
-        {
-          "name": "TensorFlow Developer Certificate",
-          "url": "",
-          "date": "Expected Jan 2026"
-        },
-        {
-          "name": "AWS Certified Machine Learning Specialty",
-          "url": "",
-          "date": "Expected Dec 2025"
         }
       ]
     }

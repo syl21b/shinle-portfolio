@@ -8,7 +8,7 @@ import resumeDA from './resumeDA.json';
 import resumeDS from './resumeDS.json';
 
 // This is your original resumeDA.jsx code but made generic
-export default function DynamicResume({ initialResume = 'AI Engineer' }) {
+export default function DynamicResume({ initialResume = 'Data Analyst' }) {
   const resumeRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   const [resumeData, setResumeData] = useState(() => {

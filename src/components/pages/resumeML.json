@@ -125,17 +125,18 @@
     
     "certifications": {
       "title": "CERTIFICATIONS",
-      "items": [
-        {
-          "name": "AWS Certified Machine Learning Specialty",
-          "url": "",
-          "date": "Expected Jan 2026"
-        },
+      "items": [     
         {
           "name": "TensorFlow Developer Certificate",
           "url": "",
-          "date": "Expected Dec 2025"
+          "date": "Expected March 2026"
         },
+        {
+          "name": "AWS Certified Machine Learning Specialty",
+          "url": "",
+          "date": "Expected Feb 2026"
+        },
+   
         {
           "name": "IBM Data Science Professional Certificate",
           "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",

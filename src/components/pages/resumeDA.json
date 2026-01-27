@@ -118,7 +118,7 @@
         {
           "degree": "Associate of Arts in Mathematics",
           "institution": "Indian River State College",
-          "details": "Graduated with Honors (Summa Cum Laude), Dean's List All Semesters, GPA: 3.96/4.0"
+          "details": "GPA: 3.96/4.0, Graduated with Honors (Summa Cum Laude), Dean's List All Semesters"
         }
       ]
     },
@@ -126,6 +126,11 @@
     "certifications": {
       "title": "CERTIFICATIONS & TRAINING",
       "items": [
+                {
+          "name": "Tableau Desktop Specialist",
+          "url": "",
+          "date": "May 2025"
+        },
         {
           "name": "IBM Data Analyst Professional Certificate",
           "url": "https://coursera.org/share/6f4a5c892079cf1212f1669b9539e20b",
@@ -135,11 +140,6 @@
           "name": "IBM Data Science Professional Certificate",
           "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",
           "date": "May 2023"
-        },
-        {
-          "name": "Tableau Desktop Specialist",
-          "url": "",
-          "date": "May 2025"
         }
       ]
     }

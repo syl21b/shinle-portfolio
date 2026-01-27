@@ -5,7 +5,7 @@ export const projects = [
   {
     id: 6,
     type: "fullstack",
-    date: "Aug 2025 - Present",
+    date: "Sep 2025 - Present",
     isOngoing: false,
     featured: true,
     title: "Mentivio: AI-Powered Mental Health Assessment Platform",

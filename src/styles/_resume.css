@@ -1,6 +1,6 @@
 /* Resume Page Styles - Professional Version */
 .resume-container {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   color: var(--dark);
   padding: 3rem 2.5rem;
   max-width: 850px;
@@ -16,7 +16,7 @@
 .resume-header {
   text-align: center;
   margin-bottom: 1rem;
-  padding-bottom: 0.5rem; /* Reduced from 1rem */
+  padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--primary-dark);
 }
 
@@ -25,7 +25,7 @@
   font-weight: var(--font-weight-bold);
   color: var(--dark);
   letter-spacing: 1px;
-  margin-bottom: 0.1rem; /* Reduced from 0.3rem */
+  margin-bottom: 0.1rem;
   line-height: 1.1;
 }
 
@@ -33,17 +33,16 @@
   font-size: 1.2rem;
   font-weight: var(--font-weight-normal);
   color: var(--gray);
-  margin-top: 0.1rem; /* Reduced from 0.3rem */
-  margin-bottom: 0.5rem; /* Added to control space before contact */
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
   font-style: italic;
 }
 
 /* Contact Info - Supports both versions */
 .contact-info {
-  margin-top: 0rem; /* Already 0, but keep it minimal */
+  margin-top: 0rem;
   font-size: 0.95rem;
   color: var(--dark);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 /* First resume version (flex row) */
@@ -52,13 +51,13 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.2rem;
-  margin-top: 0.3rem; /* Added minimal top margin */
+  margin-top: 0.3rem;
 }
 
 /* Second resume version - Desktop: single line with separators */
 .contact-info:has(.contact-line) {
   display: block;
-  margin-top: 0.3rem; /* Added minimal top margin */
+  margin-top: 0.3rem;
 }
 
 .contact-line {
@@ -67,7 +66,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.2rem; /* Added minimal top margin */
+  margin-top: 0.2rem;
 }
 
 .contact-item {
@@ -109,8 +108,8 @@
   font-size: 1.2rem;
   font-weight: var(--font-weight-normal);
   color: var(--gray);
-  margin-top: 0.1rem; /* Reduced from 0.3rem */
-  margin-bottom: 0.5rem; /* Added to control space before contact */
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
   font-style: italic;
   text-align: center;
 }
@@ -134,7 +133,6 @@
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
   color: var(--dark);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 /* For first resume version without section-header class */
@@ -147,7 +145,6 @@
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
   color: var(--dark);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 /* Professional Summary */
@@ -161,7 +158,7 @@
 /* Skills Section - Supports both versions */
 .skills-container,
 .skills-list {
-  font-family: 'Segoe UI', sans-serif;
+  /* Removed font-family override - will inherit from .resume-container */
 }
 
 .skill-line {
@@ -207,7 +204,6 @@
   font-weight: var(--font-weight-semibold);
   color: var(--dark);
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
   flex: 1;
   min-width: 200px;
 }
@@ -233,7 +229,6 @@
   color: var(--gray);
   white-space: nowrap;
   flex-shrink: 0;
-  font-family: 'Segoe UI', sans-serif;
   font-style: italic;
 }
 
@@ -249,7 +244,6 @@
 .resume-section ul {
   padding-left: 1.5rem;
   margin: 0.5rem 0 0 0;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .resume-section ul li {
@@ -332,7 +326,6 @@
   cursor: pointer;
   transition: all var(--transition-base);
   box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .download-resume-button:hover {
@@ -394,22 +387,22 @@
   }
   
   .resume-header {
-    margin-bottom: 0.5rem; /* Reduced from default */
-    padding-bottom: 0.3rem; /* Reduced from default */
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
   }
   
   .resume-header h1 {
     font-size: 2rem;
     line-height: 1.2;
-    margin-bottom: 0.1rem; /* Reduced */
+    margin-bottom: 0.1rem;
   }
   
   .resume-header h2,
   .professional-title {
     font-size: 1rem;
     line-height: 1.3;
-    margin-top: 0.1rem; /* Reduced */
-    margin-bottom: 0.3rem; /* Reduced */
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
   }
   
   /* Simple contact info styling for mobile */
@@ -422,7 +415,7 @@
   }
   
   .contact-info {
-    margin-top: 0.2rem; /* Reduced from 1rem */
+    margin-top: 0.2rem;
   }
   
   .contact-info a {
@@ -447,7 +440,7 @@
   
   .contact-line {
     margin-top: 0.1rem;
-    gap: 0.8rem; /* Slightly reduced gap on mobile */
+    gap: 0.8rem;
   }
   
   /* Section headers */
@@ -542,20 +535,20 @@
   }
   
   .resume-header {
-    margin-bottom: 0.3rem; /* Reduced */
-    padding-bottom: 0.2rem; /* Reduced */
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.2rem;
   }
   
   .resume-header h1 {
     font-size: 1.8rem;
-    margin-bottom: 0.1rem; /* Reduced */
+    margin-bottom: 0.1rem;
   }
   
   .resume-header h2,
   .professional-title {
     font-size: 0.9rem;
-    margin-top: 0.1rem; /* Reduced */
-    margin-bottom: 0.2rem; /* Reduced */
+    margin-top: 0.1rem;
+    margin-bottom: 0.2rem;
   }
   
   /* Adjust contact spacing for very small screens */
@@ -565,7 +558,7 @@
   
   .contact-info {
     font-size: 0.85rem;
-    margin-top: 0.1rem; /* Further reduced */
+    margin-top: 0.1rem;
   }
   
   .contact-info svg {
@@ -580,7 +573,7 @@
   
   .contact-line {
     margin-top: 0.1rem;
-    gap: 0.6rem; /* Further reduced gap on small mobile */
+    gap: 0.6rem;
   }
   
   .section-title,
@@ -616,13 +609,14 @@
     font-size: 0.85rem;
   }
 }
+
 /* ===== FORCE DESKTOP CONTACT CENTERING (override :has rules) ===== */
 @media (min-width: 769px) {
   .resume-header .contact-info {
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
-    margin-top: 0.3rem !important; /* Consistent minimal margin */
+    margin-top: 0.3rem !important;
   }
 
   .resume-header .contact-info .contact-line {
@@ -631,7 +625,7 @@
     align-items: center !important;
     margin: 0 auto !important;
     width: auto !important;
-    margin-top: 0.2rem !important; /* Minimal margin */
+    margin-top: 0.2rem !important;
   }
 }
 
@@ -644,7 +638,7 @@
 /* Additional adjustments to minimize white space */
 .resume-header h1 + .professional-title,
 .resume-header h1 + h2 {
-  margin-bottom: 0.5rem; /* Reduced from default */
+  margin-bottom: 0.5rem;
 }
 
 .contact-info:first-child {
@@ -653,7 +647,7 @@
 
 /* Ensure contact information is tight against the title */
 .resume-header > :last-child:not(.contact-info) + .contact-info {
-  margin-top: 0.3rem; /* Minimal space after title */
+  margin-top: 0.3rem;
 }
 
 /* For the first resume version with spans directly in contact-info */
