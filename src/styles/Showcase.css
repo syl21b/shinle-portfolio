@@ -145,8 +145,8 @@
 
 .project-viewer-image {
   width: 100%;
-  height: auto;
-  max-height: 500px;
+  height: 90%;
+
   object-fit: contain;
   background: #f8f9fa;
   display: block;

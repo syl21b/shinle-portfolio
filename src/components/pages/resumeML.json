@@ -1,0 +1,151 @@
+{
+  "name": "SHIN LE",
+  "title": "Machine Learning Engineer",
+  
+  "contact": {
+    "email": "shinle666@gmail.com",
+    "phone": "772-285-6483",
+    "linkedin": {
+      "text": "LinkedIn",
+      "url": "https://linkedin.com/in/shin-le-b9727a238"
+    },
+    "github": {
+      "text": "GitHub",
+      "url": "https://github.com/syl21b"
+    },
+    "portfolio": {
+      "text": "Portfolio",
+      "url": "https://syl21b.github.io/shinle-portfolio"
+    }
+  },
+  
+  "sections": {
+    "professionalSummary": {
+      "title": "PROFESSIONAL SUMMARY",
+      "content": "Machine Learning Engineer with expertise in building end-to-end ML systems from research to production. Deployed clinical ML pipeline with 94% accuracy at scale and financial prediction systems with 85% ROI improvement. Proficient in Python, TensorFlow, scikit-learn, and MLOps practices. Experienced in model optimization, feature engineering, and deploying ML systems with 99.9% uptime and sub-200ms latency."
+    },
+    
+    "technicalSkills": {
+      "title": "TECHNICAL SKILLS",
+      "skills": [
+        {
+          "category": "Machine Learning & Deep Learning",
+          "content": "Python, TensorFlow, PyTorch, scikit-learn, XGBoost, LSTM, Random Forest, Ensemble Methods, Hyperparameter Optimization"
+        },
+        {
+          "category": "MLOps & Production",
+          "content": "Docker, Kubernetes, MLflow, Kubeflow, Model Serving (Flask, FastAPI), AWS SageMaker, CI/CD for ML, Model Monitoring"
+        },
+        {
+          "category": "Feature Engineering & Data",
+          "content": "Feature Selection, Dimensionality Reduction, Data Preprocessing, SQL, PostgreSQL, Time Series Analysis, Data Pipeline Design"
+        },
+        {
+          "category": "Software Engineering",
+          "content": "Git, REST APIs, Microservices, Testing (Unit, Integration), Code Optimization, System Design, Scalability Patterns"
+        },
+        {
+          "category": "Specialized ML Domains",
+          "content": "Clinical ML, Healthcare Analytics, Financial Time Series, Predictive Maintenance, Recommendation Systems, NLP, Computer Vision"
+        }
+      ]
+    },
+    
+    "projects": {
+      "title": "MACHINE LEARNING ENGINEERING PROJECTS",
+      "items": [
+        {
+          "title": "Mentivio: Production Clinical ML System",
+          "url": "https://mentivio-web.onrender.com/home?lang=en",
+          "date": "September 2025 – Present",
+          "bullets": [
+            "Architected end-to-end ML pipeline from data ingestion to production serving achieving 94% diagnostic accuracy",
+            "Optimized ensemble model reducing inference time from 500ms to <200ms while maintaining 94% accuracy",
+            "Implemented MLOps pipeline with automated retraining, versioning, and A/B testing capabilities",
+            "Deployed scalable ML service on AWS handling 50+ concurrent users with 99.9% uptime and real-time monitoring"
+          ]
+        },
+        {
+          "title": "Financial Market ML Prediction Engine",
+          "url": "https://syl21b.github.io/shinle-portfolio/showcase/5",
+          "date": "May 2025 – June 2025",
+          "bullets": [
+            "Engineered LSTM-XGBoost ensemble model improving prediction accuracy by 15% over baseline methods",
+            "Developed feature store with 20+ technical indicators enabling reproducible model training and inference",
+            "Built model serving infrastructure with canary deployment and automated rollback capabilities",
+            "Implemented continuous training pipeline updating models weekly with new market data"
+          ]
+        },
+        {
+          "title": "Retail Predictive Analytics Platform",
+          "url": "https://syl21b.github.io/shinle-portfolio/showcase/4",
+          "date": "April 2025 – May 2025",
+          "bullets": [
+            "Developed time series forecasting models with 90% accuracy for retail sales prediction",
+            "Built anomaly detection system identifying $150K+ in potential revenue leakage from operational issues",
+            "Created automated model validation framework reducing deployment errors by 80%",
+            "Implemented feature importance analysis providing business interpretability for complex ML models"
+          ]
+        }
+      ]
+    },
+    
+    "experience": {
+      "title": "PROFESSIONAL EXPERIENCE",
+      "items": [
+        {
+          "title": "ML Systems Developer & Tutor",
+          "company": "Mathnasium Learning Center",
+          "date": "August 2024 – April 2025",
+          "bullets": [
+            "Built predictive model forecasting student performance with 85% accuracy using gradient boosting",
+            "Developed personalized learning recommendation system improving student outcomes by 25%",
+            "Implemented automated assessment grading system reducing teacher workload by 40%",
+            "Created ML-based progress tracking system identifying at-risk students 2 weeks earlier than manual methods"
+          ]
+        }
+      ]
+    },
+    
+    "education": {
+      "title": "EDUCATION",
+      "items": [
+        {
+          "degree": "Bachelor of Science in Applied Mathematics",
+          "institution": "Florida State University",
+          "details": "Focus: Machine Learning Theory & Applications | Coursework: Statistical Learning Theory, Optimization Algorithms, Deep Learning, Probability Models"
+        },
+        {
+          "degree": "Associate of Arts in Mathematics",
+          "institution": "Indian River State College",
+          "details": "Graduated with Honors, Focus: Mathematical Modeling & Computational Methods"
+        }
+      ]
+    },
+    
+    "certifications": {
+      "title": "CERTIFICATIONS",
+      "items": [
+        {
+          "name": "AWS Certified Machine Learning Specialty",
+          "url": "",
+          "date": "Expected Jan 2026"
+        },
+        {
+          "name": "TensorFlow Developer Certificate",
+          "url": "",
+          "date": "Expected Dec 2025"
+        },
+        {
+          "name": "IBM Data Science Professional Certificate",
+          "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",
+          "date": "May 2023"
+        }
+      ]
+    }
+  },
+  
+  "pdf": {
+    "fileName": "Shin_Le_ML_Engineer_Resume.pdf"
+  }
+}

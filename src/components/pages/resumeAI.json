@@ -1,0 +1,151 @@
+{
+  "name": "SHIN LE",
+  "title": "AI Engineer",
+  
+  "contact": {
+    "email": "shinle666@gmail.com",
+    "phone": "772-285-6483",
+    "linkedin": {
+      "text": "LinkedIn",
+      "url": "https://linkedin.com/in/shin-le-b9727a238"
+    },
+    "github": {
+      "text": "GitHub",
+      "url": "https://github.com/syl21b"
+    },
+    "portfolio": {
+      "text": "Portfolio",
+      "url": "https://syl21b.github.io/shinle-portfolio"
+    }
+  },
+  
+  "sections": {
+    "professionalSummary": {
+      "title": "PROFESSIONAL SUMMARY",
+      "content": "AI Engineer specializing in developing production-grade machine learning systems and AI applications. Built clinical ML pipeline achieving 94% diagnostic accuracy and multi-language AI chatbot with 200+ safety rules. Expert in Python, scikit-learn, TensorFlow, and Gemini API with experience deploying AI systems at scale with 99.9% uptime. Passionate about creating ethical, safe AI solutions for healthcare and finance domains."
+    },
+    
+    "technicalSkills": {
+      "title": "TECHNICAL SKILLS",
+      "skills": [
+        {
+          "category": "Machine Learning & AI",
+          "content": "Python (scikit-learn, TensorFlow, PyTorch), Ensemble Methods, Deep Learning, Natural Language Processing, Computer Vision, Model Evaluation"
+        },
+        {
+          "category": "AI Development & APIs",
+          "content": "Gemini API, OpenAI API, LangChain, Prompt Engineering, AI Safety, Content Moderation, Multi-language AI Systems"
+        },
+        {
+          "category": "MLOps & Deployment",
+          "content": "Model Deployment (Flask, FastAPI), Docker, AWS SageMaker, Model Monitoring, A/B Testing, Feature Stores, Pipeline Orchestration"
+        },
+        {
+          "category": "Data Science & Engineering",
+          "content": "Feature Engineering, Data Preprocessing, SQL, PostgreSQL, Data Pipeline Development, ETL Processes, Data Quality"
+        },
+        {
+          "category": "Specialized AI Applications",
+          "content": "Clinical Machine Learning, Healthcare AI, Financial Forecasting, Time Series Prediction, Sentiment Analysis, Chatbot Development"
+        }
+      ]
+    },
+    
+    "projects": {
+      "title": "AI ENGINEERING PROJECTS",
+      "items": [
+        {
+          "title": "Mentivio: Clinical AI Assessment Platform",
+          "url": "https://mentivio-web.onrender.com/home?lang=en",
+          "date": "September 2025 – Present",
+          "bullets": [
+            "Built clinical ML pipeline with ensemble methods achieving 94% diagnostic accuracy for 4 mental health conditions",
+            "Developed multi-language AI chatbot supporting 4 languages with 200+ safety rules and zero unsafe responses in production",
+            "Implemented 3-layer safety filter system: keyword detection, topic validation, Gemini safety settings with crisis routing",
+            "Created real-time inference system maintaining sub-200ms response times for 50+ concurrent assessments"
+          ]
+        },
+        {
+          "title": "Stock Market Prediction AI System",
+          "url": "https://syl21b.github.io/shinle-portfolio/showcase/5",
+          "date": "May 2025 – June 2025",
+          "bullets": [
+            "Developed ensemble model (LSTM, XGBoost, Random Forest) achieving 85% accuracy in stock trend prediction",
+            "Engineered 20+ technical indicators and behavioral finance metrics improving model performance by 15%",
+            "Implemented feature importance visualization providing interpretable insights for complex ML models",
+            "Built automated trading signal generator reducing manual analysis time by 40% for investment decisions"
+          ]
+        },
+        {
+          "title": "Retail Intelligence AI Analytics",
+          "url": "https://syl21b.github.io/shinle-portfolio/showcase/4",
+          "date": "April 2025 – May 2025",
+          "bullets": [
+            "Developed predictive models identifying profitability trends with 90% accuracy across 4 years of retail data",
+            "Implemented anomaly detection system identifying operational bottlenecks costing 15% in lost revenue",
+            "Built recommendation engine generating 10+ actionable insights improving operational efficiency by 12%",
+            "Created NLP-based sentiment analysis for customer feedback improving product strategy alignment"
+          ]
+        }
+      ]
+    },
+    
+    "experience": {
+      "title": "PROFESSIONAL EXPERIENCE",
+      "items": [
+        {
+          "title": "AI & Data Systems Developer",
+          "company": "Mathnasium Learning Center",
+          "date": "August 2024 – April 2025",
+          "bullets": [
+            "Developed predictive analytics system forecasting student performance with 85% accuracy",
+            "Built recommendation engine customizing learning paths improving average grades by 1.5 points",
+            "Implemented pattern recognition algorithms identifying learning gaps 30% faster than manual methods",
+            "Created automated progress tracking using ML classification reducing administrative workload by 50%"
+          ]
+        }
+      ]
+    },
+    
+    "education": {
+      "title": "EDUCATION",
+      "items": [
+        {
+          "degree": "Bachelor of Science in Applied Mathematics",
+          "institution": "Florida State University",
+          "details": "Focus: Machine Learning & Statistical Methods | Coursework: Statistical Learning, Deep Learning, Linear Algebra, Probability Theory, Calculus III"
+        },
+        {
+          "degree": "Associate of Arts in Mathematics",
+          "institution": "Indian River State College",
+          "details": "Graduated with Honors, Focus: Computational Intelligence & AI Fundamentals"
+        }
+      ]
+    },
+    
+    "certifications": {
+      "title": "CERTIFICATIONS",
+      "items": [
+        {
+          "name": "TensorFlow Developer Certificate",
+          "url": "",
+          "date": "Expected Jan 2026"
+        },
+        {
+          "name": "AWS Certified Machine Learning Specialty",
+          "url": "",
+          "date": "Expected Dec 2025"
+        },
+        {
+          "name": "IBM Data Science Professional Certificate",
+          "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",
+          "date": "May 2023"
+        }
+      ]
+    }
+  },
+  
+  "pdf": {
+    "fileName": "Shin_Le_AI_Engineer_Resume.pdf"
+  }
+}

@@ -18,23 +18,23 @@ export const projects = [
       "<strong>Multi-Language AI Chatbot:</strong> Implemented a safe AI companion using <strong>Gemini API</strong> with strict content moderation, supporting 4 languages (English, Spanish, Vietnamese, Chinese) and 200+ safety rules.",
       "<strong>Enterprise Security Framework:</strong> Designed <strong>HIPAA-inspired security</strong> with end-to-end encryption, JWT authentication, rate limiting, comprehensive audit logging, and automatic PII scrubbing.",
       "<strong>Internationalized Reporting:</strong> Created dynamic PDF report generation with support for 12 writing systems, font fallback mechanisms, and RTL support for Arabic/Hebrew scripts.",
-      "<strong>Scalable Infrastructure:</strong> Deployed on <strong>AWS</strong> with auto-scaling, load balancing, and 99.9% uptime, handling 100+ concurrent users with sub-200ms response times."
+      "<strong>Scalable Infrastructure:</strong> Deployed on <strong>AWS</strong> with auto-scaling, load balancing, and 99.9% uptime, handling 50+ concurrent users with sub-200ms response times."
     ],
     technologies: [
       "React", "Flask", "Python", "PostgreSQL", "AWS", "Docker", "Machine Learning",
-      "scikit-learn", "Gemini API", "JWT", "Redis", "CI/CD", "REST API", "Security",
+      "scikit-learn", "Gemini API", "JWT", "CI/CD", "REST API", "Security",
       "Multi-Language", "AI Chatbot", "Clinical Psychology", "Data Encryption",
       "Tableau", "Power BI", "SQL", "Natural Language Processing", "PDF Generation",
       "Internationalization", "Responsive Design", "OAuth"
     ],
     challenges: [
-      "<strong>Clinical Safety in AI:</strong> Ensuring AI responses are safe and clinically appropriate. Implemented 3-layer safety filter: keyword detection → topic validation → Gemini safety settings with automatic crisis resource routing, resulting in zero unsafe responses across 15,000+ conversations.",
+      "<strong>Clinical Safety in AI:</strong> Ensuring AI responses are safe and clinically appropriate. Implemented 3-layer safety filter: keyword detection → topic validation → Gemini safety settings with automatic crisis resource routing, resulting in zero unsafe responses across 1000+ conversations.",
       "<strong>Multi-Language PDF Generation:</strong> Supporting complex writing systems and RTL languages in PDF reports. Built dynamic font-loading system with fallback mechanisms achieving 100% font coverage for 12 language families.",
-      "<strong>Real-time ML Inference at Scale:</strong> Maintaining sub-200ms response times for ML predictions under heavy load. Optimized feature preprocessing pipeline with caching layer and async processing, serving 100+ concurrent assessments with 99.8% uptime.",
+      "<strong>Real-time ML Inference at Scale:</strong> Maintaining sub-200ms response times for ML predictions under heavy load. Optimized feature preprocessing pipeline with caching layer and async processing, serving 50+ concurrent assessments with 99.8% uptime.",
       "<strong>HIPAA-Compliant Data Management:</strong> Securely handling sensitive mental health data. Designed encryption-at-rest architecture with role-based access control, comprehensive audit logging, and automatic PII scrubbing.",
       "<strong>Model Accuracy vs. Interpretability:</strong> Balancing clinical-grade accuracy with model interpretability. Used ensemble methods with feature importance visualization and clinical rule-based validation to maintain 94% accuracy while providing transparent insights."
     ],
-    results: "The platform has served <strong>100+ users</strong> with <strong>94% diagnostic accuracy</strong> and <strong>&lt;200ms response times</strong>. It provides 24/7 mental health support in <strong>4 languages</strong> (English, Spanish, Vietnamese, Chinese) with <strong>zero security incidents</strong> in production. The system generates professional clinical reports in multiple languages and has processed <strong>100+ assessments</strong> with consistent performance and reliability.",
+    results: "The platform has served <strong>50+ users</strong> with <strong>94% diagnostic accuracy</strong> and <strong>&lt;200ms response times</strong>. It provides 24/7 mental health support in <strong>4 languages</strong> (English, Spanish, Vietnamese, Chinese) with <strong>zero security incidents</strong> in production. The system generates professional clinical reports in multiple languages and has processed <strong>50+ assessments</strong> with consistent performance and reliability.",
     futureEnhancements: "Pursue <strong>FDA 510(k) clearance</strong> for clinical decision support, integrate with <strong>Epic/Cerner EHR systems</strong>, expand to <strong>50+ languages and dialects</strong>, develop <strong>mobile-native applications</strong> with telehealth API integration, implement <strong>predictive intervention algorithms</strong> for early intervention, and establish <strong>research collaboration platform</strong> for mental health studies.",
     linkText: "Access Mentivio Website",
     linkHref: "https://mentivio-web.onrender.com/home?lang=en",
@@ -50,8 +50,8 @@ export const projects = [
       { value: "94%", label: "Diagnostic Accuracy" },
       { value: "<200ms", label: "Response Time" },
       { value: "4", label: "Languages" },
-      { value: "100+", label: "Users Served" },
-      { value: "100+", label: "Assessments" },
+      { value: "50+", label: "Users Served" },
+      { value: "50+", label: "Assessments" },
       { value: "99.9%", label: "Uptime" }
     ],
     techIcons: [

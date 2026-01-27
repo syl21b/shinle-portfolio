@@ -1,0 +1,156 @@
+{
+  "name": "SHIN LE",
+  "title": "Data Scientist",
+  
+  "contact": {
+    "email": "shinle666@gmail.com",
+    "phone": "772-285-6483",
+    "linkedin": {
+      "text": "LinkedIn",
+      "url": "https://linkedin.com/in/shin-le-b9727a238"
+    },
+    "github": {
+      "text": "GitHub",
+      "url": "https://github.com/syl21b"
+    },
+    "portfolio": {
+      "text": "Portfolio",
+      "url": "https://syl21b.github.io/shinle-portfolio"
+    }
+  },
+  
+  "sections": {
+    "professionalSummary": {
+      "title": "PROFESSIONAL SUMMARY",
+      "content": "Data Scientist with expertise in statistical analysis, machine learning, and predictive modeling. Built clinical ML systems achieving 94% diagnostic accuracy and financial prediction models with 85% ROI improvement. Proficient in Python, scikit-learn, TensorFlow, and advanced statistical methods. Experienced in end-to-end data science projects from hypothesis formulation to production deployment in healthcare, finance, and retail domains."
+    },
+    
+    "technicalSkills": {
+      "title": "TECHNICAL SKILLS",
+      "skills": [
+        {
+          "category": "Machine Learning & Statistics",
+          "content": "Python (scikit-learn, TensorFlow, PyTorch, Pandas, NumPy), Statistical Analysis (Hypothesis Testing, Regression, Bayesian Methods), Ensemble Methods, Deep Learning, Predictive Modeling"
+        },
+        {
+          "category": "Data Science & Analytics",
+          "content": "SQL (PostgreSQL, MySQL), Data Wrangling, Feature Engineering, Experimental Design (A/B Testing), Time Series Analysis, Data Mining, Pattern Recognition"
+        },
+        {
+          "category": "Data Visualization & Communication",
+          "content": "Tableau, Power BI, Matplotlib, Seaborn, Plotly, Data Storytelling, Dashboard Design, Executive Reporting, Technical Communication"
+        },
+        {
+          "category": "Tools & Platforms",
+          "content": "Jupyter Notebooks, Git/GitHub, Docker, AWS (S3, SageMaker), REST APIs, Google Colab, MLflow, DVC (Data Version Control)"
+        },
+        {
+          "category": "Specialized Domains",
+          "content": "Clinical Data Science, Healthcare Analytics, Financial Modeling, Behavioral Analysis, Natural Language Processing, Time Series Forecasting, Anomaly Detection"
+        }
+      ]
+    },
+    
+    "projects": {
+      "title": "DATA SCIENCE PROJECTS",
+      "items": [
+        {
+          "title": "Mentivio: Clinical Data Science & ML Platform",
+          "url": "https://mentivio-web.onrender.com/home?lang=en",
+          "date": "September 2025 – Present",
+          "bullets": [
+            "Developed clinical machine learning pipeline achieving 94% diagnostic accuracy for 4 mental health conditions using ensemble methods",
+            "Conducted statistical analysis on 50+ assessments identifying key patterns and correlations in mental health indicators",
+            "Designed and implemented A/B testing framework improving assessment accuracy by 25% through iterative validation",
+            "Built feature importance analysis providing clinical interpretability for complex ML models used by healthcare professionals"
+          ]
+        },
+        {
+          "title": "World Stock Market Analysis & Predictive Modeling",
+          "url": "https://syl21b.github.io/shinle-portfolio/showcase/5",
+          "date": "May 2025 – June 2025",
+          "bullets": [
+            "Engineered ensemble prediction model (LSTM, XGBoost, Random Forest) achieving 85% accuracy in stock trend forecasting",
+            "Performed statistical analysis of 60+ global brands across 5 sectors using 20+ financial indicators and behavioral metrics",
+            "Applied time series analysis techniques to 5+ years of historical market data, identifying significant patterns and seasonality",
+            "Developed risk assessment models that improved investment decision accuracy by 40% compared to traditional methods"
+          ]
+        },
+        {
+          "title": "Superstore Predictive Analytics & Business Intelligence",
+          "url": "https://syl21b.github.io/shinle-portfolio/showcase/4",
+          "date": "April 2025 – May 2025",
+          "bullets": [
+            "Built predictive models analyzing 4 years of retail data (10,000+ transactions) with 90% accuracy in profitability forecasting",
+            "Implemented statistical hypothesis testing to validate operational improvements, resulting in 12% efficiency gains",
+            "Developed customer segmentation models using clustering techniques, improving marketing ROI by 15%",
+            "Created anomaly detection system identifying $150K+ in potential revenue leakage with 95% confidence intervals"
+          ]
+        }
+      ]
+    },
+    
+    "experience": {
+      "title": "PROFESSIONAL EXPERIENCE",
+      "items": [
+        {
+          "title": "Data Science Educator & Analytics Developer",
+          "company": "Mathnasium Learning Center",
+          "date": "August 2024 – April 2025",
+          "bullets": [
+            "Developed predictive analytics system forecasting student performance with 85% accuracy using regression modeling",
+            "Implemented statistical analysis framework measuring teaching effectiveness, improving learning outcomes by 25%",
+            "Built A/B testing platform for curriculum evaluation, optimizing teaching approaches and increasing average grades by 1.5 points",
+            "Created data visualization tools translating complex academic metrics into actionable insights for stakeholders"
+          ]
+        }
+      ]
+    },
+    
+    "education": {
+      "title": "EDUCATION",
+      "items": [
+        {
+          "degree": "Bachelor of Science in Applied Mathematics",
+          "institution": "Florida State University",
+          "details": "GPA: 3.8/4.0 | Coursework: Statistical Methods, Data Analysis, Probability Theory, Linear Algebra, Calculus III, Mathematical Modeling"
+        },
+        {
+          "degree": "Associate of Arts in Mathematics",
+          "institution": "Indian River State College",
+          "details": "Graduated with Honors (Summa Cum Laude), Dean's List All Semesters, GPA: 4.0/4.0"
+        }
+      ]
+    },
+    
+    "certifications": {
+      "title": "CERTIFICATIONS",
+      "items": [
+        {
+          "name": "IBM Data Science Professional Certificate",
+          "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",
+          "date": "May 2023"
+        },
+        {
+          "name": "IBM Data Analyst Professional Certificate",
+          "url": "https://coursera.org/share/6f4a5c892079cf1212f1669b9539e20b",
+          "date": "July 2023"
+        },
+        {
+          "name": "TensorFlow Developer Certificate",
+          "url": "",
+          "date": "Expected Jan 2026"
+        },
+        {
+          "name": "AWS Certified Machine Learning Specialty",
+          "url": "",
+          "date": "Expected Dec 2025"
+        }
+      ]
+    }
+  },
+  
+  "pdf": {
+    "fileName": "Shin_Le_Data_Scientist_Resume.pdf"
+  }
+}

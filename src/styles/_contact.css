@@ -26,7 +26,7 @@
   max-width: 680px;
   margin: 0 auto;
   text-align: center;
-  padding: var(--spacing-5xl) var(--spacing-xl);
+  padding: var(--spacing-4xl) var(--spacing-xl);
   position: relative;
   z-index: 1;
 }
@@ -262,4 +262,26 @@
 
 .contact-container {
   animation: fadeInUp var(--transition-slow) ease-out;
+}
+
+/* Additional token-based styles */
+.contact-section .btn {
+  font-family: var(--font-primary);
+  border-radius: var(--button-border-radius);
+  height: var(--button-height);
+  font-size: var(--font-size-sm);
+}
+
+.contact-header .section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+}
+
+.contact-header .section-description {
+  font-family: var(--font-primary);
+}
+
+/* Ensure consistent spacing */
+.contact-actions .btn {
+  margin: 0;
 }

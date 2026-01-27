@@ -11,10 +11,8 @@ import ContactSection from "./components/pages/ContactSection";
 import Footer from "./components/pages/Footer";
 import Thanks from "./components/pages/Thanks";
 import Learning from "./components/pages/Learning";
-import ResumePage1 from "./components/pages/ResumePageDataAnalyst.jsx";
-import ResumePage2 from "./components/pages/ResumePageBISpecialist.jsx";
-import ResumePage3 from "./components/pages/ResumePageDataScientist.jsx";
-import ResumePage4 from "./components/pages/ResumePageMLEngineer.jsx";
+import ResumePage5 from "./components/pages/resume.jsx";
+
 import Showcase from "./components/pages/Showcase.jsx";
 import FeaturedProjects from "./components/pages/FeaturedProjects.jsx";
 
@@ -85,7 +83,7 @@ export default function App() {
         
         {/* Other routes */}
         <Route path="/learning" element={<Learning />} />
-        <Route path="/resume" element={<ResumePage1 />} />
+        <Route path="/resume" element={<ResumePage5 />} />
         
         {/* Catch-all redirect to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
