@@ -56,7 +56,7 @@
       "items": [
         {
           "title": "Mentivio: Production Clinical ML System",
-          "url": "https://mentivio-web.onrender.com/home?lang=en",
+          "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
           "date": "September 2025 – Present",
           "bullets": [
             "Architected end-to-end ML pipeline from data ingestion to production serving achieving 94% diagnostic accuracy",

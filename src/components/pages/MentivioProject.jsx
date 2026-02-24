@@ -525,7 +525,7 @@ const MentivioProject = () => {
           <p>Explore the complete Mentivio platform with full functionality</p>
           <div className="cta-buttons">
             <a 
-              href="https://mentivio.onrender.com" 
+              href="https://mentivio-mentalhealth.onrender.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="cta-button primary"

@@ -56,7 +56,7 @@
       "items": [
         {
           "title": "Mentivio: Healthcare Data Platform Architecture",
-          "url": "https://mentivio-web.onrender.com/home?lang=en",
+          "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
           "date": "September 2025 – Present",
           "bullets": [
             "Architected and deployed full-stack healthcare platform on AWS achieving 99.9% uptime and sub-200ms response times",
