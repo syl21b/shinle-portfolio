@@ -9,6 +9,7 @@ import superstorePreview from '/src/components/image/superstore.png';
 import bankchurnPreview from '/src/components/image/bankchurn.png';
 import carpricePreview from '/src/components/image/carprice.png';
 import churnPreview from '/src/components/image/churn.png';
+import RetailAnalyticsPreview from '/src/components/image/retail-analysis.png';
 
 export default function ShowProject() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ export default function ShowProject() {
 
   const projects = useMemo(() => [
     {
-      id: 6,
+      id: 7,
       title: "Mentivio - Mentalhealth Assessment Platform",
       description: "AI-powered mental health platform with clinical ML assessments and multi-language support.",
       isOngoing: false,
@@ -28,6 +29,18 @@ export default function ShowProject() {
       githubHref: "https://github.com/syl21b/mentivio",
       type: "fullstack",
     },
+
+    {
+      id: 6,
+      title: "Enterprise BI Dashboard – AI‑Powered Retail Analytics",
+      description: "Production BI platform with AI natural language queries, cross‑filtering, what‑if simulation, RFM/LTV, and cohort retention.",
+      isOngoing: false,
+      imagePreview: RetailAnalyticsPreview, 
+      linkHref: "https://retail-analysis-cj4s.onrender.com",
+      githubHref: "https://github.com/syl21b/retail-analysis",
+      type: "fullstack",
+    },
+
     {
       id: 5,
       title: "World Stock Market Analysis & Prediction",
