@@ -1,6 +1,6 @@
 {
   "name": "SHIN LE",
-  "title": "Data Analyst",
+  "title": "Data Analyst | Business Intelligence Specialist",
   
   "contact": {
     "email": "shinle666@gmail.com",
@@ -30,23 +30,23 @@
       "skills": [
         {
           "category": "Data Analysis & SQL",
-          "content": "PostgreSQL, MySQL, Python, Excel, Statistical Analysis (A/B Testing, Regression)"
+          "content": "PostgreSQL, MySQL, Python, Excel, Statistical Analysis (A/B Testing, Regression), Time Series Analysis, Data Mining"
         },
         {
           "category": "Data Visualization & BI",
-          "content": "Tableau, Data Storytelling, KPI Development, Interactive Reporting, Executive Dashboards"
+          "content": "Tableau, Plotly, Data Storytelling, Interactive Dashboards, Executive Reporting, KPI Development, Cross-Filtering, Heatmaps"
         },
         {
           "category": "Business Intelligence",
-          "content": "Data Warehousing Concepts, ETL Pipeline Development, Data Modeling, Report Automation, Business Metrics Design, Performance Analytics Framework"
+          "content": "Data Warehousing, ETL Pipeline Development, Data Modeling, Report Automation, Business Metrics Design, Performance Analytics Framework, Predictive Analytics"
+        },
+        {
+          "category": "Machine Learning & Analytics",
+          "content": "RFM Segmentation, Cohort Analysis, Customer Churn Prediction, Revenue Forecasting, Anomaly Detection, Natural Language Processing, Regression Models"
         },
         {
           "category": "Tools & Platforms",
-          "content": "Git/GitHub, Jupyter Notebooks, Google Sheets, AWS (S3, Redshift), REST APIs, JSON, Google Analytics"
-        },
-        {
-          "category": "Statistical & Analytical Methods",
-          "content": "A/B Testing Design, Hypothesis Testing, Multiple Regression, Time Series Analysis, Predictive Modeling, Data Mining, Cohort Analysis, Root Cause Analysis"
+          "content": "Git/GitHub, Jupyter Notebooks, AWS (S3, Redshift), REST APIs, Google Analytics, Python (Pandas, NumPy, scikit-learn), Flask, Docker"
         }
       ]
     },
@@ -59,21 +59,33 @@
           "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
           "date": "September 2025 – Present",
           "bullets": [
-            "Achieved 94% diagnostic accuracy by analyzing clinical assessment data across 50+ users and 50+ assessments",
-            "Designed data collection protocols improving data quality by 30% for sensitive health information",
-            "Created visualization dashboards that reduced analysis time by 40% for tracking user engagement trends",
-            "Implemented statistical validation framework improving assessment accuracy by 25% through A/B testing"
+            "Achieved 94% diagnostic accuracy analyzing clinical assessment data across 50+ users",
+            "Designed data collection protocols improving data quality by 30%",
+            "Built visualization dashboards reducing analysis time by 40%",
+            "Implemented statistical validation framework improving assessment accuracy by 25%"
           ]
         },
+        {
+          "title": "Enterprise BI Dashboard: AI-Powered Retail Analytics",
+          "url": "https://retail-analysis-cj4s.onrender.com",
+          "date": "May 2026 – June 2026",
+          "bullets": [
+            "Built production BI platform processing 4M+ records with 99.8% data validity",
+            "Developed AI natural language query engine converting plain English to SQL",
+            "Implemented cross-filtering across 10+ interactive charts for real-time drill-down analysis",
+            "Created what-if simulator forecasting revenue impact of operational changes",
+            "Reduced data analysis time by 40% through automated reporting and intelligent caching"
+          ]
+        },
+        
         {
           "title": "World Stock Market Analysis & Prediction (2000-2025)",
           "url": "https://syl21b.github.io/shinle-portfolio/showcase/5",
           "date": "May 2025 – June 2025",
           "bullets": [
-            "Increased investment decision accuracy by 85% through comparative analysis of 60+ global brands across 5 sectors",
-            "Reduced data processing time by 60% by engineering optimized SQL queries for 5+ years of historical market data",
-            "Built Tableau dashboards visualizing risk assessment and sector performance, enabling 40% faster market response",
-            "Developed predictive models achieving 15% higher accuracy than baseline methods for timing investment decisions"
+            "Increased investment decision accuracy by 85% through comparative analysis of 60+ global brands",
+            "Reduced data processing time by 60% by optimizing SQL queries for historical market data",
+            "Built Tableau dashboards enabling 40% faster market response"
           ]
         },
         {
@@ -81,10 +93,19 @@
           "url": "https://syl21b.github.io/shinle-portfolio/showcase/4",
           "date": "April 2025 – May 2025",
           "bullets": [
-            "Identified operational bottlenecks costing 15% in lost revenue, leading to 12% efficiency improvements",
-            "Built interactive Tableau dashboards revealing 19% profit peaks, reducing manual reporting time by 60%",
-            "Developed 10+ actionable recommendations implemented across 4 regions, increasing operational efficiency by 12%",
-            "Created executive reports that improved stakeholder decision-making speed by 50% for non-technical audiences"
+            "Identified operational bottlenecks leading to 12% efficiency improvements",
+            "Built interactive Tableau dashboards reducing manual reporting time by 60%",
+            "Created executive reports improving stakeholder decision-making speed by 50%"
+          ]
+        },
+        {
+          "title": "Bank Customer Churn Prediction & Analysis",
+          "url": "https://syl21b.github.io/shinle-portfolio/showcase/3",
+          "date": "April 2025 – April 2025",
+          "bullets": [
+            "Analyzed customer behavior to identify churn drivers, reducing reactive churn responses by 30%",
+            "Built interactive Tableau dashboards visualizing demographic and behavioral churn indicators",
+            "Created data-driven retention recommendations for high-risk customer segments"
           ]
         }
       ]
@@ -98,10 +119,9 @@
           "company": "Mathnasium Learning Center",
           "date": "August 2024 – April 2025",
           "bullets": [
-            "Increased student learning outcomes by 25% faster through data-driven progress tracking system implementation",
-            "Improved average math grades by 1.5 points by analyzing performance patterns and customizing teaching approaches",
-            "Enhanced parent satisfaction by 40% through visualization reports translating academic data into actionable insights",
-            "Optimized curriculum delivery efficiency by 20% using statistical analysis to measure teaching effectiveness"
+            "Applied data analysis to track student progress, improving outcomes by 25% faster",
+            "Created visualization reports translating academic data into actionable insights",
+            "Used statistical analysis to measure and optimize teaching effectiveness by 20%"
           ]
         }
       ]
@@ -126,11 +146,6 @@
     "certifications": {
       "title": "CERTIFICATIONS & TRAINING",
       "items": [
-                {
-          "name": "Tableau Desktop Specialist",
-          "url": "",
-          "date": "May 2025"
-        },
         {
           "name": "IBM Data Analyst Professional Certificate",
           "url": "https://coursera.org/share/6f4a5c892079cf1212f1669b9539e20b",
@@ -140,6 +155,11 @@
           "name": "IBM Data Science Professional Certificate",
           "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",
           "date": "May 2023"
+        },
+        {
+          "name": "Tableau Desktop Specialist",
+          "url": "",
+          "date": "May 2025"
         }
       ]
     }
