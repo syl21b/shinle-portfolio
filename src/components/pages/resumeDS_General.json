@@ -20,7 +20,7 @@
   "sections": {
     "professionalSummary": {
       "title": "PROFESSIONAL SUMMARY",
-      "content": "Data Scientist with expertise in statistical analysis, machine learning, and predictive modeling across healthcare, finance, and retail domains. Built clinical ML systems achieving 94% diagnostic accuracy, AI-powered analytics platforms processing 4M+ records with 99.8% validity, and churn prediction models using Random Forest. Proficient in Python, scikit-learn, TensorFlow, and advanced statistical methods. Experienced in end-to-end data science projects from hypothesis formulation to production deployment. Strong foundation in applied mathematics with one year of experience translating complex data into actionable business insights."
+      "content": "Data Scientist with expertise in statistical analysis, machine learning, and predictive modeling across healthcare, finance, and retail domains. Built clinical ML systems achieving 94% diagnostic accuracy, AI-powered analytics platforms processing 4M+ records, and financial prediction models with 85% ROI improvement. Proficient in Python, scikit-learn, TensorFlow, and advanced statistical methods. Experienced in end-to-end data science projects from hypothesis formulation to production deployment. Strong foundation in applied mathematics with one year of experience translating complex data into actionable insights."
     },
     "technicalSkills": {
       "title": "TECHNICAL SKILLS",
@@ -30,12 +30,12 @@
           "content": "Python (scikit-learn, TensorFlow, Pandas, NumPy), Statistical Analysis (Hypothesis Testing, Regression, Bayesian), Ensemble Methods (Random Forest, XGBoost, Gradient Boosting), Deep Learning, Predictive Modeling, Time Series Analysis"
         },
         {
-          "category": "Business Analytics",
-          "content": "Business Intelligence, KPI Development, A/B Testing Design, Causal Inference, Revenue Forecasting, Customer Lifetime Value, Churn Prediction, RFM Analysis, Cohort Analysis"
+          "category": "Data Science & Analytics",
+          "content": "SQL (PostgreSQL, MySQL), Data Wrangling, Feature Engineering, Experimental Design (A/B Testing), Anomaly Detection, Causal Inference, Data Mining, Pattern Recognition"
         },
         {
-          "category": "Data Science & Analytics",
-          "content": "SQL (PostgreSQL, MySQL), Data Wrangling, Feature Engineering, Experimental Design, Anomaly Detection, Data Mining, Pattern Recognition, Model Persistence (Joblib)"
+          "category": "Domain Applications",
+          "content": "Healthcare Analytics, Clinical Data Science, Customer Analytics (RFM, Cohort, Churn), Retail Analytics, Financial Modeling, Behavioral Analysis, Natural Language Processing"
         },
         {
           "category": "Data Visualization & Communication",
@@ -43,7 +43,7 @@
         },
         {
           "category": "Tools & Platforms",
-          "content": "Jupyter Notebooks, Git/GitHub, Docker, AWS (S3, SageMaker), REST APIs, Google Colab, Flask, Gunicorn, MLflow"
+          "content": "Jupyter Notebooks, Git/GitHub, Docker, AWS (S3, SageMaker), REST APIs, Google Colab, Flask, Gunicorn, MLflow, DVC"
         }
       ]
     },
@@ -55,9 +55,9 @@
           "url": "https://retail-analysis-cj4s.onrender.com",
           "date": "May 2026 – June 2026",
           "bullets": [
-            "Built AI natural language query engine using LLMs (Groq/Gemini) that converts plain English to SQL with 95% accuracy",
+            "Built AI natural language query engine using LLMs (Groq/Gemini) converting plain English to SQL with 95% accuracy",
             "Developed what-if simulation engine using linear regression trained on monthly business data for revenue forecasting",
-            "Implemented Random Forest churn prediction with adjustable thresholds (30–365 days), recency, frequency, monetary, tenure, and order gap features",
+            "Implemented Random Forest churn prediction with adjustable thresholds and risk visualisation",
             "Created anomaly detection system identifying 20%+ daily revenue drops with 90% precision",
             "Engineered statistical models for RFM segmentation and cohort retention analysis across 4M+ transaction records",
             "Designed memory-optimized caching system with TTL and LRU policies reducing compute resource usage by 40%"
@@ -70,8 +70,8 @@
           "bullets": [
             "Developed clinical ML pipeline achieving 94% diagnostic accuracy using ensemble methods and feature importance analysis",
             "Conducted statistical validation of clinical assessments across 50+ users, improving diagnostic confidence intervals by 25%",
-            "Designed A/B testing framework for continuous model improvement and validation",
-            "Built multi-language data processing supporting 4 languages and 12 writing systems"
+            "Built multi-language processing pipeline supporting 4 languages and 12 writing systems",
+            "Designed and implemented 200+ clinical safety rules with 3-layer content moderation for AI chatbot"
           ]
         },
         {
@@ -82,7 +82,7 @@
             "Developed ensemble prediction models (LSTM, XGBoost, Random Forest) achieving 85% accuracy in stock trend forecasting",
             "Performed statistical analysis of 60+ global brands across 5 sectors using 20+ financial indicators",
             "Applied time series analysis techniques to 5+ years of historical market data, identifying significant patterns",
-            "Created risk assessment models that improved investment decision accuracy by 40%"
+            "Conducted hypothesis testing and causal analysis to validate technical trading signals"
           ]
         },
         {
@@ -106,8 +106,9 @@
           "date": "August 2024 – April 2025",
           "bullets": [
             "Applied data-driven statistical analysis to track student progress, improving learning outcomes by 25% faster",
-            "Implemented data collection and analysis systems for tracking 40+ students",
-            "Created visualization reports translating academic data into actionable insights for families"
+            "Designed and implemented progress tracking system with statistical validation of teaching effectiveness",
+            "Created visualization reports translating academic data into actionable insights for 40+ families",
+            "Optimized curriculum delivery using statistical analysis to measure teaching effectiveness by 20%"
           ]
         }
       ]
@@ -144,6 +145,6 @@
     }
   },
   "pdf": {
-    "fileName": "Shin_Le_Data_Scientist_Business_Resume.pdf"
+    "fileName": "Shin_Le_Data_Scientist_Resume.pdf"
   }
 }

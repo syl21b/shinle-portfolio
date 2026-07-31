@@ -20,7 +20,7 @@
   "sections": {
     "professionalSummary": {
       "title": "PROFESSIONAL SUMMARY",
-      "content": "Business Intelligence Analyst with a strong applied mathematics background and 1.5 years of experience turning complex datasets into actionable business insights. Expert in SQL, Python, and Tableau with a proven track record of increasing operational efficiency by 25% and improving decision accuracy by 85%. Skilled at building interactive dashboards, developing KPIs, and translating technical findings into executive-level narratives that drive profitability and optimize business processes across multiple industries."
+      "content": "Data Analyst with a strong applied mathematics background and 1.5 years of experience turning complex datasets into actionable business insights. Expert in SQL, Python, and Tableau with a proven track record of increasing operational efficiency by 25% and improving decision accuracy by 85%. Skilled at building interactive dashboards, developing KPIs, and translating technical findings into executive-level narratives that drive profitability and optimize business processes across multiple industries."
     },
     "technicalSkills": {
       "title": "TECHNICAL SKILLS",
@@ -35,32 +35,31 @@
         },
         {
           "category": "Business Intelligence",
-          "content": "Data Warehousing, ETL Pipeline Development, Data Modeling, Report Automation, Business Metrics Design, Performance Analytics Framework, Predictive Analytics"
+          "content": "Data Warehousing, ETL Pipeline Development, Data Modeling, Report Automation, Business Metrics Design, Performance Analytics Framework"
         },
         {
-          "category": "Machine Learning & Analytics",
-          "content": "RFM Segmentation, Cohort Analysis, Customer Churn Prediction (Random Forest), Revenue Forecasting, Anomaly Detection, Natural Language Processing, Regression Models"
+          "category": "Analytical Techniques",
+          "content": "RFM Segmentation, Cohort Analysis, Anomaly Detection, Customer Churn Analysis, Revenue Forecasting, A/B Testing Design"
         },
         {
           "category": "Tools & Platforms",
-          "content": "Git/GitHub, Jupyter Notebooks, AWS (S3, Redshift), REST APIs, Google Analytics, Python (Pandas, NumPy, scikit-learn), Flask, Docker"
+          "content": "Git/GitHub, Jupyter Notebooks, AWS (S3, Redshift), REST APIs, Google Analytics, Python (Pandas, NumPy, scikit-learn)"
         }
       ]
     },
     "projects": {
-      "title": "BUSINESS INTELLIGENCE PROJECTS",
+      "title": "DATA ANALYSIS PROJECTS",
       "items": [
         {
-          "title": "Enterprise BI Dashboard: AI-Powered Retail Analytics",
+          "title": "Enterprise BI Dashboard: AI-Powered Analytics Platform",
           "url": "https://retail-analysis-cj4s.onrender.com",
           "date": "May 2026 – June 2026",
           "bullets": [
-            "Built production BI platform processing 4M+ records with 99.8% data validity for retail analytics",
-            "Developed AI natural language query feature enabling non-technical users to ask business questions in plain English",
-            "Implemented cross-filtering across 10+ interactive charts for real-time drill-down analysis",
-            "Created what-if simulator that forecasts revenue impact of operational changes (repeat rate, AOV, fulfillment) using linear regression",
-            "Integrated Random Forest churn prediction with adjustable thresholds (30–365 days) and risk visualisation",
-            "Reduced data analysis time by 40% through automated reporting and intelligent caching"
+            "Designed and built a full-stack BI platform processing 4M+ records with 99.8% data validity, enabling real-time business monitoring",
+            "Developed interactive dashboards with cross-filtering across 10+ charts, allowing users to drill down and explore data from multiple angles",
+            "Created an AI natural language query engine that converts plain English questions into SQL, empowering non-technical users to access data independently",
+            "Built a what-if simulator forecasting revenue impact of changes in repeat rate, AOV, and fulfillment metrics using regression analysis",
+            "Reduced manual reporting time by 40% through automated data pipelines and intelligent caching (TTLCache)"
           ]
         },
         {
@@ -68,7 +67,7 @@
           "url": "https://syl21b.github.io/shinle-portfolio/showcase/5",
           "date": "May 2025 – June 2025",
           "bullets": [
-            "Increased investment decision accuracy by 85% through comparative analysis of 60+ global brands across 5 sectors",
+            "Increased investment decision accuracy by 85% through comparative analysis of 60+ global brands across 5 sectors using advanced statistical methods",
             "Reduced data processing time by 60% by engineering optimized SQL queries for 5+ years of historical market data",
             "Built Tableau dashboards visualizing risk assessment and sector performance, enabling 40% faster market response"
           ]
@@ -132,6 +131,6 @@
     }
   },
   "pdf": {
-    "fileName": "Shin_Le_BI_Analyst_Resume.pdf"
+    "fileName": "Shin_Le_Data_Analyst_Resume.pdf"
   }
 }

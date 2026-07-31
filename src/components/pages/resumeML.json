@@ -1,7 +1,6 @@
 {
   "name": "SHIN LE",
   "title": "Machine Learning Engineer",
-  
   "contact": {
     "email": "shinle666@gmail.com",
     "phone": "772-285-6483",
@@ -18,51 +17,60 @@
       "url": "https://syl21b.github.io/shinle-portfolio"
     }
   },
-  
   "sections": {
     "professionalSummary": {
       "title": "PROFESSIONAL SUMMARY",
-      "content": "Machine Learning Engineer with expertise in building end-to-end ML systems from research to production. Deployed clinical ML pipeline with 94% accuracy at scale and financial prediction systems with 85% ROI improvement. Proficient in Python, TensorFlow, scikit-learn, and MLOps practices. Experienced in model optimization, feature engineering, and deploying ML systems with 99.9% uptime and sub-200ms latency."
+      "content": "Machine Learning Engineer with expertise in building end-to-end ML systems from research to production. Deployed clinical ML pipeline achieving 94% diagnostic accuracy, built churn prediction models using Random Forest with adjustable thresholds, and developed what-if simulation engines using linear regression. Proficient in Python, TensorFlow, scikit-learn, and MLOps practices. Experienced in model optimization, feature engineering, and deploying ML systems with 99.9% uptime and sub-200ms latency across healthcare, retail, and finance domains."
     },
-    
     "technicalSkills": {
       "title": "TECHNICAL SKILLS",
       "skills": [
         {
           "category": "Machine Learning & Deep Learning",
-          "content": "Python, TensorFlow, PyTorch, scikit-learn, XGBoost, LSTM, Random Forest, Ensemble Methods, Hyperparameter Optimization"
+          "content": "Python, TensorFlow, PyTorch, scikit-learn, XGBoost, LSTM, Random Forest, Ensemble Methods, Hyperparameter Optimization, Linear Regression"
         },
         {
           "category": "MLOps & Production",
-          "content": "Docker, Kubernetes, MLflow, Kubeflow, Model Serving (Flask, FastAPI), AWS SageMaker, CI/CD for ML, Model Monitoring"
+          "content": "Docker, Kubernetes, MLflow, Model Serving (Flask, FastAPI), AWS SageMaker, CI/CD for ML, Model Monitoring, Model Persistence (Joblib)"
         },
         {
           "category": "Feature Engineering & Data",
-          "content": "Feature Selection, Dimensionality Reduction, Data Preprocessing, SQL, PostgreSQL, Time Series Analysis, Data Pipeline Design"
+          "content": "Feature Selection, Dimensionality Reduction, Data Preprocessing, SQL, PostgreSQL, Time Series Analysis, Data Pipeline Design, Feature Importance Analysis"
         },
         {
           "category": "Software Engineering",
-          "content": "Git, REST APIs, Microservices, Testing (Unit, Integration), Code Optimization, System Design, Scalability Patterns"
+          "content": "Git, REST APIs, Microservices, Testing (Unit, Integration), Code Optimization, System Design, Scalability Patterns, Caching (TTLCache)"
         },
         {
           "category": "Specialized ML Domains",
-          "content": "Clinical ML, Healthcare Analytics, Financial Time Series, Predictive Maintenance, Recommendation Systems, NLP, Computer Vision"
+          "content": "Clinical ML, Healthcare Analytics, Financial Time Series, Customer Churn Prediction, RFM Segmentation, Cohort Analysis, Anomaly Detection, NLP"
         }
       ]
     },
-    
     "projects": {
       "title": "MACHINE LEARNING ENGINEERING PROJECTS",
       "items": [
+        {
+          "title": "Enterprise BI Dashboard: AI-Powered Analytics Platform",
+          "url": "https://retail-analysis-cj4s.onrender.com",
+          "date": "May 2026 – June 2026",
+          "bullets": [
+            "Architected ML pipeline for customer churn prediction using Random Forest, achieving risk classification with features: recency, frequency, monetary, tenure, average days between orders",
+            "Developed what-if simulation engine using linear regression trained on monthly business data, forecasting revenue uplift from changes in repeat rate, AOV, churn, and fulfillment days",
+            "Engineered anomaly detection system identifying 20%+ daily revenue drops with 90% precision using statistical methods",
+            "Optimized inference latency to <200ms through model serialization with joblib and efficient feature engineering",
+            "Implemented model versioning and automatic retraining when churn threshold changes (30–365 days)"
+          ]
+        },
         {
           "title": "Mentivio: Production Clinical ML System",
           "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
           "date": "September 2025 – Present",
           "bullets": [
-            "Architected end-to-end ML pipeline from data ingestion to production serving achieving 94% diagnostic accuracy",
-            "Optimized ensemble model reducing inference time from 500ms to <200ms while maintaining 94% accuracy",
-            "Implemented MLOps pipeline with automated retraining, versioning, and A/B testing capabilities",
-            "Deployed scalable ML service on AWS handling 50+ concurrent users with 99.9% uptime and real-time monitoring"
+            "Architected end-to-end ML pipeline from data ingestion to production serving achieving 94% diagnostic accuracy using ensemble methods (Random Forest, XGBoost)",
+            "Optimized ensemble model reducing inference time from 500ms to <200ms while maintaining 94% accuracy through feature selection and model pruning",
+            "Implemented MLOps pipeline with automated retraining, versioning, and A/B testing capabilities for clinical assessment validation",
+            "Designed feature importance analysis providing clinical interpretability for complex ML models"
           ]
         },
         {
@@ -70,26 +78,14 @@
           "url": "https://syl21b.github.io/shinle-portfolio/showcase/5",
           "date": "May 2025 – June 2025",
           "bullets": [
-            "Engineered LSTM-XGBoost ensemble model improving prediction accuracy by 15% over baseline methods",
+            "Engineered LSTM-XGBoost ensemble model improving prediction accuracy by 15% over baseline methods for stock trend forecasting",
             "Developed feature store with 20+ technical indicators enabling reproducible model training and inference",
             "Built model serving infrastructure with canary deployment and automated rollback capabilities",
             "Implemented continuous training pipeline updating models weekly with new market data"
           ]
-        },
-        {
-          "title": "Retail Predictive Analytics Platform",
-          "url": "https://syl21b.github.io/shinle-portfolio/showcase/4",
-          "date": "April 2025 – May 2025",
-          "bullets": [
-            "Developed time series forecasting models with 90% accuracy for retail sales prediction",
-            "Built anomaly detection system identifying $150K+ in potential revenue leakage from operational issues",
-            "Created automated model validation framework reducing deployment errors by 80%",
-            "Implemented feature importance analysis providing business interpretability for complex ML models"
-          ]
         }
       ]
     },
-    
     "experience": {
       "title": "PROFESSIONAL EXPERIENCE",
       "items": [
@@ -98,7 +94,7 @@
           "company": "Mathnasium Learning Center",
           "date": "August 2024 – April 2025",
           "bullets": [
-            "Built predictive model forecasting student performance with 85% accuracy using gradient boosting",
+            "Built predictive model forecasting student performance with 85% accuracy using gradient boosting on historical data",
             "Developed personalized learning recommendation system improving student outcomes by 25%",
             "Implemented automated assessment grading system reducing teacher workload by 40%",
             "Created ML-based progress tracking system identifying at-risk students 2 weeks earlier than manual methods"
@@ -106,42 +102,37 @@
         }
       ]
     },
-    
     "education": {
       "title": "EDUCATION",
       "items": [
         {
           "degree": "Bachelor of Science in Applied Mathematics",
           "institution": "Florida State University",
-          "details": "Focus: Machine Learning Theory & Applications | Coursework: Statistical Learning Theory, Optimization Algorithms, Deep Learning, Probability Models"
+          "details": "GPA: 3.89/4.0 | Focus: Machine Learning Theory & Applications | Coursework: Statistical Learning Theory, Optimization Algorithms, Deep Learning, Probability Models"
         },
         {
           "degree": "Associate of Arts in Mathematics",
           "institution": "Indian River State College",
-          "details": "Graduated with Honors, Focus: Mathematical Modeling & Computational Methods"
+          "details": "GPA: 3.96/4.0, Graduated with Honors (Summa Cum Laude), Focus: Mathematical Modeling & Computational Methods"
         }
       ]
     },
-    
     "certifications": {
       "title": "CERTIFICATIONS",
-      "items": [     
-
-        {
-          "name": "AWS Certified Machine Learning Specialty",
-          "url": "",
-          "date": "Expected April 2026"
-        },
-   
+      "items": [
         {
           "name": "IBM Data Science Professional Certificate",
           "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",
           "date": "May 2023"
+        },
+        {
+          "name": "IBM Data Analyst Professional Certificate",
+          "url": "https://coursera.org/share/6f4a5c892079cf1212f1669b9539e20b",
+          "date": "July 2023"
         }
       ]
     }
   },
-  
   "pdf": {
     "fileName": "Shin_Le_ML_Engineer_Resume.pdf"
   }
