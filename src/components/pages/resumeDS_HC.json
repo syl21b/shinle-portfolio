@@ -1,6 +1,6 @@
 {
   "name": "SHIN LE",
-  "title": "Data Scientist",
+  "title": "Data Scientist | Clinical ML & Healthcare Analytics",
   "contact": {
     "email": "shinle666@gmail.com",
     "phone": "772-285-6483",
@@ -20,7 +20,7 @@
   "sections": {
     "professionalSummary": {
       "title": "PROFESSIONAL SUMMARY",
-      "content": "Data Scientist with expertise in statistical analysis, machine learning, and predictive modeling across healthcare, finance, and retail domains. Built clinical ML systems achieving 94% diagnostic accuracy, AI-powered analytics platforms processing 4M+ records with 99.8% validity, and churn prediction models using Random Forest. Proficient in Python, scikit-learn, TensorFlow, and advanced statistical methods. Experienced in end-to-end data science projects from hypothesis formulation to production deployment. Strong foundation in applied mathematics with one year of experience translating complex data into actionable business insights."
+      "content": "Data Scientist with expertise in clinical machine learning, statistical analysis, and predictive modeling. Built clinical ML systems achieving 94% diagnostic accuracy for mental health conditions and deployed AI-powered healthcare platforms processing sensitive patient data. Proficient in Python, scikit-learn, TensorFlow, and advanced statistical methods. Experienced in end-to-end data science projects from hypothesis formulation to production deployment in healthcare, finance, and retail domains. Strong foundation in applied mathematics with one year of experience translating complex data into actionable clinical and business insights."
     },
     "technicalSkills": {
       "title": "TECHNICAL SKILLS",
@@ -30,12 +30,12 @@
           "content": "Python (scikit-learn, TensorFlow, Pandas, NumPy), Statistical Analysis (Hypothesis Testing, Regression, Bayesian), Ensemble Methods (Random Forest, XGBoost, Gradient Boosting), Deep Learning, Predictive Modeling, Time Series Analysis"
         },
         {
-          "category": "Business Analytics",
-          "content": "Business Intelligence, KPI Development, A/B Testing Design, Causal Inference, Revenue Forecasting, Customer Lifetime Value, Churn Prediction, RFM Analysis, Cohort Analysis"
+          "category": "Healthcare & Clinical Analytics",
+          "content": "Clinical Data Science, Medical ML Validation, Patient Outcome Prediction, HIPAA-Inspired Data Security, Mental Health Analytics, Clinical Assessment Design, Diagnostic Modeling"
         },
         {
           "category": "Data Science & Analytics",
-          "content": "SQL (PostgreSQL, MySQL), Data Wrangling, Feature Engineering, Experimental Design, Anomaly Detection, Data Mining, Pattern Recognition, Model Persistence (Joblib)"
+          "content": "SQL (PostgreSQL, MySQL), Data Wrangling, Feature Engineering, Experimental Design (A/B Testing), Anomaly Detection, Causal Inference, Data Mining"
         },
         {
           "category": "Data Visualization & Communication",
@@ -51,27 +51,28 @@
       "title": "DATA SCIENCE PROJECTS",
       "items": [
         {
+          "title": "Mentivio: Clinical ML & Mental Health Assessment Platform",
+          "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
+          "date": "September 2025 – Present",
+          "bullets": [
+            "Developed clinical ML pipeline achieving 94% diagnostic accuracy for 4 mental health conditions using ensemble methods and feature importance analysis",
+            "Conducted statistical validation of clinical assessments across 50+ users, improving diagnostic confidence intervals by 25%",
+            "Built multi-language processing pipeline supporting 4 languages and 12 writing systems for international clinical reporting",
+            "Designed and implemented 200+ clinical safety rules with 3-layer content moderation for AI chatbot interactions",
+            "Created comprehensive statistical framework for continuous model monitoring and clinical validation"
+          ]
+        },
+        {
           "title": "Enterprise BI Dashboard: AI-Powered Analytics Platform",
           "url": "https://retail-analysis-cj4s.onrender.com",
           "date": "May 2026 – June 2026",
           "bullets": [
             "Built AI natural language query engine using LLMs (Groq/Gemini) that converts plain English to SQL with 95% accuracy",
             "Developed what-if simulation engine using linear regression trained on monthly business data for revenue forecasting",
-            "Implemented Random Forest churn prediction with adjustable thresholds (30–365 days), recency, frequency, monetary, tenure, and order gap features",
+            "Implemented Random Forest churn prediction with adjustable thresholds and risk visualisation",
             "Created anomaly detection system identifying 20%+ daily revenue drops with 90% precision",
             "Engineered statistical models for RFM segmentation and cohort retention analysis across 4M+ transaction records",
             "Designed memory-optimized caching system with TTL and LRU policies reducing compute resource usage by 40%"
-          ]
-        },
-        {
-          "title": "Mentivio: Clinical ML & Mental Health Assessment Platform",
-          "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
-          "date": "September 2025 – Present",
-          "bullets": [
-            "Developed clinical ML pipeline achieving 94% diagnostic accuracy using ensemble methods and feature importance analysis",
-            "Conducted statistical validation of clinical assessments across 50+ users, improving diagnostic confidence intervals by 25%",
-            "Designed A/B testing framework for continuous model improvement and validation",
-            "Built multi-language data processing supporting 4 languages and 12 writing systems"
           ]
         },
         {
@@ -82,17 +83,7 @@
             "Developed ensemble prediction models (LSTM, XGBoost, Random Forest) achieving 85% accuracy in stock trend forecasting",
             "Performed statistical analysis of 60+ global brands across 5 sectors using 20+ financial indicators",
             "Applied time series analysis techniques to 5+ years of historical market data, identifying significant patterns",
-            "Created risk assessment models that improved investment decision accuracy by 40%"
-          ]
-        },
-        {
-          "title": "Superstore Predictive Analytics & Business Intelligence",
-          "url": "https://syl21b.github.io/shinle-portfolio/showcase/4",
-          "date": "April 2025 – May 2025",
-          "bullets": [
-            "Built predictive models analyzing 4 years of retail data with 90% accuracy in profitability forecasting",
-            "Implemented statistical hypothesis testing to validate operational improvements, resulting in 12% efficiency gains",
-            "Developed customer segmentation models using clustering techniques, improving marketing ROI by 15%"
+            "Conducted hypothesis testing and causal analysis to validate technical trading signals and behavioral finance metrics"
           ]
         }
       ]
@@ -106,8 +97,8 @@
           "date": "August 2024 – April 2025",
           "bullets": [
             "Applied data-driven statistical analysis to track student progress, improving learning outcomes by 25% faster",
-            "Implemented data collection and analysis systems for tracking 40+ students",
-            "Created visualization reports translating academic data into actionable insights for families"
+            "Implemented progress tracking system with statistical validation of teaching effectiveness, improving efficiency by 20%",
+            "Created visualization reports translating academic data into actionable insights for 40+ families"
           ]
         }
       ]
@@ -144,6 +135,6 @@
     }
   },
   "pdf": {
-    "fileName": "Shin_Le_Data_Scientist_Business_Resume.pdf"
+    "fileName": "Shin_Le_Data_Scientist_Healthcare_Resume.pdf"
   }
 }

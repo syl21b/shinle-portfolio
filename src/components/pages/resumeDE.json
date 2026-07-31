@@ -1,7 +1,6 @@
 {
   "name": "SHIN LE",
   "title": "Data Engineer",
-  
   "contact": {
     "email": "shinle666@gmail.com",
     "phone": "772-285-6483",
@@ -18,23 +17,21 @@
       "url": "https://syl21b.github.io/shinle-portfolio"
     }
   },
-  
   "sections": {
     "professionalSummary": {
       "title": "PROFESSIONAL SUMMARY",
-      "content": "Data Engineer with expertise in building scalable data pipelines, data warehousing solutions, and ETL processes. Proficient in PostgreSQL, AWS (S3, Redshift), and Python with experience handling 50+ concurrent users and sub-200ms response times. Strong background in data modeling, pipeline optimization, and implementing HIPAA-inspired security frameworks for sensitive healthcare data."
+      "content": "Data Engineer with expertise in building scalable data pipelines, data warehousing solutions, and ETL processes. Proficient in PostgreSQL, AWS, and Python with experience processing 4M+ records with 99.8% data validity, handling 50+ concurrent users, and achieving sub-200ms response times. Strong background in data modeling, pipeline optimization, connection pooling, caching (TTLCache), and implementing HIPAA-inspired security frameworks for sensitive healthcare data."
     },
-    
     "technicalSkills": {
       "title": "TECHNICAL SKILLS",
       "skills": [
         {
           "category": "Databases & Data Warehousing",
-          "content": "PostgreSQL (Optimization, Indexing, Partitioning), MySQL, AWS Redshift, Data Modeling (Star/Snowflake Schema), Database Design, Query Optimization"
+          "content": "PostgreSQL (Optimization, Indexing, Partitioning, Connection Pooling), MySQL, AWS Redshift, Data Modeling (Star/Snowflake Schema), Database Design, Query Optimization"
         },
         {
           "category": "Data Engineering & ETL",
-          "content": "ETL/ELT Pipeline Development, Apache Airflow, AWS Glue, Data Pipeline Architecture, Batch Processing, Real-time Data Streaming"
+          "content": "ETL/ELT Pipeline Development, Apache Airflow, AWS Glue, Data Pipeline Architecture, Batch Processing, Real-time Data Streaming, Data Validation"
         },
         {
           "category": "Cloud & Infrastructure",
@@ -46,14 +43,25 @@
         },
         {
           "category": "Data Security & Operations",
-          "content": "Data Encryption (At-rest/In-transit), JWT Authentication, Role-Based Access Control, Audit Logging, PII Scrubbing, HIPAA Compliance"
+          "content": "Data Encryption (At-rest/In-transit), JWT Authentication, Role-Based Access Control, Audit Logging, PII Scrubbing, HIPAA-Inspired Compliance, Rate Limiting"
         }
       ]
     },
-    
     "projects": {
       "title": "DATA ENGINEERING PROJECTS",
       "items": [
+        {
+          "title": "Enterprise BI Dashboard: Retail Analytics Data Platform",
+          "url": "https://retail-analysis-cj4s.onrender.com",
+          "date": "May 2026 – June 2026",
+          "bullets": [
+            "Designed and deployed full-stack analytics database processing 4M+ transaction records with 99.8% data validity using PostgreSQL",
+            "Implemented connection pooling (SimpleConnectionPool) supporting 2-20 concurrent connections with automatic retries and keepalive parameters",
+            "Engineered memory-optimized caching layer with TTLCache (5-minute TTL, LRU eviction) reducing database load by 40%",
+            "Built SQL query execution framework with automatic schema prefixing, date extraction fixes, and query sanitization for safety",
+            "Deployed production environment on Render with Gunicorn, achieving sub-500ms API response times for 10+ analytical endpoints"
+          ]
+        },
         {
           "title": "Mentivio: Healthcare Data Platform Architecture",
           "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
@@ -75,21 +83,9 @@
             "Designed data warehouse schema for financial time-series data supporting complex analytical queries",
             "Implemented batch processing system handling 10,000+ daily records with 99.8% data accuracy"
           ]
-        },
-        {
-          "title": "Retail Analytics Data Infrastructure",
-          "url": "https://syl21b.github.io/shinle-portfolio/showcase/4",
-          "date": "April 2025 – May 2025",
-          "bullets": [
-            "Built data consolidation pipeline integrating 4 years of retail data (10,000+ transactions) from multiple sources",
-            "Designed dimensional data model for business intelligence dashboards reducing query times by 70%",
-            "Implemented automated reporting system reducing manual data processing time by 60%",
-            "Created data validation framework improving data quality by 30% through automated checks and balances"
-          ]
         }
       ]
     },
-    
     "experience": {
       "title": "PROFESSIONAL EXPERIENCE",
       "items": [
@@ -106,45 +102,37 @@
         }
       ]
     },
-    
     "education": {
       "title": "EDUCATION",
       "items": [
         {
           "degree": "Bachelor of Science in Applied Mathematics",
           "institution": "Florida State University",
-          "details": "Focus: Computational Mathematics & Data Structures | Coursework: Database Systems, Algorithms, Data Structures, Statistical Computing"
+          "details": "GPA: 3.89/4.0 | Focus: Computational Mathematics & Data Structures | Coursework: Database Systems, Algorithms, Data Structures, Statistical Computing"
         },
         {
           "degree": "Associate of Arts in Mathematics",
           "institution": "Indian River State College",
-          "details": "Graduated with Honors, Focus: Computer Science & Mathematics Integration"
+          "details": "GPA: 3.96/4.0, Graduated with Honors (Summa Cum Laude), Focus: Computer Science & Mathematics Integration"
         }
       ]
     },
-    
     "certifications": {
       "title": "CERTIFICATIONS",
       "items": [
         {
-          "name": "AWS Certified Solutions Architect - Associate",
-          "url": "",
-          "date": "Expected April 2026"
-        },
-        {
-          "name": "IBM Data Engineering Professional Certificate",
-          "url": "https://coursera.org/share/example",
-          "date": "Expected Dec 2025"
-        },
-        {
           "name": "IBM Data Science Professional Certificate",
           "url": "https://coursera.org/share/c483954137c683f173873918b09024f2",
           "date": "May 2023"
+        },
+        {
+          "name": "IBM Data Analyst Professional Certificate",
+          "url": "https://coursera.org/share/6f4a5c892079cf1212f1669b9539e20b",
+          "date": "July 2023"
         }
       ]
     }
   },
-  
   "pdf": {
     "fileName": "Shin_Le_Data_Engineer_Resume.pdf"
   }
