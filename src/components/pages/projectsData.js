@@ -66,70 +66,70 @@ export const projects = [
   },
 
 {
-  "id": 6,
-  "type": "fullstack",
-  "date": "Jun 2026 - July 2026",
-  "isOngoing": false,
-  "featured": true,
-  "title": "Enterprise BI Dashboard: AI-Powered Retail Analytics",
-  "description": "Production-grade business intelligence dashboard with AI natural language querying, what-if simulation, RFM segmentation, cohort retention analysis, cross-filtering visualizations, and customer churn prediction using Random Forest.",
-  "problem": "Traditional BI tools require technical SQL knowledge to extract insights, lack interactive cross-filtering between charts, offer no predictive simulation or customer churn forecasting. Business users struggle to ask ad-hoc questions, identify revenue anomalies, or forecast the impact of operational changes without heavy engineering support.",
-  "solution": "Built a full-stack BI platform that processes 4M+ records with 99.8% data validity. Features include: natural language querying (NLQ) that converts plain English into SQL, click-based cross-filtering across all charts, revenue anomaly detection, RFM/LTV segmentation, cohort retention heatmaps, a what-if simulator that estimates revenue uplift from changes in repeat rate, AOV, churn, or fulfillment days, and a customer churn prediction module (Random Forest) with adjustable threshold, risk distribution, and individual predictions. All powered by a Flask backend, PostgreSQL data warehouse, and a responsive Plotly-based frontend.",
-  "contributions": [
-    "<strong>End-to-End Architecture:</strong> Architected the entire platform using <strong>Flask (backend)</strong>, <strong>PostgreSQL (data warehouse)</strong>, <strong>Plotly.js (interactive charts)</strong>, and <strong>HTML/CSS/JS frontend</strong>. Deployed on Render with Gunicorn and a free-tier PostgreSQL database.",
-    "<strong>AI Natural Language Query:</strong> Built an LLM-powered NLQ engine (Groq/Gemini) that generates safe SELECT SQL from plain English questions, with automatic schema awareness, caching, and rate limiting.",
-    "<strong>Interactive Cross-Filtering:</strong> Implemented global filter state management that allows users to click any bar or pie slice to drill down across all pages, plus date-range selection via chart brushing.",
-    "<strong>Revenue Anomaly Detection:</strong> Automated detection of daily revenue drops >20% with visual markers on trends and simulated Slack/Jira alerts.",
-    "<strong>RFM & Cohort Analysis:</strong> Delivered interactive RFM segmentation scatter plots, segment statistics, retention heatmaps, and infinite-scroll tables for thousands of customers.",
-    "<strong>What-If Simulator:</strong> Created a linear-regression-based simulation engine (trained on monthly data) that estimates revenue uplift from changes in repeat rate, AOV, churn reduction, or fulfillment days.",
-    "<strong>Customer Churn Prediction:</strong> Implemented a Random Forest classifier (scikit-learn) trained on recency, frequency, monetary, tenure, and order gap features. Built an interactive UI with adjustable churn threshold (30–365 days), risk distribution pie chart, revenue vs churn timeline, and per‑customer prediction.",
-    "<strong>Memory-Optimised Caching:</strong> Implemented TTL and LRU caching for SQL result dataframes, reducing memory footprint by auto-evicting stale or infrequently used data."
-  ],
-  "technologies": [
-    "Flask", "PostgreSQL", "Python", "Plotly.js", "HTML/CSS/JS", "Gunicorn",
-    "Groq API", "Gemini API", "scikit-learn", "Pandas", "SQL", "Render",
-    "Natural Language Processing", "Machine Learning", "BI Dashboard",
-    "Data Visualization", "RFM Analysis", "Cohort Analysis", "REST API",
-    "JWT Authentication", "Rate Limiting", "Cache Management", "Random Forest",
-    "Joblib"
-  ],
-  "challenges": [
-    "<strong>Python 3.14 Compatibility:</strong> Initial deployment failed because `psycopg2-binary` and `numpy` lacked wheels for Python 3.14. Resolved by pinning Python 3.13 in `render.yaml` and upgrading dependencies.",
-    "<strong>Real-Time Cross-Filtering:</strong> Keeping 10+ charts in sync with global filters without performance degradation. Solved with a central `filterState` object and page refresh logic that only reloads necessary API calls.",
-    "<strong>LLM SQL Safety:</strong> Preventing the AI from generating dangerous SQL (e.g., `DROP`, `DELETE`). Implemented strict regex validation, schema prefix forcing, and a test-execution safety net.",
-    "<strong>Memory Bloat from DataFrames:</strong> Caching all SQL results caused high RAM usage. Fixed with `TTLCache` (auto-evict after 5 minutes) and size limits (max 10 dataframes).",
-    "<strong>Model Persistence on Render:</strong> Churn model trained on first request but needed to survive redeploys; saved `churn_model.pkl` and `scaler.pkl` to the working directory and reloaded on startup.",
-    "<strong>Cold Starts on Free Tier:</strong> Render free tier spins down after inactivity. Mitigated with a `/health` endpoint and uptime monitoring (UptimeRobot)."
-  ],
-  "results": "The dashboard successfully serves <strong>9 analytical use cases</strong> with sub-500ms response times. It handles <strong>4M+ records</strong> in the underlying data warehouse, provides <strong>real-time cross-filtering</strong>, and its AI Analyst generates detailed business reports with three persona options (balanced, CFO, CMO). The what-if simulator has been used to model revenue uplift scenarios, the NLQ feature answers ad-hoc business questions without SQL knowledge, and the churn prediction module identifies at-risk customers with adjustable thresholds and visual risk distribution.",
-  "futureEnhancements": "Add more granular forecast models (Prophet/ARIMA), implement user authentication with role-based access, integrate real-time data streaming via Kafka, develop a mobile-friendly PWA version, and expand the simulation engine to include marketing spend and acquisition cost variables.",
-  "linkText": "Live Dashboard",
-  "linkHref": "https://retail-analysis-cj4s.onrender.com",
-  "buttonTitle": "Open Enterprise BI Dashboard",
-  "iframeSrc": null,
-  "demoLinkText": "View Code",
-  "demoLinkHref": "https://github.com/syl21b/retail-analysis",
-  "demoButtonTitle": "View Enterprise BI Dashboard Code on GitHub",
-  "buttonVariant": "btn-primary",
-  "buttonVariant2": "btn-outline",
-  "imagePreview": "RetailAnalysis",
-  "keyMetrics": [
-    { "value": "4M+", "label": "Records Processed" },
-    { "value": "99.8%", "label": "Data Validity" },
-    { "value": "9", "label": "Use Cases" },
-    { "value": "<500ms", "label": "Response Time" },
-    { "value": "3", "label": "AI Personas" },
-    { "value": "24/7", "label": "Availability" }
-  ],
-  "techIcons": [
-    { "icon": "Database", "label": "PostgreSQL", "color": "text-indigo-600" },
-    { "icon": "Brain", "label": "AI/NLQ Engine", "color": "text-purple-600" },
-    { "icon": "BarChart", "label": "Plotly.js", "color": "text-blue-600" },
-    { "icon": "Shield", "label": "Rate Limiting", "color": "text-green-600" },
-    { "icon": "Refresh", "label": "TTL Cache", "color": "text-orange-600" },
-    { "icon": "TrendingUp", "label": "Churn Prediction", "color": "text-red-600" }
-  ]
-},
+    id: 6,
+    type: "fullstack",
+    date: "Jun 2026 - July 2026",
+    isOngoing: false,
+    featured: true,
+    title: "Enterprise BI Dashboard: AI-Powered Retail Analytics",
+    description: "Production-grade business intelligence dashboard with AI natural language querying, what-if simulation, RFM segmentation, cohort retention analysis, cross-filtering visualizations, and customer churn prediction using Random Forest.",
+    problem: "Traditional BI tools require technical SQL knowledge to extract insights, lack interactive cross-filtering between charts, offer no predictive simulation or customer churn forecasting. Business users struggle to ask ad-hoc questions, identify revenue anomalies, or forecast the impact of operational changes without heavy engineering support.",
+    solution: "Built a full-stack BI platform that processes 4M+ records with 99.8% data validity. Features include: natural language querying (NLQ) that converts plain English into SQL, click-based cross-filtering across all charts, revenue anomaly detection, RFM/LTV segmentation, cohort retention heatmaps, a what-if simulator that estimates revenue uplift from changes in repeat rate, AOV, churn, or fulfillment days, and a customer churn prediction module (Random Forest) with adjustable threshold, risk distribution, and individual predictions. All powered by a Flask backend, PostgreSQL data warehouse, and a responsive Plotly-based frontend.",
+    contributions: [
+      "<strong>End-to-End Architecture:</strong> Architected the entire platform using <strong>Flask (backend)</strong>, <strong>PostgreSQL (data warehouse)</strong>, <strong>Plotly.js (interactive charts)</strong>, and <strong>HTML/CSS/JS frontend</strong>. Deployed on Render with Gunicorn and a free-tier PostgreSQL database.",
+      "<strong>AI Natural Language Query:</strong> Built an LLM-powered NLQ engine (Groq/Gemini) that generates safe SELECT SQL from plain English questions, with automatic schema awareness, caching, and rate limiting.",
+      "<strong>Interactive Cross-Filtering:</strong> Implemented global filter state management that allows users to click any bar or pie slice to drill down across all pages, plus date-range selection via chart brushing.",
+      "<strong>Revenue Anomaly Detection:</strong> Automated detection of daily revenue drops >20% with visual markers on trends and simulated Slack/Jira alerts.",
+      "<strong>RFM & Cohort Analysis:</strong> Delivered interactive RFM segmentation scatter plots, segment statistics, retention heatmaps, and infinite-scroll tables for thousands of customers.",
+      "<strong>What-If Simulator:</strong> Created a linear-regression-based simulation engine (trained on monthly data) that estimates revenue uplift from changes in repeat rate, AOV, churn reduction, or fulfillment days.",
+      "<strong>Customer Churn Prediction:</strong> Implemented a Random Forest classifier (scikit-learn) trained on recency, frequency, monetary, tenure, and order gap features. Built an interactive UI with adjustable churn threshold (30–365 days), risk distribution pie chart, revenue vs churn timeline, and per‑customer prediction.",
+      "<strong>Memory-Optimised Caching:</strong> Implemented TTL and LRU caching for SQL result dataframes, reducing memory footprint by auto-evicting stale or infrequently used data."
+    ],
+    technologies: [
+      "Flask", "PostgreSQL", "Python", "Plotly.js", "HTML/CSS/JS", "Gunicorn",
+      "Groq API", "Gemini API", "scikit-learn", "Pandas", "SQL", "Render",
+      "Natural Language Processing", "Machine Learning", "BI Dashboard",
+      "Data Visualization", "RFM Analysis", "Cohort Analysis", "REST API",
+      "JWT Authentication", "Rate Limiting", "Cache Management", "Random Forest",
+      "Joblib"
+    ],
+    challenges: [
+      "<strong>Python 3.14 Compatibility:</strong> Initial deployment failed because `psycopg2-binary` and `numpy` lacked wheels for Python 3.14. Resolved by pinning Python 3.13 in `render.yaml` and upgrading dependencies.",
+      "<strong>Real-Time Cross-Filtering:</strong> Keeping 10+ charts in sync with global filters without performance degradation. Solved with a central `filterState` object and page refresh logic that only reloads necessary API calls.",
+      "<strong>LLM SQL Safety:</strong> Preventing the AI from generating dangerous SQL (e.g., `DROP`, `DELETE`). Implemented strict regex validation, schema prefix forcing, and a test-execution safety net.",
+      "<strong>Memory Bloat from DataFrames:</strong> Caching all SQL results caused high RAM usage. Fixed with `TTLCache` (auto-evict after 5 minutes) and size limits (max 10 dataframes).",
+      "<strong>Model Persistence on Render:</strong> Churn model trained on first request but needed to survive redeploys; saved `churn_model.pkl` and `scaler.pkl` to the working directory and reloaded on startup.",
+      "<strong>Cold Starts on Free Tier:</strong> Render free tier spins down after inactivity. Mitigated with a `/health` endpoint and uptime monitoring (UptimeRobot)."
+    ],
+    results: "The dashboard successfully serves <strong>9 analytical use cases</strong> with sub-500ms response times. It handles <strong>4M+ records</strong> in the underlying data warehouse, provides <strong>real-time cross-filtering</strong>, and its AI Analyst generates detailed business reports with three persona options (balanced, CFO, CMO). The what-if simulator has been used to model revenue uplift scenarios, the NLQ feature answers ad-hoc business questions without SQL knowledge, and the churn prediction module identifies at-risk customers with adjustable thresholds and visual risk distribution.",
+    futureEnhancements: "Add more granular forecast models (Prophet/ARIMA), implement user authentication with role-based access, integrate real-time data streaming via Kafka, develop a mobile-friendly PWA version, and expand the simulation engine to include marketing spend and acquisition cost variables.",
+    linkText: "Live Dashboard",
+    linkHref: "https://retail-analysis-cj4s.onrender.com",
+    buttonTitle: "Open Enterprise BI Dashboard",
+    iframeSrc: null,
+    demoLinkText: "View Code",
+    demoLinkHref: "https://github.com/syl21b/retail-analysis",
+    demoButtonTitle: "View Enterprise BI Dashboard Code on GitHub",
+    buttonVariant: "btn-primary",
+    buttonVariant2: "btn-outline",
+    imagePreview: RetailAnalysis,  // ✅ use imported variable, not string
+    keyMetrics: [
+      { value: "4M+", label: "Records Processed" },
+      { value: "99.8%", label: "Data Validity" },
+      { value: "9", label: "Use Cases" },
+      { value: "<500ms", label: "Response Time" },
+      { value: "3", label: "AI Personas" },
+      { value: "24/7", label: "Availability" }
+    ],
+    techIcons: [
+      { icon: "Database", label: "PostgreSQL", color: "text-indigo-600" },
+      { icon: "Brain", label: "AI/NLQ Engine", color: "text-purple-600" },
+      { icon: "BarChart", label: "Plotly.js", color: "text-blue-600" },
+      { icon: "Shield", label: "Rate Limiting", color: "text-green-600" },
+      { icon: "Refresh", label: "TTL Cache", color: "text-orange-600" },
+      { icon: "TrendingUp", label: "Churn Prediction", color: "text-red-600" }
+    ]
+  },
 
   {
     id: 5,
