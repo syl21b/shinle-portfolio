@@ -1,6 +1,6 @@
 {
   "name": "SHIN LE",
-  "title": "Data Analyst",
+  "title": "Business Intelligence Analyst | Data Analyst",
   "contact": {
     "email": "shinle666@gmail.com",
     "phone": "772-285-6483",
@@ -27,23 +27,23 @@
       "skills": [
         {
           "category": "Data Analysis & SQL",
-          "content": "PostgreSQL, MySQL, Python, Excel, Statistical Analysis (A/B Testing, Regression), Time Series Analysis, Data Mining"
+          "content": "PostgreSQL, MySQL, Python, Excel, A/B Testing, Regression, Time Series, Data Mining"
         },
         {
           "category": "Data Visualization & BI",
-          "content": "Tableau, Plotly, Data Storytelling, Interactive Dashboards, Executive Reporting, KPI Development, Cross-Filtering, Heatmaps"
+          "content": "Tableau, Plotly, Data Storytelling, Interactive Dashboards, Executive Reporting, KPI Development, Cross-Filtering"
         },
         {
           "category": "Business Intelligence",
-          "content": "Data Warehousing, ETL Pipeline Development, Data Modeling, Report Automation, Business Metrics Design, Performance Analytics Framework, Predictive Analytics"
+          "content": "Data Warehousing, ETL Pipeline Development, Data Modeling, Report Automation, Business Metrics Design, Performance Analytics, Predictive Analytics"
         },
         {
           "category": "Machine Learning & Analytics",
-          "content": "RFM Segmentation, Cohort Analysis, Customer Churn Prediction (Random Forest), Revenue Forecasting, Anomaly Detection, Natural Language Processing, Regression Models"
+          "content": "RFM Segmentation, Cohort Analysis, Customer Churn Prediction, Revenue Forecasting, Anomaly Detection, NLP, Regression Models"
         },
         {
           "category": "Tools & Platforms",
-          "content": "Git/GitHub, Jupyter Notebooks, AWS (S3, Redshift), REST APIs, Google Analytics, Python (Pandas, NumPy, scikit-learn), Flask, Docker"
+          "content": "Git/GitHub, Jupyter, AWS (S3, Redshift), REST APIs, Google Analytics, Pandas, NumPy, scikit-learn, Flask, Docker"
         }
       ]
     },
@@ -53,20 +53,20 @@
         {
           "title": "Enterprise BI Dashboard: AI-Powered Retail Analytics",
           "url": "https://retail-analysis-cj4s.onrender.com",
-          "date": "May 2026 – June 2026",
+          "date": "May 2026 - June 2026",
           "bullets": [
-            "Built production BI platform processing 4M+ records with 99.8% data validity for retail analytics",
-            "Developed AI natural language query feature enabling non-technical users to ask business questions in plain English",
+            "Built production BI platform processing 4M+ records with 99.8% data validity",
+            "Developed AI natural language query enabling non-technical users to ask questions in plain English",
             "Implemented cross-filtering across 10+ interactive charts for real-time drill-down analysis",
-            "Created what-if simulator that forecasts revenue impact of operational changes (repeat rate, AOV, fulfillment) using linear regression",
-            "Integrated Random Forest churn prediction with adjustable thresholds (30–365 days) and risk visualisation",
+            "Created what-if simulator forecasting revenue impact using linear regression",
+            "Integrated Random Forest churn prediction with adjustable thresholds (30-365 days)",
             "Reduced data analysis time by 40% through automated reporting and intelligent caching"
           ]
         },
         {
           "title": "World Stock Market Analysis & Prediction (2000-2025)",
           "url": "https://syl21b.github.io/shinle-portfolio/showcase/5",
-          "date": "May 2025 – June 2025",
+          "date": "May 2025 - June 2025",
           "bullets": [
             "Increased investment decision accuracy by 85% through comparative analysis of 60+ global brands across 5 sectors",
             "Reduced data processing time by 60% by engineering optimized SQL queries for 5+ years of historical market data",
@@ -76,7 +76,7 @@
         {
           "title": "Superstore Performance Analysis & Business Intelligence",
           "url": "https://syl21b.github.io/shinle-portfolio/showcase/4",
-          "date": "April 2025 – May 2025",
+          "date": "April 2025 - May 2025",
           "bullets": [
             "Identified operational bottlenecks costing 15% in lost revenue, leading to 12% efficiency improvements",
             "Built interactive Tableau dashboards revealing profit trends across 4 regions, reducing manual reporting time by 60%",
@@ -91,7 +91,7 @@
         {
           "title": "Mathematics Tutor & Academic Coach",
           "company": "Mathnasium Learning Center",
-          "date": "August 2024 – April 2025",
+          "date": "August 2024 - April 2025",
           "bullets": [
             "Applied data analysis to track student progress, improving outcomes by 25% faster",
             "Created visualization reports translating academic data into actionable insights for parents",

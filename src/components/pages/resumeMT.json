@@ -45,53 +45,51 @@
         {
           "title": "Mathematics Tutor & Academic Coach",
           "company": "Mathnasium Learning Center",
-          "date": "August 2024 – April 2025",
+          "date": "August 2024 - April 2025",
           "bullets": [
-            "Delivered personalized math instruction to students from elementary to high school, focusing on building foundational skills and confidence",
-            "Increased student learning outcomes by 25% through a data-driven progress tracking system I designed and implemented",
+            "Delivered personalized math instruction to elementary through high school students, building foundational skills and confidence",
+            "Increased student learning outcomes by 25% via a data-driven progress tracking system I designed and implemented",
             "Improved average math grades by 1.5 points by analyzing performance patterns and adapting teaching methods",
-            "Enhanced parent satisfaction by 40% through visual progress reports that translated academic data into actionable insights",
-            "Optimized curriculum delivery efficiency by 20% using statistical analysis to measure teaching effectiveness"
+            "Enhanced parent satisfaction by 40% through visual progress reports translating academic data into actionable insights"
           ]
         },
         {
           "title": "Mathematics Teaching Assistant",
           "company": "Florida State University",
-          "date": "April 2023 – May 2024",
+          "date": "April 2023 - May 2024",
           "bullets": [
-            "Assisted professors in teaching Calculus, Linear Algebra, and introductory computer science courses (C++, Data Structures)",
-            "Led weekly review sessions and provided one-on-one support to students struggling with course material",
-            "Graded assignments and exams, offering detailed feedback that helped students improve their understanding and performance",
-            "Collaborated with faculty to develop supplemental instructional materials and practice problems"
+            "Assisted professors in teaching Calculus, Linear Algebra, and introductory computer science (C++, Data Structures)",
+            "Led weekly review sessions and provided one-on-one support to struggling students",
+            "Graded assignments and exams, offering detailed feedback that improved student understanding and performance"
           ]
         },
         {
           "title": "GED Program Math Tutor",
           "company": "Online",
-          "date": "July 2022 – January 2023",
+          "date": "July 2022 - January 2023",
           "bullets": [
-            "Provided remote tutoring to adult learners preparing for the GED math exam, covering algebra, geometry, and data analysis",
-            "Developed customized lesson plans based on each student's strengths and weaknesses, leading to two students successfully passing the math section",
-            "Adapted pacing and instructional style to accommodate adult learners with varying levels of math anxiety and prior knowledge"
+            "Provided remote tutoring to adult learners preparing for the GED math exam (algebra, geometry, data analysis)",
+            "Developed customized lesson plans based on each student's strengths and weaknesses, leading to two students passing the math section",
+            "Adapted pacing and instructional style for adult learners with varying levels of math anxiety and prior knowledge"
           ]
         }
       ]
     },
-    "education": {
-      "title": "EDUCATION",
-      "items": [
-        {
-          "degree": "Bachelor of Science in Applied Mathematics",
-          "institution": "Florida State University",
-          "details": "GPA: 3.89/4.0 | Coursework: Linear Algebra, Calculus, Numerical Analysis, Statistical Methods, Probability Theory"
-        },
-        {
-          "degree": "Associate of Arts in Mathematics",
-          "institution": "Indian River State College",
-          "details": "GPA: 3.96/4.0, Graduated with Honors (Summa Cum Laude), Dean's List All Semesters"
-        }
-      ]
+"education": {
+  "title": "EDUCATION",
+  "items": [
+    {
+      "degree": "Bachelor of Science in Applied Mathematics",
+      "institution": "Florida State University",
+      "details": "GPA: 3.89/4.0 | Coursework: Statistical Methods, Computational Mathematics, Probability Theory, Linear Algebra, Calculus"
+    },
+    {
+      "degree": "Associate of Arts in Mathematics",
+      "institution": "Indian River State College",
+      "details": "GPA: 3.96/4.0, Graduated with Honors (Summa Cum Laude), Dean's List All Semesters"
     }
+  ]
+}
   },
   "pdf": {
     "fileName": "Shin_Le_Math_Tutor_Resume.pdf"

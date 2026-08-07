@@ -43,7 +43,7 @@
         },
         {
           "category": "Tools & Platforms",
-          "content": "Git/GitHub, Jupyter Notebooks, AWS (S3, Redshift), REST APIs, Google Analytics, Python (Pandas, NumPy, scikit-learn)"
+          "content": "Git/GitHub, Jupyter Notebooks, AWS, REST APIs, Google Analytics, Python (Pandas, NumPy, scikit-learn)"
         }
       ]
     },
@@ -53,7 +53,7 @@
         {
           "title": "Mentivio: AI-Powered Mental Health Assessment Platform",
           "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
-          "date": "September 2025 – Present",
+          "date": "September 2025 - Present",
           "bullets": [
             "Achieved 94% diagnostic accuracy by analyzing clinical assessment data across 50+ users and 50+ assessments using ensemble ML methods",
             "Designed data collection protocols improving data quality by 30% for sensitive mental health information",
@@ -64,7 +64,7 @@
         {
           "title": "Enterprise BI Dashboard: AI-Powered Retail Analytics",
           "url": "https://retail-analysis-cj4s.onrender.com",
-          "date": "May 2026 – June 2026",
+          "date": "May 2026 - June 2026",
           "bullets": [
             "Designed full-stack analytics platform processing 4M+ records with 99.8% data validity",
             "Built AI natural language query engine that converts plain English to SQL for ad-hoc business questions",
@@ -90,7 +90,7 @@
         {
           "title": "Mathematics Tutor & Academic Coach",
           "company": "Mathnasium Learning Center",
-          "date": "August 2024 – April 2025",
+          "date": "August 2024 - April 2025",
           "bullets": [
             "Analyzed student performance data to identify learning gaps, improving outcomes by 25% faster",
             "Designed progress tracking dashboards for parents, enhancing satisfaction by 40%",

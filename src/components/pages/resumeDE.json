@@ -26,24 +26,24 @@
       "title": "TECHNICAL SKILLS",
       "skills": [
         {
-          "category": "Databases & Data Warehousing",
-          "content": "PostgreSQL (Optimization, Indexing, Partitioning, Connection Pooling), MySQL, AWS Redshift, Data Modeling (Star/Snowflake Schema), Database Design, Query Optimization"
+          "category": "Databases & Warehousing",
+          "content": "PostgreSQL, MySQL, AWS Redshift, Data Modeling (Star/Snowflake), Query Optimization, Indexing, Partitioning, Connection Pooling"
         },
         {
-          "category": "Data Engineering & ETL",
-          "content": "ETL/ELT Pipeline Development, Apache Airflow, AWS Glue, Data Pipeline Architecture, Batch Processing, Real-time Data Streaming, Data Validation"
+          "category": "ETL & Data Pipelines",
+          "content": "ETL/ELT Pipeline Development, Apache Airflow, AWS Glue, Batch Processing, Real-time Streaming, Data Validation, Data Quality"
         },
         {
           "category": "Cloud & Infrastructure",
-          "content": "AWS (S3, Redshift, EC2, Lambda, RDS), Docker, Kubernetes, CI/CD Pipelines, Infrastructure as Code, Auto-scaling, Load Balancing"
+          "content": "AWS (S3, Redshift, EC2, Lambda, RDS), Docker, Kubernetes, CI/CD, Auto-scaling, Load Balancing, Infrastructure as Code"
         },
         {
           "category": "Programming & Scripting",
-          "content": "Python (Pandas, NumPy, SQLAlchemy), SQL (Advanced Queries, CTEs, Window Functions), Bash Scripting, REST API Development"
+          "content": "Python (Pandas, NumPy, SQLAlchemy), Advanced SQL (CTEs, Window Functions), Bash Scripting, REST API Development"
         },
         {
           "category": "Data Security & Operations",
-          "content": "Data Encryption (At-rest/In-transit), JWT Authentication, Role-Based Access Control, Audit Logging, PII Scrubbing, HIPAA-Inspired Compliance, Rate Limiting"
+          "content": "Encryption (At-rest/In-transit), JWT Authentication, RBAC, Audit Logging, PII Scrubbing, HIPAA-Inspired Compliance, Rate Limiting"
         }
       ]
     },
@@ -53,35 +53,33 @@
         {
           "title": "Enterprise BI Dashboard: Retail Analytics Data Platform",
           "url": "https://retail-analysis-cj4s.onrender.com",
-          "date": "May 2026 – June 2026",
+          "date": "May 2026 - June 2026",
           "bullets": [
-            "Designed and deployed full-stack analytics database processing 4M+ transaction records with 99.8% data validity using PostgreSQL",
-            "Implemented connection pooling (SimpleConnectionPool) supporting 2-20 concurrent connections with automatic retries and keepalive parameters",
-            "Engineered memory-optimized caching layer with TTLCache (5-minute TTL, LRU eviction) reducing database load by 40%",
-            "Built SQL query execution framework with automatic schema prefixing, date extraction fixes, and query sanitization for safety",
-            "Deployed production environment on Render with Gunicorn, achieving sub-500ms API response times for 10+ analytical endpoints"
+            "Designed PostgreSQL database processing 4M+ transaction records with 99.8% data validity and connection pooling for 2-20 concurrent connections",
+            "Engineered caching layer with TTLCache (5-min TTL, LRU eviction) reducing database load by 40%",
+            "Built SQL query execution framework with automatic schema prefixing, date extraction fixes, and query sanitization",
+            "Deployed on Render with Gunicorn, achieving sub-500ms API response times for 10+ analytical endpoints"
           ]
         },
         {
           "title": "Mentivio: Healthcare Data Platform Architecture",
           "url": "https://mentivio-mentalhealth.onrender.com/home?lang=en",
-          "date": "September 2025 – Present",
+          "date": "September 2025 - Present",
           "bullets": [
-            "Architected and deployed full-stack healthcare platform on AWS achieving 99.9% uptime and sub-200ms response times",
-            "Designed PostgreSQL database schema supporting 50+ concurrent users and 1M+ assessment records with optimized indexing",
-            "Implemented HIPAA-inspired security framework with end-to-end encryption, JWT authentication, and automated PII scrubbing",
+            "Architected full-stack healthcare platform on AWS with 99.9% uptime and sub-200ms response times",
+            "Designed PostgreSQL schema supporting 50+ concurrent users and 1M+ assessment records with optimized indexing",
+            "Implemented HIPAA-inspired security with end-to-end encryption, JWT authentication, and automated PII scrubbing",
             "Built scalable ETL pipeline processing 17 psychological features in real-time with 94% diagnostic accuracy"
           ]
         },
         {
           "title": "Financial Market Data Pipeline & Warehousing",
           "url": "https://syl21b.github.io/shinle-portfolio/showcase/5",
-          "date": "May 2025 – June 2025",
+          "date": "May 2025 - June 2025",
           "bullets": [
-            "Engineered data ingestion pipeline processing 5+ years of historical market data for 60+ global brands",
-            "Optimized SQL queries reducing data processing time by 60% through indexing and query optimization techniques",
-            "Designed data warehouse schema for financial time-series data supporting complex analytical queries",
-            "Implemented batch processing system handling 10,000+ daily records with 99.8% data accuracy"
+            "Engineered data ingestion pipeline for 5+ years of historical market data for 60+ global brands",
+            "Optimized SQL queries reducing processing time by 60% through indexing and query optimization",
+            "Designed data warehouse schema for financial time-series data supporting complex analytical queries"
           ]
         }
       ]
@@ -92,31 +90,31 @@
         {
           "title": "Data Systems Developer & Academic Coach",
           "company": "Mathnasium Learning Center",
-          "date": "August 2024 – April 2025",
+          "date": "August 2024 - April 2025",
           "bullets": [
             "Developed data tracking system improving student learning outcomes by 25% through automated progress monitoring",
             "Engineered performance analysis database reducing report generation time from 3 hours to 15 minutes",
-            "Implemented data visualization layer translating academic metrics into actionable insights for stakeholders",
+            "Implemented data visualization layer translating academic metrics into actionable insights",
             "Optimized data collection processes increasing data accuracy by 40% through validation rules"
           ]
         }
       ]
     },
-    "education": {
-      "title": "EDUCATION",
-      "items": [
-        {
-          "degree": "Bachelor of Science in Applied Mathematics",
-          "institution": "Florida State University",
-          "details": "GPA: 3.89/4.0 | Focus: Computational Mathematics & Data Structures | Coursework: Database Systems, Algorithms, Data Structures, Statistical Computing"
-        },
-        {
-          "degree": "Associate of Arts in Mathematics",
-          "institution": "Indian River State College",
-          "details": "GPA: 3.96/4.0, Graduated with Honors (Summa Cum Laude), Focus: Computer Science & Mathematics Integration"
-        }
-      ]
+"education": {
+  "title": "EDUCATION",
+  "items": [
+    {
+      "degree": "Bachelor of Science in Applied Mathematics",
+      "institution": "Florida State University",
+      "details": "GPA: 3.89/4.0 | Coursework: Statistical Methods, Computational Mathematics, Probability Theory, Linear Algebra, Calculus"
     },
+    {
+      "degree": "Associate of Arts in Mathematics",
+      "institution": "Indian River State College",
+      "details": "GPA: 3.96/4.0, Graduated with Honors (Summa Cum Laude), Dean's List All Semesters"
+    }
+  ]
+},
     "certifications": {
       "title": "CERTIFICATIONS",
       "items": [
