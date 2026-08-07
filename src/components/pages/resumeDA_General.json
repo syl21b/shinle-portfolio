@@ -55,10 +55,10 @@
           "url": "https://retail-analysis-cj4s.onrender.com",
           "date": "May 2026 – June 2026",
           "bullets": [
-            "Designed and built a full-stack BI platform processing 4M+ records with 99.8% data validity, enabling real-time business monitoring",
+            "Designed full-stack BI platform processing 4M+ records with 99.8% data validity, enabling real-time business monitoring",
             "Developed interactive dashboards with cross-filtering across 10+ charts, allowing users to drill down and explore data from multiple angles",
-            "Created an AI natural language query engine that converts plain English questions into SQL, empowering non-technical users to access data independently",
-            "Built a what-if simulator forecasting revenue impact of changes in repeat rate, AOV, and fulfillment metrics using regression analysis",
+            "Created AI natural language query engine converting plain English questions into SQL, empowering non-technical users to access data independently",
+            "Built what-if simulator forecasting revenue impact of changes in repeat rate, AOV, and fulfillment metrics using regression analysis",
             "Reduced manual reporting time by 40% through automated data pipelines and intelligent caching (TTLCache)"
           ]
         },

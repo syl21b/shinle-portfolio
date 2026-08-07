@@ -58,7 +58,7 @@
             "Built production BI platform processing 4M+ records with 99.8% data validity for retail analytics",
             "Developed AI natural language query feature enabling non-technical users to ask business questions in plain English",
             "Implemented cross-filtering across 10+ interactive charts for real-time drill-down analysis",
-            "Created what-if simulator that forecasts revenue impact of operational changes (repeat rate, AOV, fulfillment) using linear regression",
+            "Created what-if simulator forecasting revenue impact of operational changes (repeat rate, AOV, fulfillment) using linear regression",
             "Integrated Random Forest churn prediction with adjustable thresholds (30–365 days) and risk visualisation",
             "Reduced data analysis time by 40% through automated reporting and intelligent caching"
           ]

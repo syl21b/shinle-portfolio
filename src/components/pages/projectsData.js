@@ -68,7 +68,7 @@ export const projects = [
 {
     id: 6,
     type: "fullstack",
-    date: "Jun 2026 - July 2026",
+    date: "Jun 2026 - Jul 2026",
     isOngoing: false,
     featured: true,
     title: "Enterprise BI Dashboard: AI-Powered Retail Analytics",
@@ -134,7 +134,7 @@ export const projects = [
   {
     id: 5,
     type: "tableau",
-    date: "May 2025 - June 2025",
+    date: "May 2025 - Jun 2025",
     
     title: "World Stock Market Analysis & Prediction (2000-2025)",
     description: "A comprehensive, multi-faceted data-driven platform for advanced stock market analysis and price forecasting.",
